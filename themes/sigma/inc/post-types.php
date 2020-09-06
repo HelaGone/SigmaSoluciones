@@ -31,7 +31,7 @@ add_action('init', function(){
 		'menu_icon'			     => 'dashicons-businesswoman',
 		'hierarchical'       => false,
 		'menu_position'      => 4,
-		'taxonomies'         => array( 'category', 'post_tag' ),
+		'taxonomies'         => array(),
 		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'author' )
 	);
 	register_post_type( 'asesores', $args );
