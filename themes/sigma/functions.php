@@ -1,4 +1,4 @@
-<?php 
+<?php
 	// REMOVE WP JUNK FROM HEAD ////////////////////////////////////////////////////////////
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7);
 	remove_action( 'wp_print_styles', 'print_emoji_styles');
@@ -39,34 +39,10 @@
 	 * This function register stylesheets needed for this theme
 	*/
 	function ct_register_styles(){
-		wp_enqueue_style( 'reset-style', CSSPATH.'reset.css' , array(), '1.0.0', 'all' );
-		wp_enqueue_style( 'header-style', CSSPATH.'header.css' , array(), '1.0.0', 'all' );
-		wp_enqueue_style( 'footer-style', CSSPATH.'footer.css' , array(), '1.0.0', 'all' );
-		wp_enqueue_style( 'main-style', get_stylesheet_uri(), array('reset-style'), '1.0.0', 'all' );
-
-		if(is_archive()){
-			wp_enqueue_style( 'archive-style', CSSPATH.'archive.css', array('reset-style'), '1.0.0', 'all' );
-		}
-		if(is_author()){
-			wp_enqueue_style( 'author-style', CSSPATH.'author.css', array('reset-style'), '1.0.0', 'all' );
-		}
-		if(is_category()){
-			wp_enqueue_style( 'category-style', CSSPATH.'category.css', array('reset-style'), '1.0.0', 'all' );
-		}
-		if(is_home()){
-			wp_enqueue_style( 'home-style', CSSPATH.'home.css', array('reset-style'), '1.0.0', 'all' );
-		}
-		if(is_404()){
-			wp_enqueue_style( 'not-found-style', CSSPATH.'not-found.css', array('reset-style'), '1.0.0', 'all' );
-		}
-		if(is_page()){
-			wp_enqueue_style( 'page-style', CSSPATH.'page.css', array('reset-style'), '1.0.0', 'all' );
-		}
-		if(is_single()){
-			wp_enqueue_style( 'single-style', CSSPATH.'single.css', array('reset-style'), '1.0.0', 'all' );
-		}
-
-
+		wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.0.0', 'all' );
+		//Pannellum css
+		wp_register_style('sig-pannellum-css', 'https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css', array(), '2.5.6', 'all');
+		wp_enqueue_style('sig-pannellum-css');
 	}
 	add_action('wp_enqueue_scripts', 'ct_register_styles');
 
@@ -78,11 +54,14 @@
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", array(), '3.2.1', false);
 		wp_enqueue_script('jquery');
+		//Custom functions
+		wp_enqueue_script('functions', JSPATH.'functions.js', array('jquery'), '1.0.0', false);
 		//Bx Slider 4.2.12
 		wp_register_script('bx-slider', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '4.2.12');
 		wp_enqueue_script('bx-slider');
-		//Custom functions
-		wp_enqueue_script('functions', JSPATH.'functions.js', array('jquery'), '1.0.0', false);
+		//Pannellum
+		wp_register_script('sig-pannellum', 'https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js', array('functions'), '2.5.6');
+		wp_enqueue_script('sig-pannellum');
 	}
 	add_action('wp_enqueue_scripts', 'ct_register_scripts');
 
@@ -98,7 +77,7 @@
 			if ( $paged >= 2 || $page >= 2 ){
 				echo ' | ' . sprintf( __( 'Página %s' ), max( $paged, $page ) );
 			}
-		endif;	
+		endif;
 	}
 
 	// Let Photon to know the viewport width
@@ -202,5 +181,3 @@
 		return $sanitized_filename;
 	}
 	add_filter( 'sanitize_file_name', 'wpartisan_sanitize_file_name', 10, 1 );
-
-
