@@ -33,6 +33,23 @@
 		<!-- START WP_HEAD -->
 		<?php wp_head(); ?>
 		<!-- END WP_HEAD -->
+		<script type="text/javascript">
+			const hk_handle_toggle_menu = () => {
+				console.log('click menu');
+			}
+		</script>
 	</head>
 	<body <?php body_class(); ?> >
-		<header id="main_header"></header>
+		<header id="main_header" class="main_header">
+			<div class="header_item">
+				<img src="<?php echo THEMEPATH . 'images/logo_sigma.png'; ?>" alt="Sigma Soluciones Logotipo">
+			</div>
+			<div class="header_item">
+				<button type="button" name="button" onclick="hk_handle_toggle_menu">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="#F16922" height="24" viewBox="0 0 24 24" width="24">
+						<path d="M0 0h24v24H0z" fill="none"/>
+						<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+					</svg>
+				</button>
+			</div>
+		</header>

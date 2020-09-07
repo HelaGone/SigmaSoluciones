@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <main id="main_container" class="main_wrapper">
   <section class="hk-section main_wrapper_section">
-    <div class="inner_wrapper">
+    <div class="">
       <div id="tabbed_widget">
-        <ul class="tabs custom-list">
+        <ul class="tabs custom-list inner_wrapper">
           <li class="tab_item">
             <button type="button" name="button" onclick="hk_hanlde_panel(this, 'recorrido')">RECORRIDO</button>
           </li>
