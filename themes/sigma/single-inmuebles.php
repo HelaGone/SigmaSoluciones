@@ -8,7 +8,7 @@
   $parking = (get_post_meta($post->ID, 'estacionamiento', true)) ? get_post_meta($post->ID, 'estacionamiento', true) : null;
   $pool = (get_post_meta($post->ID, 'alberca', true)) ? get_post_meta($post->ID, 'alberca', true) : null;
 
-  $amenities_arr = array("dimensiones"=>$dimentions,"habitaciones"=>$rooms,"banos"=>$wc,"bym"=>$gym,"seguridad"=>$security,"pets"=>$pets,"estacionamiento"=>$parking,"alberca"=>$pool);
+  $amenities_arr = array("dimensiones"=>$dimentions,"habitaciones"=>$rooms,"banos"=>$wc,"gym"=>$gym,"seguridad"=>$security,"pets"=>$pets,"estacionamiento"=>$parking,"alberca"=>$pool);
 ?>
 <main id="main_container" class="main_wrapper">
   <section class="hk-section main_wrapper_section">
@@ -29,14 +29,14 @@
       </ul>
       <ul class="tabpanels">
         <!-- RECORRIDO VIRTUAL -->
-        <li class="panel selected" data-media-type="recorrido">
+        <li class="panel" data-media-type="recorrido">
           <div class="item_inner_wrapper">
-            <iframe src="https://players.cupix.com/p/AYvGTwTL" width="720" height="480" style="margin:0 auto;" allowFullScreen="true"></iframe>
+            <!-- <iframe src="https://players.cupix.com/p/AYvGTwTL" width="720" height="480" style="margin:0 auto;" allowFullScreen="true"></iframe> -->
           </div>
         </li>
 
         <!-- FOTO 360 -->
-        <li class="panel" data-media-type="foto360">
+        <li class="panel selected" data-media-type="foto360">
           <div id="panorama" class="item_inner_wrapper"></div>
         </li>
 
@@ -101,24 +101,39 @@
     <!-- END TITLE WIDGET -->
 
     <section id="amenities_pool">
-      <ul>
+      <ul class="ameni_list">
         <?php
+          $abrev = '';
           if(is_array($amenities_arr)&&!empty($amenities_arr)):
-            foreach($amenities_arr as $key => $value): ?>
-              <li>
-                <figure>
-                  <img width="24" height="24" src="" alt="">
-                </figure>
-              </li>
-              debug($value);
-              debug($key);
-        <?php
-            endforeach;
-          endif;
-        ?>
-        <li>
+            foreach($amenities_arr as $key => $value):
 
-        </li>
+              if(strtolower($value)!='no' || intval($value)!=0):
+
+                switch ($key) {
+                  case 'habitaciones': $abrev = 'Hab.'; break;
+                  case 'banos': $abrev = 'WC'; break;
+                  case 'gym': $abrev = 'Gimnasio'; break;
+                  case 'seguridad': $abrev = 'Vigilancia'; break;
+                  case 'pets': $abrev = 'Mascotas'; break;
+                  case 'estacionamiento': $abrev = 'E'; break;
+                  case 'alberca': $abrev = 'Alberca'; break;
+                  default: $abrev = '';break;
+                } ?>
+                <li class="ameni_item">
+                  <figure class="fig_object">
+                    <img width="24" height="24" src="<?php echo THEMEPATH.'images/assets/'.$key.'.svg'; ?>" alt="<?php echo esc_attr($key); ?>">
+                    <figcaption class="fig_caption">
+                      <div class="">
+                        <span><?php echo ($key == 'seguridad'||$key=='alberca'||$key=='pets'||$key=='gym') ? '' : esc_html($value); ?></span>
+                        <span><?php echo esc_html($abrev); ?></span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </li>
+        <?php
+              endif;
+            endforeach;
+          endif; ?>
       </ul>
     </section>
     <!-- END AMENITIES SECTION -->
