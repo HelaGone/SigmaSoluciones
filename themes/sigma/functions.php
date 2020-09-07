@@ -16,6 +16,13 @@
 	remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 	remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0 );
 
+	// DEBUGGER ////////////////////////////////////////////////////////////////////////
+	function debug($var){
+		echo '<pre style="color:red;">';
+			print_r($var);
+		echo '</pre>';
+	}
+
 	// DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
 	define( 'JSPATH', get_template_directory_uri() . '/js/' );
 	define( 'CSSPATH', get_template_directory_uri() . '/css/' );
@@ -43,6 +50,9 @@
 		//Pannellum css
 		wp_register_style('sig-pannellum-css', 'https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css', array(), '2.5.6', 'all');
 		wp_enqueue_style('sig-pannellum-css');
+		//BxSlider css
+		wp_register_style('sig-bx-css', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12', 'all');
+		wp_enqueue_style('sig-bx-css');
 	}
 	add_action('wp_enqueue_scripts', 'ct_register_styles');
 
@@ -50,16 +60,16 @@
 	 * This function register scripts needed for this theme
 	*/
 	function ct_register_scripts(){
-		//Jquery 3.2.1
+		//Jquery 3.5.1
 		wp_deregister_script('jquery');
-		wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", array(), '3.2.1', false);
+		wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-3.5.1.min.js", array(), '3.5.1', false);
 		wp_enqueue_script('jquery');
 		//Custom functions
 		wp_enqueue_script('functions', JSPATH.'functions.js', array('jquery'), '1.0.0', false);
 		//Bx Slider 4.2.12
 		wp_register_script('bx-slider', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '4.2.12');
 		wp_enqueue_script('bx-slider');
-		//Pannellum
+		//Pannellum 2.5.6
 		wp_register_script('sig-pannellum', 'https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js', array('functions'), '2.5.6');
 		wp_enqueue_script('sig-pannellum');
 	}
@@ -131,7 +141,7 @@
 
 	if ( function_exists('add_image_size') ){
 		// Custom Theme : Center|Top
-		// add_image_size( 'banner_large', 1400, 600, array('center','top') );
+		// add_image_size( 'banner_large', 1400, 600, array('center','top') );)
 	}
 
 	function ct_pre_get_posts($query){

@@ -11,4 +11,7 @@ Text Domain: custom-theme
 Tags: Custom, wordpress, theme, templates
 */
 
-#panorama {width: 600px;height: 400px;}
+#panorama {width: 720px;height: 405px;}
+
+.tabpanels .panel{display: none;}
+.tabpanels .panel.selected{display: block;}
