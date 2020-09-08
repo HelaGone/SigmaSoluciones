@@ -80,6 +80,10 @@ button{background:none;border:none;}
 .ameni_item .fig_object{display:grid;place-items: center;padding:4px 0;}
 .ameni_item .fig_object img{margin-bottom:4px;}
 
+/* Map container */
+.map_container{width:100%;}
+.map_container iframe{width:100%;height:auto;}
+
 
 @media only screen and (min-width:360px){
   .ameni_list{width:94%;}

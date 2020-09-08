@@ -1,12 +1,15 @@
-<?php get_header();
-  $dimentions = (get_post_meta($post->ID, 'dimensiones', true)) ? get_post_meta($post->ID, 'dimensiones', true) : null;
-  $rooms = (get_post_meta($post->ID, 'habitaciones', true)) ? get_post_meta($post->ID, 'habitaciones', true) : null;
-  $wc = (get_post_meta($post->ID, 'banos', true)) ? get_post_meta($post->ID, 'banos', true) : null;
-  $gym = (get_post_meta($post->ID, 'gimnasio', true)) ? get_post_meta($post->ID, 'gimnasio', true) : null;
-  $security = (get_post_meta($post->ID, 'vigilancia', true)) ? get_post_meta($post->ID, 'vigilancia', true) : null;
-  $pets = (get_post_meta($post->ID, 'mascotas', true)) ? get_post_meta($post->ID, 'mascotas', true) : null;
-  $parking = (get_post_meta($post->ID, 'estacionamiento', true)) ? get_post_meta($post->ID, 'estacionamiento', true) : null;
-  $pool = (get_post_meta($post->ID, 'alberca', true)) ? get_post_meta($post->ID, 'alberca', true) : null;
+<?php get_header(); global $post, $_wp_additional_image_sizes;
+  // debug( $_wp_additional_image_sizes );
+  $pId = $post->ID;
+  $dimentions = (get_post_meta($pId, 'dimensiones', true)) ? get_post_meta($pId, 'dimensiones', true) : null;
+  $rooms = (get_post_meta($pId, 'habitaciones', true)) ? get_post_meta($pId, 'habitaciones', true) : null;
+  $wc = (get_post_meta($pId, 'banos', true)) ? get_post_meta($pId, 'banos', true) : null;
+  $gym = (get_post_meta($pId, 'gimnasio', true)) ? get_post_meta($pId, 'gimnasio', true) : null;
+  $security = (get_post_meta($pId, 'vigilancia', true)) ? get_post_meta($pId, 'vigilancia', true) : null;
+  $pets = (get_post_meta($pId, 'mascotas', true)) ? get_post_meta($pId, 'mascotas', true) : null;
+  $parking = (get_post_meta($pId, 'estacionamiento', true)) ? get_post_meta($pId, 'estacionamiento', true) : null;
+  $pool = (get_post_meta($pId, 'alberca', true)) ? get_post_meta($pId, 'alberca', true) : null;
+  $maps_location = (get_post_meta($pId, 'ubicacion', true)) ? get_post_meta($pId, 'ubicacion', true) : null;
 
   $amenities_arr = array("dimensiones"=>$dimentions,"habitaciones"=>$rooms,"banos"=>$wc,"gym"=>$gym,"seguridad"=>$security,"pets"=>$pets,"estacionamiento"=>$parking,"alberca"=>$pool);
 ?>
@@ -137,6 +140,52 @@
       </ul>
     </section>
     <!-- END AMENITIES SECTION -->
+
+    <section id="description_section">
+      <div class="inner_wrapper content_container">
+        <?php the_content(); ?>
+      </div>
+      <div class="map_container">
+        <?php echo $maps_location; ?>
+      </div>
+    </section>
+
+    <section>
+      <?php
+        $args = array(
+          'post_type'=>'inmuebles',
+          'posts_per_page'=>4,
+          'post_status'=>'publish',
+          'orderby'=>'date',
+          'order'=>'DESC',
+          'post__not_in'=>array($pId)
+        );
+        $related = get_posts($args);
+        if(is_array($related)&&!empty($related)): ?>
+          <h2>También te pueden interesar</h2>
+          <section class="related_pool">
+            <?php
+              // debug(get_intermediate_image_sizes());
+              foreach ($related as $key => $item):
+                $inmuId = $item->ID;
+                $thumbId = get_post_thumbnail_id($inmuId); ?>
+                <figure>
+                  <picture>
+                    <source media="(min-width:650px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'large')) ? get_the_post_thumbnail_url($inmuId, 'large') : ''; ?>">
+                    <source media="(min-width:465px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'medium')) ? get_the_post_thumbnail_url($inmuId, 'medium') : ''; ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url($inmuId, 'thumbnail'); ?>" alt="Cover Inmueble">
+                  </picture>
+                  <figcaption>
+                    <h3><?php echo esc_html($item->post_title); ?></h3>
+                  </figcaption>
+                </figure>
+            <?php
+              endforeach; ?>
+          </section>
+      <?php
+        endif;?>
+
+    </section>
   </section>
 </main>
 
