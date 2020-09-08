@@ -144,12 +144,12 @@
 
 	if ( function_exists('add_image_size') ){
 		// Custom Theme : Center|Top
-		add_image_size('sig-xxl', 1280, 720, array('center', 'top'));
-		add_image_size('sig-xl', 960, 540, array('center', 'top'));
-		add_image_size('sig-l', 640, 360, array('center', 'top'));
-		add_image_size('sig-m', 480, 270, array('center', 'top'));
-		add_image_size('sig-s', 320, 180, array('center', 'top'));
-		add_image_size('sig-xs', 240, 135, array('center', 'top'));
+		add_image_size('sig-xxl-1280', 1280, 720, array('center', 'top'));
+		add_image_size('sig-xl-960', 960, 540, array('center', 'top'));
+		add_image_size('sig-l-640', 640, 360, array('center', 'top'));
+		add_image_size('sig-m-480', 480, 270, array('center', 'top'));
+		add_image_size('sig-s-320', 320, 180, array('center', 'top'));
+		add_image_size('sig-xs-240', 240, 135, array('center', 'top'));
 	}
 
 	function ct_pre_get_posts($query){

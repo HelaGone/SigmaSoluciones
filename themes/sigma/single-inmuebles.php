@@ -171,9 +171,11 @@
                 $thumbId = get_post_thumbnail_id($inmuId); ?>
                 <figure>
                   <picture>
-                    <source media="(min-width:650px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'large')) ? get_the_post_thumbnail_url($inmuId, 'large') : ''; ?>">
-                    <source media="(min-width:465px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'medium')) ? get_the_post_thumbnail_url($inmuId, 'medium') : ''; ?>">
-                    <img src="<?php echo get_the_post_thumbnail_url($inmuId, 'thumbnail'); ?>" alt="Cover Inmueble">
+                    <source media="(min-width:1280px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-xxl-1280')) ? get_the_post_thumbnail_url($inmuId, 'sig-xxl-1280') : ''; ?>">
+                    <source media="(min-width:768px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-xl-960')) ? get_the_post_thumbnail_url($inmuId, 'sig-xl-960') : ''; ?>">
+                    <source media="(min-width:650px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-l-640')) ? get_the_post_thumbnail_url($inmuId, 'sig-l-640') : ''; ?>">
+                    <source media="(min-width:465px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-m-480')) ? get_the_post_thumbnail_url($inmuId, 'sig-m-480') : ''; ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url($inmuId, 'sig-m-480'); ?>" alt="Cover Inmueble">
                   </picture>
                   <figcaption>
                     <h3><?php echo esc_html($item->post_title); ?></h3>
