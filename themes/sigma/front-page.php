@@ -54,16 +54,12 @@ get_header(); ?>
             foreach ($services as $key => $service):
               $s_name = str_replace('-', ' ', $service);
               ?>
-              <figure>
-                <!-- <picture>
-                  <source media="(min-width:1280px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-xxl-1280')) ? get_the_post_thumbnail_url($inmuId, 'sig-xxl-1280') : ''; ?>">
-                  <source media="(min-width:768px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-xl-960')) ? get_the_post_thumbnail_url($inmuId, 'sig-xl-960') : ''; ?>">
-                  <source media="(min-width:650px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-l-640')) ? get_the_post_thumbnail_url($inmuId, 'sig-l-640') : ''; ?>">
-                  <source media="(min-width:465px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-m-480')) ? get_the_post_thumbnail_url($inmuId, 'sig-m-480') : ''; ?>">
-                  <img src="<?php echo get_the_post_thumbnail_url($inmuId, 'sig-m-480'); ?>" alt="Cover Inmueble">
-                </picture> -->
-                <figcaption>
-                  <h2>
+              <figure class="ribbon_fig_obj">
+                <picture>
+                  <img src="<?php echo THEMEPATH . 'images/default.jpg' ?>" alt="Cover Inmueble">
+                </picture>
+                <figcaption class="ribbon_fig_capion">
+                  <h2 class="ribbon_fig_title">
                     <a href="#"><?php echo esc_html(strtoupper($s_name)); ?></a>
                   </h2>
                 </figcaption>

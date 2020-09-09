@@ -70,7 +70,7 @@ button{background:none;border:none;}
 }
 
 body{font-family: 'Akzidenz Grotesk',sans-serif;}
-a{text-decoration: none;color:#708B99;}
+a{text-decoration: none;color:inherit;}
 a:hover{color:#30434D;transition:color .6s;}
 
 /* GENERAL */
@@ -79,6 +79,12 @@ a:hover{color:#30434D;transition:color .6s;}
 .section_heading{color:#FFE4D7;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 24px;line-height: 28px;text-align: center;border-bottom:2px solid #FFE4D7;display: inline-block;padding:2px 4px;margin-bottom:16px;}
 .descriptive_txt{color:#30434D;font-family: 'Source Serif Pro Light', serif;text-align: center;font-size: 16px;line-height: 22px;}
 
+/* HEADER */
+.main_header{position:fixed;top:0;left:0;right:0;z-index:3;display: flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:#F2F7F5;padding:8px 8px;box-shadow: 1px 2px 4px rgba(0,0,0,0.33);}
+.main_header .logo_item{width:83px;height:47px;}
+.main_header .logo_item img{width: 100%;height: auto;}
+/* END HEADER */
+
 /* HOME */
 .home_header_frame{position:fixed;top:64px;left:0;right:0; display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;}
 .side_carousel{width:calc(100% / 2);flex-shrink: 0;}
@@ -86,17 +92,22 @@ a:hover{color:#30434D;transition:color .6s;}
 .home_header_frame .bx-wrapper{border:none;}
 
 .inner_container{background-color:#30434D;border-radius: 30px 30px 0 0;}
-.scroll_section{position:relative;z-index: 3;padding:32px 16px;}
+.scroll_section{position:relative;z-index:2;padding:32px 16px;}
 
 /* ABOUT SECTION HOME */
 .about_info{text-align: center;margin-bottom:32px;}
 .about_info p{color:#FFE4D7;}
 
-/* HEADER */
-.main_header{position:fixed;top:0;left:0;right:0;z-index:3;display: flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:#F2F7F5;padding:8px 8px;box-shadow: 1px 2px 4px rgba(0,0,0,0.33);opacity:0.95;}
-.main_header_item{}
-.main_header .logo_item{width:83px;height:47px;}
-.main_header .logo_item img{width: 100%;height: auto;}
+/* MAIN SERVICES SECTION HOME*/
+.ribbon_fig_obj{width:100%;position: relative;margin-bottom:8px;}
+.ribbon_fig_obj img{width:100%;height: auto;box-shadow: 1px 2px 4px rgba(0,0,0,0.66);overflow: hidden;border-radius: 3px;}
+.ribbon_fig_capion{position:absolute;top:0;left:0;right:0;bottom:0;display:grid;place-items:center;}
+.ribbon_fig_title{width:100%;padding:32px 0;text-align: center;background-color: rgba(0,0,0,0.66);
+  color:#F2F7F5;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 22px;text-shadow: 1px 2px 4px rgba(0,0,0,0.66);
+}
+/* END HOME */
+
+
 
 /* SINGLE INMUEBLE */
 
