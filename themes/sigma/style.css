@@ -53,10 +53,6 @@ button{background:none;border:none;}
   src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Bold.otf') format("opentype")
 }
 @font-face {
-  font-family: 'Akzidenz Grotesk ExtraB';
-  src: url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-ExtraBold.otf') format("opentype");
-}
-@font-face {
   font-family: 'Akzidenz Grotesk Condensed';
   src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Cond.otf') format("opentype");
 }
@@ -65,32 +61,36 @@ button{background:none;border:none;}
   src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Bold.ttf') format("truetype");
 }
 @font-face {
-  font-family: 'Source Serif Pro';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Regular.ttf') format("truetype");
+  font-family: 'Source Serif Pro Light';
+  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Light.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Source Serif Pro Italic';
   src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Italic.ttf') format("truetype");
 }
-@font-face {
-  font-family: 'Source Serif Pro Light Ital';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-LightItalic.ttf') format("truetype");
-}
 
 body{font-family: 'Akzidenz Grotesk',sans-serif;}
+a{text-decoration: none;color:#708B99;}
+a:hover{color:#30434D;transition:color .6s;}
 
-
-/* @font-face {
-  font-family: "Bitstream Vera Serif Bold";
-  src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
-}
-
-body { font-family: "Bitstream Vera Serif Bold", serif } */
-
-
-
-.main_wrapper{padding-top:64px;}
+/* GENERAL */
+.main_wrapper{position:relative;top:60vh;max-width:1440px;margin:0 auto;}
 .inner_wrapper{padding:0 16px;}
+.section_heading{color:#FFE4D7;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 24px;line-height: 28px;text-align: center;border-bottom:2px solid #FFE4D7;display: inline-block;padding:2px 4px;margin-bottom:16px;}
+.descriptive_txt{color:#30434D;font-family: 'Source Serif Pro Light', serif;text-align: center;font-size: 16px;line-height: 22px;}
+
+/* HOME */
+.home_header_frame{position:fixed;top:64px;left:0;right:0; display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;}
+.side_carousel{width:calc(100% / 2);flex-shrink: 0;}
+.side_carousel img{object-fit: cover;}
+.home_header_frame .bx-wrapper{border:none;}
+
+.inner_container{background-color:#30434D;border-radius: 30px 30px 0 0;}
+.scroll_section{position:relative;z-index: 3;padding:32px 16px;}
+
+/* ABOUT SECTION HOME */
+.about_info{text-align: center;margin-bottom:32px;}
+.about_info p{color:#FFE4D7;}
 
 /* HEADER */
 .main_header{position:fixed;top:0;left:0;right:0;z-index:3;display: flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:#F2F7F5;padding:8px 8px;box-shadow: 1px 2px 4px rgba(0,0,0,0.33);opacity:0.95;}

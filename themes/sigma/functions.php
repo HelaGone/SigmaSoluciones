@@ -199,3 +199,14 @@
 		return $sanitized_filename;
 	}
 	add_filter( 'sanitize_file_name', 'wpartisan_sanitize_file_name', 10, 1 );
+
+	/**
+	 * ct_move_element
+	 * Mueve un elemento de un array a otro
+	*/
+	function ct_move_element($array, $a, $b) {
+		$p1 = array_splice($array, $a, 1);
+    $p2 = array_splice($array, 0, $b);
+    $array = array_merge($p2,$p1,$array);
+		// return $array;
+	}

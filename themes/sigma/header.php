@@ -42,7 +42,9 @@
 	<body <?php body_class(); ?> >
 		<header id="main_header" class="main_header">
 			<div class="main_header_item logo_item">
-				<img width="83" height="47" src="<?php echo THEMEPATH . 'images/logo_sigma.png'; ?>" alt="Sigma Soluciones Logotipo">
+				<a href="<?php echo home_url('','https'); ?>" title="Sigma Soluciones">
+					<img width="83" height="47" src="<?php echo THEMEPATH . 'images/logo_sigma.png'; ?>" alt="Sigma Soluciones Logotipo">
+				</a>
 			</div>
 			<div class="main_header_item button_item">
 				<button type="button" name="button" onclick="hk_handle_toggle_menu()">
