@@ -10,36 +10,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: custom-theme
 Tags: Custom, wordpress, theme, templates
 */
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {display: block;}
-body {line-height: 1;font-size: 16px;}
-ol, ul {list-style: none;}
-blockquote, q {quotes: none;}
-blockquote:before, blockquote:after,
-q:before, q:after {content: '';content: none;}
-table {border-collapse: collapse;border-spacing: 0;}
-button{background:none;border:none;}
-
 @font-face {
   font-family: 'Akzidenz Grotesk Light';
   src: url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Light.otf') format("opentype");
@@ -66,18 +36,57 @@ button{background:none;border:none;}
 }
 @font-face {
   font-family: 'Source Serif Pro Italic';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Italic.ttf') format("truetype");
+  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-LightItalic.ttf') format("truetype");
 }
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;font-size: 16px;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+button{background:none;border:none;}
 
-body{font-family: 'Akzidenz Grotesk',sans-serif;}
+body{font-family: 'Akzidenz Grotesk',sans-serif;color:#30434D;}
 a{text-decoration: none;color:inherit;}
 a:hover{color:#30434D;transition:color .6s;}
 
+/* COLOR PALETTE
+ Dark blue: #30434D
+ Medium Blue: #708B99
+ Light orange: #FFE4D7
+ Orange: #E26917
+ Bluish White: #F2F7F5
+ Light Orange: #FFE4D7
+ */
+
 /* GENERAL */
 .main_wrapper{position:relative;top:60vh;max-width:1440px;margin:0 auto;}
-.inner_wrapper{padding:0 16px;}
+.inner_wrapper{padding:16px 8px 8px;}
 .section_heading{color:#FFE4D7;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 24px;line-height: 28px;text-align: center;border-bottom:2px solid #FFE4D7;display: inline-block;padding:2px 4px;margin-bottom:16px;}
-.descriptive_txt{color:#30434D;font-family: 'Source Serif Pro Light', serif;text-align: center;font-size: 16px;line-height: 22px;}
+.descriptive_txt{color:#F2F7F5;font-family: 'Source Serif Pro Light', serif;font-size: 16px;line-height: 22px;text-align:left; padding:0 20%;}
+.section_wrapper{text-align: center;}
+.dark_blue_bg{background-color:#30434D;}
+._see_more{background-color:white;border-radius: 5px;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);max-width:80px;margin:32px auto;padding:16px;font-family: 'Source Serif Pro', serif;}
 
 /* HEADER */
 .main_header{position:fixed;top:0;left:0;right:0;z-index:3;display: flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:#F2F7F5;padding:8px 8px;box-shadow: 1px 2px 4px rgba(0,0,0,0.33);}
@@ -92,19 +101,34 @@ a:hover{color:#30434D;transition:color .6s;}
 .home_header_frame .bx-wrapper{border:none;}
 
 .inner_container{background-color:#30434D;border-radius: 30px 30px 0 0;}
-.scroll_section{position:relative;z-index:2;padding:32px 16px;}
+.scroll_section{position:relative;z-index:2;padding:32px 0;}
 
 /* ABOUT SECTION HOME */
 .about_info{text-align: center;margin-bottom:32px;}
-.about_info p{color:#FFE4D7;}
 
 /* MAIN SERVICES SECTION HOME*/
 .ribbon_fig_obj{width:100%;position: relative;margin-bottom:8px;}
 .ribbon_fig_obj img{width:100%;height: auto;box-shadow: 1px 2px 4px rgba(0,0,0,0.66);overflow: hidden;border-radius: 3px;}
 .ribbon_fig_capion{position:absolute;top:0;left:0;right:0;bottom:0;display:grid;place-items:center;}
-.ribbon_fig_title{width:100%;padding:32px 0;text-align: center;background-color: rgba(0,0,0,0.66);
-  color:#F2F7F5;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 22px;text-shadow: 1px 2px 4px rgba(0,0,0,0.66);
-}
+.ribbon_fig_title{width:100%;padding:32px 0;text-align: center;background-color: rgba(0,0,0,0.66);color:#F2F7F5;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 22px;text-shadow: 1px 2px 4px rgba(0,0,0,0.66);}
+
+/* BLOG SECTION HOME */
+#blog_section{padding-top:24px;}
+#blog_section .section_heading{color:#F2F7F5;border-bottom:2px solid #F2F7F5;margin-bottom: 32px;}
+/* BLOG POST ITEM */
+.blogpost_item{display: grid;grid-template:1fr auto / 1fr auto;background-color:#fff;margin-bottom:8px;}
+.grid_object_header{grid-column:1 / 4;font-family: 'Akzidenz Grotesk Bold'; font-size: 20px;line-height:22px;text-align: left;margin-bottom:12px;}
+.left-side{grid-column: 1 / 2;margin-right: 8px;}
+.right-side{grid-column: 2 / 4;}
+.g_o_section .blog_count{font-size:44px;font-family:'Source Serif Pro Light', serif; padding:16px 0;text-align: left;}
+.g_o_section .blogpost_author{font-family:'Source Serif Pro Italic', serif; color:#708B99;text-align: left;}
+.g_o_section img{width:100%;height: auto;}
+
+/* COMPANIES CAROUSEL HOME */
+#partners .bx-wrapper{background-color: #708B99;border:none;}
+.companies_carousel{background-color: #708B99;}
+.image_item_frame.square{display: grid;place-items:center;}
+/* .image_item_frame.square img{object-fit: contain;} */
 /* END HOME */
 
 
@@ -112,11 +136,12 @@ a:hover{color:#30434D;transition:color .6s;}
 /* SINGLE INMUEBLE */
 
 /* TABBED WIDGET */
-/* #tabbed_widget{position:fixed;top:64px;left:0;right:0;} */
+#tabbed_widget{display: block;}
 #tabbed_widget .tabs{display:flex;flex-direction: row; justify-content: space-between; align-items: center; padding:16px 0;}
 #tabbed_widget .tabs button{border-bottom:2px solid grey;color:grey;}
 #tabbed_widget .tabs button.selected_tab{border-bottom:2px solid black;color:black;}
 #panorama {min-width:320px; width: 100%;min-height:180px; height:auto;margin:0 auto;}
+.main_wrapper.inmo_single{top:40vh;background-color: #fff;}
 
 .tabpanels .panel{display: none;}
 .tabpanels .panel.selected{display: block;}

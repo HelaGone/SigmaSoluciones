@@ -19,8 +19,9 @@ get_header(); ?>
 
     <!-- SCROLL SECTION -->
     <section class="inner_container scroll_section">
+
       <!-- SERVICES SECTION -->
-      <section id="services_section">
+      <section id="services_section" class="section_wrapper">
         <div class="about_info">
           <?php
             $about = get_post(2);
@@ -67,26 +68,101 @@ get_header(); ?>
         <?php
             endforeach; ?>
         </section>
+        <!-- END POSTS POOL -->
 
       </section>
 
       <!-- BLOG SECTION -->
-      <section id="blog_section">
+      <?php
+        $args = array(
+          'post_type'=>'post',
+          'posts_per_page'=>3,
+          'post_status'=>'publish',
+          'orderby'=>'date',
+          'order'=>'date'
+        );
+        $blog = new WP_Query($args);
+        if($blog->have_posts()): ?>
+          <section id="blog_section" class="section_wrapper">
+            <h2 class="section_heading">BLOG</h2>
+            <section class="posts_pool">
+              <?php
+                  $i = 1;
+                  while($blog->have_posts()):
+                    $blog->the_post();
+                    setup_postdata($post); ?>
+                    <div class="blogpost_item inner_wrapper">
+                      <h3 class="grid_object_header">
+                        <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title);?>">
+                          <?php the_title(); ?>
+                        </a>
+                      </h3>
 
-      </section>
+                      <div class="left-side g_o_section">
+                        <div class="blog_count">
+                          <span><?php echo (strlen($i)>1) ? $i : '0' . $i;?></span>
+                        </div>
+                        <span class="blogpost_author">
+                          <?php echo get_the_author_meta('display_name', $post->post_author); ?>
+                        </span>
+                      </div>
+
+                      <div class="right-side g_o_section">
+                        <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title);?>">
+                          <?php
+                            if(has_post_thumbnail()):
+                              the_post_thumbnail('sig-s-320');
+                            else: ?>
+                              <img style="width:100%;" src="<?php echo THEMEPATH . 'images/default.jpg' ?>" alt="Cover Inmueble">
+                          <?php
+                            endif; ?>
+                        </a>
+                      </div>
+
+                    </div>
+              <?php
+                    $i++;
+                  endwhile;
+                  wp_reset_postdata(); ?>
+            </section>
+            <div class="_see_more">
+              <a href="<?php echo get_post_type_archive_link('post'); ?>" title="Ver más">Ver más</a>
+            </div>
+          </section>
+      <?php
+        endif; ?>
+      <!-- END BLOG SECTION -->
 
       <!-- LOGOS DE EMPRESAS -->
-      <section id="partners">
-
+      <section id="partners" class="section_wrapper">
+        <div class="companies_carousel">
+          <picture class="image_item_frame square">
+            <img src="<?php echo THEMEPATH . 'images/companies/centro.png'; ?>" alt="Logo CENTRO">
+          </picture>
+          <picture class="image_item_frame square">
+            <img src="<?php echo THEMEPATH . 'images/companies/LOGO_NEW_BLACK.png'; ?>" alt="Logo NEW BLACK">
+          </picture>
+          <picture class="image_item_frame square">
+            <img src="<?php echo THEMEPATH . 'images/companies/sigma_logo_hsqua.png'; ?>" alt="Logo SIGMA">
+          </picture>
+          <picture class="image_item_frame square">
+            <img src="<?php echo THEMEPATH . 'images/companies/centro.png'; ?>" alt="Logo CENTRO">
+          </picture>
+          <picture class="image_item_frame square">
+            <img src="<?php echo THEMEPATH . 'images/companies/LOGO_NEW_BLACK.png'; ?>" alt="Logo NEW BLACK">
+          </picture>
+          <picture class="image_item_frame square">
+            <img src="<?php echo THEMEPATH . 'images/companies/sigma_logo_hsqua.png'; ?>" alt="Logo SIGMA">
+          </picture>
+        </div>
       </section>
     </section>
 
   </section>
 </main>
 <script type="text/javascript">
-
   $(function(){
-    $('.carousel1').bxSlider({
+    const bx_conf_home = {
       mode:'vertical',
       captions:false,
       pager: false,
@@ -95,9 +171,8 @@ get_header(); ?>
       autoDelay:111,
       speed:3500,
       pause:7000
-    });
-
-    $('.carousel2').bxSlider({
+    }
+    const bx_conf_home_2 = {
       mode:'vertical',
       captions:false,
       pager: false,
@@ -106,7 +181,23 @@ get_header(); ?>
       autoDirection:'prev',
       speed:3500,
       pause:7000
-    });
+    }
+    const bx_conf_partners = {
+      mode:'horizontal',
+      easing:'ease-in',
+      ticker: true,
+      auto:true,
+      pause:1666,
+      maxSlides:3,
+      slideWidth:1440,
+      responsive:true,
+      autoDelay:3000,
+      pager:false,
+      slideMargin:16
+    };
+    $('.carousel1').bxSlider(bx_conf_home);
+    $('.carousel2').bxSlider(bx_conf_home_2);
+    $('.companies_carousel').bxSlider(bx_conf_partners);
   });
 </script>
 <?php get_footer(); ?>
