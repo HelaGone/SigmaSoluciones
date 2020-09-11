@@ -23,8 +23,8 @@ Tags: Custom, wordpress, theme, templates
   src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Bold.otf') format("opentype")
 }
 @font-face {
-  font-family: 'Akzidenz Grotesk Condensed';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Cond.otf') format("opentype");
+  font-family: 'Akzidenz Grotesk LightCond';
+  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-LightCond.otf') format("opentype");
 }
 @font-face {
   font-family: 'Source Serif Pro Bold';
@@ -116,7 +116,7 @@ a:hover{color:#30434D;transition:color .6s;}
 #blog_section{padding-top:24px;}
 #blog_section .section_heading{color:#F2F7F5;border-bottom:2px solid #F2F7F5;margin-bottom: 32px;}
 /* BLOG POST ITEM */
-.blogpost_item{display: grid;grid-template:1fr auto / 1fr auto;background-color:#fff;margin-bottom:8px;}
+.blogpost_item{display: grid;grid-template-columns:1fr 1fr;background-color:#fff;margin-bottom:8px;}
 .grid_object_header{grid-column:1 / 4;font-family: 'Akzidenz Grotesk Bold'; font-size: 20px;line-height:22px;text-align: left;margin-bottom:12px;}
 .left-side{grid-column: 1 / 2;margin-right: 8px;min-width: 94px;}
 .right-side{grid-column: 2 / 4;}
@@ -170,7 +170,19 @@ a:hover{color:#30434D;transition:color .6s;}
 .map_container iframe{width:100%;height:auto;}
 
 /* FOOTER STYLES */
+/* Social Icons */
+.social_icons{display: flex;flex-direction: row;justify-content: flex-end;align-items: center;}
+.social_icons .icon_item{margin: 4px 8px;}
 .footer_style{position:relative;top:46vh;z-index: 2;}
+.big_footer{display: grid;grid-template-columns:minmax(160px, 50%) 1fr;column-gap:8px;background-color:#30434D;color:#F2F7F5;font-family:'Akzidenz Grotesk LightCond', sans-serif;font-size: 14px;line-height: 16px;}
+.mini_footer{background-color:#E26917; padding:8px;}
+.sig_about_foot img{object-fit:cover; margin:0 0 8px 16px;}
+.sig_contact_foot h4{font-size: 18px}
+.sig_contact_foot h4, .sig_contact_foot span{color:#E26917;}
+._comms li{margin:12px 0;font-size: 16px;}
+._disclaimers{grid-column:1 / 3;display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding:12px;}
+/* END FOOTER STYLES */
+
 
 
 @media only screen and (min-width:360px){
