@@ -29,6 +29,7 @@
 	// DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
 	define( 'JSPATH', get_template_directory_uri() . '/js/' );
 	define( 'CSSPATH', get_template_directory_uri() . '/css/' );
+	define( 'FONTSPATH', get_template_directory_uri() . '/fonts/' );
 	define( 'THEMEPATH', get_template_directory_uri() . '/' );
 	define( 'SITEURL', site_url('/') );
 

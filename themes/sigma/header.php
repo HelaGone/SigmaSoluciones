@@ -23,7 +23,16 @@
 		<link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon-16x16.png">
 
-		<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json">
+		<link rel="manifest" href="<?php echo THEMEPATH .'manifest.json'; ?>">
+		<link rel="preload" href="<?php echo THEMEPATH .'style.css'; ?>" as="style">
+		<link rel="preload" href="<?php echo THEMEPATH .'js/jquery.bxslider.min.js'; ?>" as="script">
+		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Light.otf'; ?>" as="font" type="font/opentype" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Regular.otf'; ?>" as="font" type="font/opentype" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Bold.otf'; ?>" as="font" type="font/opentype" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Cond.otf'; ?>" as="font" type="font/opentype" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-Bold.ttf'; ?>" as="font" type="font/truetype" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-Light.ttf'; ?>" as="font" type="font/truetype" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-LightItalic.ttf'; ?>" as="font" type="font/truetype" crossorigin>
 
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -43,7 +52,7 @@
 		<header id="main_header" class="main_header">
 			<div class="main_header_item logo_item">
 				<a href="<?php echo home_url('','https'); ?>" title="Sigma Soluciones">
-					<img width="83" height="47" src="<?php echo THEMEPATH . 'images/logo_sigma.png'; ?>" alt="Sigma Soluciones Logotipo">
+					<img width="83" height="47" src="<?php echo THEMEPATH . 'images/logo_sigma.svg'; ?>" alt="Sigma Soluciones Logotipo">
 				</a>
 			</div>
 			<div class="main_header_item button_item">
