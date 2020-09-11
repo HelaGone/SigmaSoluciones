@@ -12,31 +12,31 @@ Tags: Custom, wordpress, theme, templates
 */
 @font-face {
   font-family: 'Akzidenz Grotesk Light';
-  src: url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Light.otf') format("opentype");
+  src: url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Light.otf') format("opentype");
 }
 @font-face {
   font-family: 'Akzidenz Grotesk';
-  src: url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Regular.otf') format("opentype");
+  src: url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Regular.otf') format("opentype");
 }
 @font-face{
   font-family: 'Akzidenz Grotesk Bold';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Bold.otf') format("opentype")
+  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Bold.otf') format("opentype")
 }
 @font-face {
   font-family: 'Akzidenz Grotesk LightCond';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-LightCond.otf') format("opentype");
+  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-LightCond.otf') format("opentype");
 }
 @font-face {
   font-family: 'Source Serif Pro Bold';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Bold.ttf') format("truetype");
+  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-Bold.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Source Serif Pro Light';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Light.ttf') format("truetype");
+  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-Light.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Source Serif Pro Italic';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-LightItalic.ttf') format("truetype");
+  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-LightItalic.ttf') format("truetype");
 }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -182,8 +182,6 @@ a:hover{color:#30434D;transition:color .6s;}
 ._comms li{margin:12px 0;font-size: 16px;}
 ._disclaimers{grid-column:1 / 3;display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding:12px;}
 /* END FOOTER STYLES */
-
-
 
 @media only screen and (min-width:360px){
   .ameni_list{width:94%;}
