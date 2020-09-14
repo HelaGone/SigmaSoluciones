@@ -2,33 +2,186 @@
   global $wp_query;
   $query_vars = $wp_query->query_vars;
   $pt = $query_vars['post_type'];
-  $arch_name = ($query_vars['post_type'] == 'inmuebles') ? 'inmobiliaria' : $pt;
+  $arch_name = ($pt == 'inmuebles') ? 'inmobiliaria' : $pt;
   if(have_posts()): ?>
-    <main id="" class="main_wrapper">
-      <section class="main_wrapper_section">
-        <div class="fixed_header_frame">
-          <figure>
-            <img src="<?php echo THEMEPATH.'images/headers/'.$pt.'.jpg' ?>" alt="">
-            <figcaption>
-              <h1><?php echo esc_html(strtoupper($arch_name)); ?></h1>
-              <p>Lorem Ipsum Dolor Sit met consectetur adipiscing elit mecenas nullam proim esectas integer</p>
-            </figcaption>
-          </figure>
+    <section class="main_wrapper_section">
+      <section class="fixed_top_section">
+        <figure class="fig_obj">
+          <img src="<?php echo THEMEPATH.'images/headers/'.$pt.'.jpg' ?>" alt="">
+          <figcaption class="fig_caption">
+            <div class="">
+              <h1 class="fig_title"><?php echo esc_html(strtoupper($arch_name)); ?></h1>
+              <p class="fig_descr">Lorem Ipsum Dolor Sit met consectetur adipiscing elit mecenas nullam proim esectas integer</p>
+            </div>
+          </figcaption>
+        </figure>
+      </section>
+      <!-- SCROLL SECTION -->
+      <section class="inner_container scroll_section">
+        <h2 class="section_heading">NUESTROS SERVICIOS</h2>
+        <div class="descriptive_txt">
+          <p>
+            En SIGMA nos comprometemos con nuestros clientes para brindarles una
+            experiencia segura y confiable en cada una de las etapas que conforman
+            el proceso de compra, venta o arrendamiento de su inmueble.
+          </p>
         </div>
-        <!-- SCROLL SECTION -->
-        <section class="inner_container scroll_section">
+        <section class="services_grid">
+          <?php
+            $args = array(
+              'post_type'=>'servicios',
+              'post_status'=>'publish',
+              'posts_per_page'=>4,
+              'orderby'=>'name',
+              'order'=>'ASC',
+              'tax_query'=>array(
+                array(
+                  'taxonomy'=>'tipo-servicio',
+                  'field'=>'slug',
+                  'terms'=>array('inmobiliarios')
+                )
+              )
+            );
+            $services = get_posts($args);
+            if(is_array($services)&&!empty($services)): ?>
+              <ul class="services_list">
+                <?php
+                  foreach($services as $key => $service):
+                    $cover_slug = $service->post_name;
+                    $service_name = $service->post_title; ?>
+                    <li class="service_item">
+                      <figure class="infocard_obj">
+                        <button type="button" name="button" onclick="handleServiceClick()">
+                          <img width="48" height="48" src="<?php echo THEMEPATH .'images/assets/'.$cover_slug.'.svg' ?>" alt="<?php echo esc_attr($service_name); ?>">
+                        </button>
+                        <figcaption class="infocard_caption">
+                          <h3 class="infocard_title">
+                            <?php echo esc_html($service_name); ?>
+                          </h3>
+                        </figcaption>
+                      </figure>
+                    </li>
+                <?php
+                  endforeach; ?>
+              </ul>
+          <?php
+            endif; ?>
+        </section>
+        <!-- END SERVICES GRID -->
+
+        <!-- INMUEBLES LIST -->
+        <section id="inm_list_section" class="section_wrapper">
+          <h2 class="section_heading"><?php echo esc_html(strtoupper($pt)); ?></h2>
+          <section id="filter_widget">
+            <?php echo get_search_form(); ?>
+            <div class="">
+              <select class="" name="ventarenta">
+                <option value="venta">Venta</option>
+                <option value="renta">Renta</option>
+              </select>
+              <select class="" name="casadepto">
+                <option value="casa">Casa</option>
+                <option value="departamento">Departamento</option>
+              </select>
+            </div>
+          </section>
           <?php
             $i=1;
             while(have_posts()):
               the_post();
-              setup_postdata($post);
-              get_template_part('templates/block', 'blog_item', array('count'=>$i));
+              $p_id = $post->ID;
+              $meta_dimensiones = get_post_meta($p_id, 'dimensiones', true);
+              $meta_habitaciones = get_post_meta($p_id, 'habitaciones', true);
+              $meta_banos = get_post_meta($p_id, 'banos', true);
+              $meta_gimnasio = get_post_meta($p_id, 'gimnasio', true);
+              $meta_vigilancia = get_post_meta($p_id, 'vigilancia', true);
+              $meta_mascotas = get_post_meta($p_id, 'mascotas', true);
+              $meta_estacionamiento = get_post_meta($p_id, 'estacionamiento', true);
+              $meta_alberca = get_post_meta($p_id, 'alberca', true);
+              $meta_ubicacion = get_post_meta($p_id, 'ubicacion', true);
+              $meta_venta_renta = get_post_meta($p_id, 'venta__renta', true);
+              $meta_precio = get_post_meta($p_id, 'precio', true);
+              $amenities_arr = array(
+                array(
+                  'gym'=>$meta_gimnasio,
+                  'seguridad'=>$meta_vigilancia,
+                  'pets'=>$meta_mascotas,
+                  'alberca'=>$meta_alberca
+                )); ?>
+
+              <figure class="inm_fig_obj">
+                <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+                  <?php
+                    if(has_post_thumbnail()):
+                      the_post_thumbnail($p_id, 'sig-m-480');
+                    else:  ?>
+                      <img src="<?php echo THEMEPATH .'images/default.jpg' ?>" alt="<?php echo esc_attr($post->post_title); ?>">
+                  <?php
+                    endif; ?>
+                </a>
+                <figcaption class="inm_fig_caption">
+                  <h3><?php the_title(); ?></h3>
+                  <div class=""></div>
+                  <div class="info__bottom_bar">
+                    <span>
+                      <?php echo esc_html(strtoupper($meta_venta_renta)); ?>
+                    </span>
+                  <!--
+                    <ul class="amenities_row_list">
+                      <?php
+                        if(is_array($amenities_arr)&&!empty($amenities_arr)):
+                          foreach($amenities_arr as $key => $amenities):
+                            foreach ($amenities as $key => $amenity): ?>
+                              <li class="amenitie_item">
+                                <img width="24" height="24" src="<?php echo THEMEPATH .'images/assets/'.$key.'.svg'; ?>" alt="Amenity icon">
+                              </li>
+                      <?php
+                            endforeach;
+                          endforeach;
+                        endif; ?>
+                    </ul>
+                  -->
+                    <span class="price">
+                      <?php echo esc_html('$'.$meta_precio); ?>
+                    </span>
+                  </div>
+
+                </figcaption>
+              </figure>
+          <?php
               $i++;
-            endwhile;
-            wp_reset_postdata(); ?>
+            endwhile; ?>
         </section>
+        <!-- END INMUEBLES LIST -->
+
+        <!-- ASESORES CAROUSEL -->
+        <section id="asesores_list" class="section_wrapper">
+          <ul class="asesores_carousel">
+            <li>
+              <figure>
+                <!-- La foto del asesor -->
+                <img src="" alt="">
+                <figcaption>
+                  <h3>Nombre del asesor</h3>
+                  <p>Descripción del asesor</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
+        <!-- END ASESORES CAROUSEL -->
+
       </section>
-    </main>
+      <!-- END SCROLL SECTION -->
+    </section>
+    <script type="text/javascript">
+      $(function(){
+        const handleServiceClick = () => {
+          console.log("click");
+        }
+       $('.asesores_carousel').bxSlider();
+      });
+    </script>
 <?php
   endif;
   get_footer(); ?>

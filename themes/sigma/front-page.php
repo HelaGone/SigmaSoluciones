@@ -135,43 +135,43 @@
 
   </section>
   <script type="text/javascript">
-  $(function(){
-    const bx_conf_home = {
-      mode:'vertical',
-      captions:false,
-      pager: false,
-      auto:true,
-      controls:false,
-      autoDelay:111,
-      speed:3500,
-      pause:7000
-    }
-    const bx_conf_home_2 = {
-      mode:'vertical',
-      captions:false,
-      pager: false,
-      auto:true,
-      controls:false,
-      autoDirection:'prev',
-      speed:3500,
-      pause:7000
-    }
-    const bx_conf_partners = {
-      mode:'horizontal',
-      easing:'ease-in',
-      ticker: true,
-      auto:true,
-      pause:1666,
-      maxSlides:3,
-      slideWidth:1440,
-      responsive:true,
-      autoDelay:3000,
-      pager:false,
-      slideMargin:16
-    };
-    $('.carousel1').bxSlider(bx_conf_home);
-    $('.carousel2').bxSlider(bx_conf_home_2);
-    $('.companies_carousel').bxSlider(bx_conf_partners);
-  });
-</script>
+    $(function(){
+      const bx_conf_home = {
+        mode:'vertical',
+        captions:false,
+        pager: false,
+        auto:true,
+        controls:false,
+        autoDelay:111,
+        speed:3500,
+        pause:7000
+      }
+      const bx_conf_home_2 = {
+        mode:'vertical',
+        captions:false,
+        pager: false,
+        auto:true,
+        controls:false,
+        autoDirection:'prev',
+        speed:3500,
+        pause:7000
+      }
+      const bx_conf_partners = {
+        mode:'horizontal',
+        easing:'ease-in',
+        ticker: true,
+        auto:true,
+        pause:1666,
+        maxSlides:3,
+        slideWidth:1440,
+        responsive:true,
+        autoDelay:3000,
+        pager:false,
+        slideMargin:16
+      };
+      $('.carousel1').bxSlider(bx_conf_home);
+      $('.carousel2').bxSlider(bx_conf_home_2);
+      $('.companies_carousel').bxSlider(bx_conf_partners);
+    });
+  </script>
 <?php get_footer(); ?>

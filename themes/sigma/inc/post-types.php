@@ -171,7 +171,7 @@ add_action('init', function(){
 		'menu_icon'			     => 'dashicons-admin-tools',
 		'hierarchical'       => false,
 		'menu_position'      => 4,
-		'taxonomies'         => array('category', 'post_tag'),
+		'taxonomies'         => array('category', 'post_tag', 'taxonomy'),
 		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'author' )
 	);
 	register_post_type( 'servicios', $args );
