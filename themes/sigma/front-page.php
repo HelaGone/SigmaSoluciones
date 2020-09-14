@@ -2,11 +2,10 @@
   /*
     Template name: Sigma Home
   */
-get_header(); ?>
-
-<main id="home_main_container" class="main_wrapper">
+  get_header(); ?>
   <section class="main_wrapper_section">
-    <div class="fixed_header_frame">
+    <!-- fixed header -->
+    <section class="fixed_top_section home_carousel">
       <div class="side_carousel carousel1">
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/img1.jpg' ?>" alt="Img 1">
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/img2.jpg' ?>" alt="Img 2">
@@ -15,11 +14,10 @@ get_header(); ?>
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/img3.jpg' ?>" alt="Img 3">
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/img4.jpg' ?>" alt="Img 4">
       </div>
-    </div>
+    </section>
 
     <!-- SCROLL SECTION -->
     <section class="inner_container scroll_section">
-
       <!-- SERVICES SECTION -->
       <section id="services_section" class="section_wrapper">
         <div class="about_info">
@@ -86,6 +84,7 @@ get_header(); ?>
         );
         $blog = new WP_Query($args);
         if($blog->have_posts()): ?>
+          <!-- BLOG SECTION -->
           <section id="blog_section" class="section_wrapper">
             <h2 class="section_heading">BLOG</h2>
             <section class="posts_pool">
@@ -103,6 +102,7 @@ get_header(); ?>
               <a href="<?php echo site_url('blog-sigma'); ?>" title="Ver más">Ver más</a>
             </div>
           </section>
+
       <?php
         endif; ?>
       <!-- END BLOG SECTION -->
@@ -130,11 +130,11 @@ get_header(); ?>
           </picture>
         </div>
       </section>
+
     </section>
 
   </section>
-</main>
-<script type="text/javascript">
+  <script type="text/javascript">
   $(function(){
     const bx_conf_home = {
       mode:'vertical',

@@ -64,3 +64,4 @@
 				</button>
 			</div>
 		</header>
+		<main class="main_wrapper">
