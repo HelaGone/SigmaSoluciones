@@ -154,8 +154,10 @@
 	}
 
 	function ct_pre_get_posts($query){
-		if(is_archive()){
-			$query->set('posts_per_page', 9);
+		if(!is_admin() && $query->is_main_query()){
+			if(is_archive()){
+				$query->set('posts_per_page', 9);
+			}
 		}
 	}
 	add_action('pre_get_posts', 'ct_pre_get_posts');

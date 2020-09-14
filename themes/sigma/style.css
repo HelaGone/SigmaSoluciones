@@ -12,31 +12,31 @@ Tags: Custom, wordpress, theme, templates
 */
 @font-face {
   font-family: 'Akzidenz Grotesk Light';
-  src: url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Light.otf') format("opentype");
+  src: url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Light.otf') format("opentype");
 }
 @font-face {
   font-family: 'Akzidenz Grotesk';
-  src: url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Regular.otf') format("opentype");
+  src: url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Regular.otf') format("opentype");
 }
 @font-face{
   font-family: 'Akzidenz Grotesk Bold';
-  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Bold.otf') format("opentype")
+  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Bold.otf') format("opentype")
 }
 @font-face {
   font-family: 'Akzidenz Grotesk LightCond';
-  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-LightCond.otf') format("opentype");
+  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-LightCond.otf') format("opentype");
 }
 @font-face {
   font-family: 'Source Serif Pro Bold';
-  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-Bold.ttf') format("truetype");
+  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Bold.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Source Serif Pro Light';
-  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-Light.ttf') format("truetype");
+  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Light.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Source Serif Pro Italic';
-  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-LightItalic.ttf') format("truetype");
+  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-LightItalic.ttf') format("truetype");
 }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -95,10 +95,10 @@ a:hover{color:#30434D;transition:color .6s;}
 /* END HEADER */
 
 /* HOME */
-.home_header_frame{position:fixed;top:64px;left:0;right:0; display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;}
+.fixed_header_frame{position:fixed;top:64px;left:0;right:0; display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;}
 .side_carousel{width:calc(100% / 2);flex-shrink: 0;}
 .side_carousel img{object-fit: cover;}
-.home_header_frame .bx-wrapper{border:none;}
+.fixed_header_frame .bx-wrapper{border:none;}
 
 .inner_container{background-color:#30434D;border-radius: 30px 30px 0 0;}
 .scroll_section{position:relative;z-index:2;padding:32px 0;}

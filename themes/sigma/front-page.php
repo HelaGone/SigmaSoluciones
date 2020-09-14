@@ -5,8 +5,8 @@
 get_header(); ?>
 
 <main id="home_main_container" class="main_wrapper">
-  <section class="hk-section main_wrapper_section">
-    <div class="home_header_frame">
+  <section class="main_wrapper_section">
+    <div class="fixed_header_frame">
       <div class="side_carousel carousel1">
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/img1.jpg' ?>" alt="Img 1">
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/img2.jpg' ?>" alt="Img 2">
@@ -40,28 +40,31 @@ get_header(); ?>
             foreach (get_post_types(array(), 'names') as $key => $value):
               switch($key){
                 case 'inmuebles':
-                  array_push($services, $value);
+                  array_push($services, array("name"=>$value, "link"=>get_post_type_archive_link($key) ));
                   break;
                 case 'recorridos-virtuales':
-                  array_push($services, $value);
+                  array_push($services, array("name"=>$value, "link"=>get_post_type_archive_link($key) ));
                   break;
                 default: null;
               }
             endforeach;
             $serv_page = get_post(65);
-            array_push($services, $serv_page->post_name);
+            array_push($services, array("name"=>$serv_page->post_name, "link"=>get_the_permalink($serv_page->ID)));
 
             ct_move_element($services, 2, 1);
             foreach ($services as $key => $service):
-              $s_name = str_replace('-', ' ', $service);
-              ?>
+              $s_name = str_replace('-', ' ', $service['name']); ?>
               <figure class="ribbon_fig_obj">
                 <picture>
-                  <img src="<?php echo THEMEPATH . 'images/default.jpg' ?>" alt="Cover Inmueble">
+                  <a href="<?php echo esc_url($service['link']); ?>" title="<?php echo esc_attr($s_name); ?>">
+                    <img src="<?php echo THEMEPATH . 'images/default.jpg' ?>" alt="Cover Inmueble">
+                  </a>
                 </picture>
                 <figcaption class="ribbon_fig_capion">
                   <h2 class="ribbon_fig_title">
-                    <a href="#"><?php echo esc_html(strtoupper($s_name)); ?></a>
+                    <a href="<?php echo esc_url($service['link']); ?>" title="<?php echo esc_attr($s_name); ?>">
+                      <?php echo esc_html(strtoupper($s_name)); ?>
+                    </a>
                   </h2>
                 </figcaption>
               </figure>
@@ -90,43 +93,14 @@ get_header(); ?>
                   $i = 1;
                   while($blog->have_posts()):
                     $blog->the_post();
-                    setup_postdata($post); ?>
-                    <div class="blogpost_item inner_wrapper">
-                      <h3 class="grid_object_header">
-                        <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title);?>">
-                          <?php the_title(); ?>
-                        </a>
-                      </h3>
-
-                      <div class="left-side g_o_section">
-                        <div class="blog_count">
-                          <span><?php echo (strlen($i)>1) ? $i : '0' . $i;?></span>
-                        </div>
-                        <span class="blogpost_author">
-                          <?php echo get_the_author_meta('display_name', $post->post_author); ?>
-                        </span>
-                      </div>
-
-                      <div class="right-side g_o_section">
-                        <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title);?>">
-                          <?php
-                            if(has_post_thumbnail()):
-                              the_post_thumbnail('sig-s-320');
-                            else: ?>
-                              <img style="width:100%;" src="<?php echo THEMEPATH . 'images/default.jpg' ?>" alt="Cover Inmueble">
-                          <?php
-                            endif; ?>
-                        </a>
-                      </div>
-
-                    </div>
-              <?php
+                    setup_postdata($post);
+                    get_template_part('templates/figure', 'item', array("count"=>$i));
                     $i++;
                   endwhile;
                   wp_reset_postdata(); ?>
             </section>
             <div class="_see_more">
-              <a href="<?php echo get_post_type_archive_link('post'); ?>" title="Ver más">Ver más</a>
+              <a href="<?php echo site_url('blog-sigma'); ?>" title="Ver más">Ver más</a>
             </div>
           </section>
       <?php
