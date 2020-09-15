@@ -212,3 +212,14 @@
     $p2 = array_splice($array, 0, $b);
     $array = array_merge($p2,$p1,$array);
 	}
+
+	/**
+	 * @author Holkan Luna
+	 * [ct_get_alt_text]
+	 * @param [Integer] $post_id
+	 * @return [String] $alt_text
+	*/
+	function ct_get_alt_text($post_id){
+		$att_id = get_post_thumbnail_id($post_id);
+		return get_post_meta($att_id, '_wp_attachment_image_alt', true);
+	}

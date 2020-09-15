@@ -155,20 +155,47 @@
         <!-- END INMUEBLES LIST -->
 
         <!-- ASESORES CAROUSEL -->
-        <section id="asesores_list" class="section_wrapper">
-          <ul class="asesores_carousel">
-            <li>
-              <figure>
-                <!-- La foto del asesor -->
-                <img src="" alt="">
-                <figcaption>
-                  <h3>Nombre del asesor</h3>
-                  <p>Descripción del asesor</p>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-        </section>
+        <?php
+          $args = array(
+            'post_type'=>'asesores',
+            'post_status'=>'publish',
+            'posts_per_page'=>4,
+            'orderby'=>'name',
+            'order'=>'ASC'
+          );
+          $asesores = get_posts($args);
+          if(is_array($asesores)&&!empty($asesores)): ?>
+            <section id="asesores_list" class="section_wrapper inner_wrapper">
+              <h2 class="section_heading">Conoce a nuestros asesores</h2>
+              <ul class="ases_carousel">
+                <?php
+                  foreach($asesores as $key => $asesor):
+                    $a_id = $asesor->ID;
+                     ?>
+                    <li class="ases_list_item inner_wrapper">
+                      <figure class="ases_fig_obj">
+                        <?php
+                          if(has_post_thumbnail()):
+                            echo get_the_post_thumbnail($a_id, 'sig-m-480');
+                          else: ?>
+                            <img width="420" height="420" src="<?php echo THEMEPATH .'images/default_squa.jpg' ?>" alt="<?php echo esc_attr($asesor->post_title); ?>">
+                        <?php
+                          endif; ?>
+                        <figcaption class="ases_fig_caption inner_wrapper">
+                          <h3><?php echo esc_html($asesor->post_title); ?></h3>
+                          <p><?php echo esc_html($asesor->post_excerpt); ?></p>
+                        </figcaption>
+                      </figure>
+                    </li>
+                <?php
+                  endforeach;
+                ?>
+              </ul>
+            </section>
+        <?php
+          endif;
+        ?>
+
         <!-- END ASESORES CAROUSEL -->
 
       </section>
@@ -179,7 +206,12 @@
         const handleServiceClick = () => {
           console.log("click");
         }
-       $('.asesores_carousel').bxSlider();
+       $('.ases_carousel').bxSlider({
+         pager:false,
+         controls:false,
+         auto:true,
+         slideMargin:16
+       });
       });
     </script>
 <?php

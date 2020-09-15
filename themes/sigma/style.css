@@ -10,6 +10,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: custom-theme
 Tags: Custom, wordpress, theme, templates
 */
+
+/* COLOR PALETTE
+ Dark blue: #30434D
+ Medium Blue: #708B99
+ Light orange: #FFE4D7
+ Orange: #E26917
+ Bluish White: #F2F7F5
+ Light Orange: #FFE4D7
+ */
+
 @font-face {
   font-family: 'Akzidenz Grotesk Light';
   src: url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Light.otf') format("opentype");
@@ -69,15 +79,6 @@ button{background:none;border:none;}
 body{font-family: 'Akzidenz Grotesk',sans-serif;color:#30434D;}
 a{text-decoration: none;color:inherit;}
 a:hover{color:#30434D;transition:color .6s;}
-
-/* COLOR PALETTE
- Dark blue: #30434D
- Medium Blue: #708B99
- Light orange: #FFE4D7
- Orange: #E26917
- Bluish White: #F2F7F5
- Light Orange: #FFE4D7
- */
 
 /* GENERAL */
 .main_wrapper{max-width:1440px;margin:0 auto;position:relative;top:47vh;}
@@ -188,6 +189,8 @@ a:hover{color:#30434D;transition:color .6s;}
 .fig_title{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;}
 .fig_descr{font-size: 14px;line-height: 16px;font-family: 'Source Serif Pro Light', serif; }
 
+#inm_list_section{padding:24px 0;background-color: #fff;}
+#inm_list_section h2{color:#30434D;border-bottom: 2px solid #30434D;}
 .inm_fig_obj{position:relative; margin:0 0 16px 0;}
 .inm_fig_obj img{width:100%;height: auto;}
 .amenitie_item img{width:24px;height:24px;}
@@ -202,12 +205,19 @@ a:hover{color:#30434D;transition:color .6s;}
 /* SERVICES WIDGET */
 .services_grid{margin:24px 0;}
 .services_list{display: flex;flex-wrap: wrap; justify-content: center;}
-.service_item{
-  flex: 0 1 150px;margin: 5px;
-  padding:8px;
-  border-radius:7px;
-}
+.service_item{flex: 0 1 150px;margin: 5px;padding:8px;border-radius:7px;}
 .infocard_caption{color:#f2f7f5;font-family: 'Source Serif Pro Light', serif;font-size: 14px;line-height: 16px;text-align: center;padding: 0;margin:8px 0;}
+
+/* ASESORES WIDGET */
+#asesores_list{background-color: #F2F7F5;}
+#asesores_list .bx-wrapper{background-color: transparent;box-shadow: none;}
+#asesores_list .bx-viewport{padding-bottom:16px;}
+#asesores_list h2{color:#30434D;border-bottom: 3px solid #30434D;}
+.ases_list_item{max-width: 220px;box-shadow:1px 3px 4px rgba(0,0,0,0.3);background-color:#FFE4D7;border-radius: 13px;}
+.ases_fig_obj{width:100%;text-align: center;}
+.ases_fig_obj img{width:120px;height:120px;border-radius: 50%;object-fit: cover;margin: 0 auto;}
+.ases_fig_caption h3{font-size: 16px;font-family: 'Source Serif Pro Light', serif; margin-bottom:16px;}
+.ases_fig_caption p{font-family: 'Akzidenz Grotesk LightCond', sans-serif;}
 
 /* END ARCHIVE INMUEBLE */
 
