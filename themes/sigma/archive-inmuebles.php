@@ -185,6 +185,7 @@
                           <h3><?php echo esc_html($asesor->post_title); ?></h3>
                           <p><?php echo esc_html($asesor->post_excerpt); ?></p>
                         </figcaption>
+                        <a class="cover_anchor" href="<?php echo get_the_permalink($a_id); ?>" title="<?php echo esc_attr($asesor->post_title); ?>"></a>
                       </figure>
                     </li>
                 <?php

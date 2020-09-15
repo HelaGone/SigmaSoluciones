@@ -91,6 +91,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .section_wrapper{text-align: center;}
 .dark_blue_bg{background-color:#30434D;}
 ._see_more{background-color:white;border-radius: 5px;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);max-width:80px;margin:32px auto;padding:16px;font-family: 'Source Serif Pro', serif;}
+.cover_anchor{position: absolute;top:0;left: 0;right: 0;bottom: 0;}
 
 /* FIXED TOP SECTION */
 .fixed_top_section{position: fixed;top:64px;left:0;right:0;}
@@ -214,7 +215,7 @@ a:hover{color:#30434D;transition:color .6s;}
 #asesores_list .bx-viewport{padding-bottom:16px;}
 #asesores_list h2{color:#30434D;border-bottom: 3px solid #30434D;}
 .ases_list_item{max-width: 220px;box-shadow:1px 3px 4px rgba(0,0,0,0.3);background-color:#FFE4D7;border-radius: 13px;}
-.ases_fig_obj{width:100%;text-align: center;}
+.ases_fig_obj{width:100%;text-align: center;position: relative;}
 .ases_fig_obj img{width:120px;height:120px;border-radius: 50%;object-fit: cover;margin: 0 auto;}
 .ases_fig_caption h3{font-size: 16px;font-family: 'Source Serif Pro Light', serif; margin-bottom:16px;}
 .ases_fig_caption p{font-family: 'Akzidenz Grotesk LightCond', sans-serif;}
