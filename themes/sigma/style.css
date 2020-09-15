@@ -205,9 +205,24 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* SERVICES WIDGET */
 .services_grid{margin:24px 0;}
-.services_list{display: flex;flex-wrap: wrap; justify-content: center;}
+.services_list{display: flex;flex-wrap: wrap; justify-content: center;position: relative;}
 .service_item{flex: 0 1 150px;margin: 5px;padding:8px;border-radius:7px;}
 .infocard_caption{color:#f2f7f5;font-family: 'Source Serif Pro Light', serif;font-size: 14px;line-height: 16px;text-align: center;padding: 0;margin:8px 0;}
+
+.view_box{background-color: #fff;position: absolute;top:0;left:0;right:0;bottom:0;overflow: scroll;padding:16px;text-align: left;line-height: 20px;}
+.view_box button{position:absolute;right:16px;top:16px;}
+.view_box p{padding-top:32px;margin-bottom: 16px;}
+.close_viewbox{font-weight: 700;}
+.calltoaction{font-weight: 700;font-family: 'Source Serif Pro Light', serif;color:#E26917;}
+
+/* SEARCH FORM */
+.sig_form_wrapper{padding:16px;position: relative;}
+.sig_form_wrapper input[type="text"]{width:100%;height: 32px;border:2px solid #30434D;background-color: #F2F2F2;color:#30434D;border-radius: 5px;}
+.sig_form_wrapper input[type="image"]{position: absolute;right:16px;top:24px;}
+
+/* SELECTOR WIDGET */
+.selectors_wrapper{padding:0 16px 16px;}
+.selectors_wrapper select{width: calc(100% / 2 - 24px);padding: 8px 12px;border:none; border-radius: 25px;background-color: #CAE5E4;position: relative;font-weight: 700;outline: none;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);}
 
 /* ASESORES WIDGET */
 #asesores_list{background-color: #F2F7F5;}

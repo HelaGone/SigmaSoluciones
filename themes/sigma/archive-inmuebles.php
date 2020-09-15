@@ -4,6 +4,17 @@
   $pt = $query_vars['post_type'];
   $arch_name = ($pt == 'inmuebles') ? 'inmobiliaria' : $pt;
   if(have_posts()): ?>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('button').on('click', function(){
+          console.log("click");
+          $(this).parent().parent().find('.view_box').show();
+        });
+        $('.close_viewbox').on('click', function(){
+          $(this).parent().hide();
+        });
+      });
+    </script>
     <section class="main_wrapper_section">
       <section class="fixed_top_section">
         <figure class="fig_obj">
@@ -26,6 +37,7 @@
             el proceso de compra, venta o arrendamiento de su inmueble.
           </p>
         </div>
+
         <section class="services_grid">
           <?php
             $args = array(
@@ -48,10 +60,13 @@
                 <?php
                   foreach($services as $key => $service):
                     $cover_slug = $service->post_name;
-                    $service_name = $service->post_title; ?>
+                    $service_name = $service->post_title;
+                    $permalink = get_the_permalink($service->ID);
+                    $excerpt = get_the_excerpt($service->ID);
+                     ?>
                     <li class="service_item">
                       <figure class="infocard_obj">
-                        <button type="button" name="button" onclick="handleServiceClick()">
+                        <button type="button" name="button">
                           <img width="48" height="48" src="<?php echo THEMEPATH .'images/assets/'.$cover_slug.'.svg' ?>" alt="<?php echo esc_attr($service_name); ?>">
                         </button>
                         <figcaption class="infocard_caption">
@@ -60,6 +75,13 @@
                           </h3>
                         </figcaption>
                       </figure>
+                      <div class="view_box" hidden>
+                        <button class="close_viewbox">Cerrar</button>
+                        <p><?php echo $excerpt; ?></p>
+                        <span class="calltoaction">
+                          <a href="<?php echo esc_url($permalink); ?>" title="<?php echo esc_attr($service_name); ?>">Conoce más</a>
+                        </span>
+                      </div>
                     </li>
                 <?php
                   endforeach; ?>
@@ -74,7 +96,7 @@
           <h2 class="section_heading"><?php echo esc_html(strtoupper($pt)); ?></h2>
           <section id="filter_widget">
             <?php echo get_search_form(); ?>
-            <div class="">
+            <div class="selectors_wrapper inner_wrapper">
               <select class="" name="ventarenta">
                 <option value="venta">Venta</option>
                 <option value="renta">Renta</option>
@@ -204,9 +226,6 @@
     </section>
     <script type="text/javascript">
       $(function(){
-        const handleServiceClick = () => {
-          console.log("click");
-        }
        $('.ases_carousel').bxSlider({
          pager:false,
          controls:false,
