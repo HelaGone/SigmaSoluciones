@@ -1,4 +1,5 @@
 <section class="services_grid">
+  <h2 class="section_heading">NUESTROS SERVICIOS</h2>
   <?php
     $service = $args['serv'];
     $_args = array(

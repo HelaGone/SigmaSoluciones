@@ -22,7 +22,7 @@
       <section id="services_section" class="section_wrapper">
         <div class="about_info">
           <?php
-            $about = get_post(2);
+            $about = get_page_by_path('somos-expertos');
             if(gettype($about) == 'object'&&$about!=null): ?>
               <h1 class="section_heading"><?php echo esc_html($about->post_title); ?></h1>
               <div class="post_content_container descriptive_txt">

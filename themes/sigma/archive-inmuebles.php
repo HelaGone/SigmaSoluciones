@@ -9,7 +9,7 @@
         <figure class="fig_obj">
           <img src="<?php echo THEMEPATH.'images/headers/'.$pt.'.jpg' ?>" alt="">
           <figcaption class="fig_caption">
-            <div class="">
+            <div class="inner_wrapper">
               <h1 class="fig_title"><?php echo esc_html(strtoupper($arch_name)); ?></h1>
               <p class="fig_descr">Lorem Ipsum Dolor Sit met consectetur adipiscing elit mecenas nullam proim esectas integer</p>
             </div>

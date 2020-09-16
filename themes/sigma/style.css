@@ -81,8 +81,8 @@ a{text-decoration: none;color:inherit;}
 a:hover{color:#30434D;transition:color .6s;}
 
 /* GENERAL */
-.main_wrapper{max-width:1440px;margin:0 auto;position:relative;top:47vh;}
-.home .main_wrapper{position:relative;top:60vh;}
+.main_wrapper{max-width:1440px;margin:0 auto;position:relative;top:64vh;}
+/* .home .main_wrapper{position:relative;top:60vh;} */
 .main_wrapper .bx-wrapper{margin-bottom: 0;}
 .main_wrapper_section .bx-wrapper{border:none;}
 .inner_wrapper{padding:16px 8px 8px;}
@@ -97,7 +97,6 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* FIXED TOP SECTION */
 .fixed_top_section{position: fixed;top:64px;left:0;right:0;}
-.fixed_top_section img{width:100%;height: auto;}
 .scroll_section{position:relative;padding:32px 0 0 0;text-align: center;}
 
 /* HEADER */
@@ -191,6 +190,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .fig_obj{position:relative;}
 .fig_obj img{width:100%;}
 .fig_caption{position: absolute;bottom:3px;left:0;right:0;top:0;display: grid;place-items:center;text-align: center;color:#F2F7F5;background-color: rgba(0,0,0,0.3);}
+.fig_caption div.inner_wrapper{position:relative;bottom:25%;}
 .fig_title{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;}
 .fig_descr{font-size: 14px;line-height: 16px;font-family: 'Source Serif Pro Light', serif; }
 
@@ -245,11 +245,12 @@ a:hover{color:#30434D;transition:color .6s;}
 /* END ARCHIVE INMUEBLE */
 
 /* ARCHIVE DISENO CONSTRUCCIÓN */
-.page-template-page-diseno-construccion .main_wrapper{top:64vh;}
+/* .page-template-page-diseno-construccion .main_wrapper{top:64vh;} */
 #page-dc .section_heading{font-family:'Source Serif Pro Light', serif;}
+#page-dc .fixed_top_section img{width:100%;height: auto;}
 #page-dc .inner_container{background-color: #fff;padding-bottom: 1px;}
 #page-dc .section_heading, #page-dc .descriptive_txt, #page-dc .infocard_caption{color:#30434D;}
-#page-dc .section_heading{border-bottom: 2px solid #30434D;}
+#page-dc .section_heading{border-bottom: 2px solid #30434D;font-weight: 700;}
 #page-dc h2.section_heading{font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 32px;}
 #page-dc .descriptive_txt{text-align: center;margin-bottom: 24px;}
 #success_cases{padding:32px 0;}
@@ -260,6 +261,10 @@ a:hover{color:#30434D;transition:color .6s;}
 .cases_fig_caption p{ color:#F2F7F5;}
 .cases_fig_caption h3{margin:16px 0;}
 /* END ARCHIVE DISEÑO CONSTRUCCIÓN */
+
+/* ARCHIVE RECORRIDOS VIRTUALES */
+#archive-rec-vir .inner_container{background-color: white;}
+#archive-rec-vir .services_grid{background-color: #30434D;}
 
 /* FOOTER STYLES */
 /* Social Icons */
