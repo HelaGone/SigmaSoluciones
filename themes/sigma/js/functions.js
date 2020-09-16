@@ -10,5 +10,12 @@ $(document).ready(function(){
 	/*
 	 * jQuery
 	*/
+	// CAROUSELS IN ARCHIVE BOTTOM POSITION
+	$('.bottom_carousel').bxSlider({
+		pager:false,
+		controls:false,
+		auto:true,
+		slideMargin:16
+	});
 
 });

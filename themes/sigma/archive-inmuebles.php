@@ -139,13 +139,13 @@
           if(is_array($asesores)&&!empty($asesores)): ?>
             <section id="asesores_list" class="section_wrapper inner_wrapper">
               <h2 class="section_heading">Conoce a nuestros asesores</h2>
-              <ul class="ases_carousel">
+              <ul class="bottom_carousel">
                 <?php
                   foreach($asesores as $key => $asesor):
                     $a_id = $asesor->ID;
                      ?>
-                    <li class="ases_list_item inner_wrapper">
-                      <figure class="ases_fig_obj">
+                    <li class="bottom_car_list_item inner_wrapper">
+                      <figure class="bottom_car_fig_obj">
                         <?php
                           if(has_post_thumbnail()):
                             echo get_the_post_thumbnail($a_id, 'sig-m-480');
@@ -174,16 +174,6 @@
       </section>
       <!-- END SCROLL SECTION -->
     </section>
-    <script type="text/javascript">
-      $(function(){
-       $('.ases_carousel').bxSlider({
-         pager:false,
-         controls:false,
-         auto:true,
-         slideMargin:16
-       });
-      });
-    </script>
 <?php
   endif;
   get_footer(); ?>

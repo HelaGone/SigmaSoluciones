@@ -89,7 +89,9 @@ a:hover{color:#30434D;transition:color .6s;}
 .section_heading{color:#FFE4D7;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 24px;line-height: 28px;text-align: center;border-bottom:2px solid #FFE4D7;display: inline-block;padding:2px 4px;margin-bottom:16px;}
 .descriptive_txt{color:#F2F7F5;font-family: 'Source Serif Pro Light', serif;font-size: 16px;line-height: 22px;text-align:left; padding:0 15%;}
 .section_wrapper{text-align: center;}
+
 .dark_blue_bg{background-color:#30434D;}
+
 ._see_more{background-color:white;border-radius: 5px;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);max-width:80px;margin:32px auto;padding:16px;font-family: 'Source Serif Pro', serif;}
 .cover_anchor{position: absolute;top:0;left: 0;right: 0;bottom: 0;}
 
@@ -227,22 +229,35 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* ASESORES WIDGET */
 #asesores_list{background-color: #F2F7F5;}
-#asesores_list .bx-wrapper{background-color: transparent;box-shadow: none;}
-#asesores_list .bx-viewport{padding-bottom:16px;}
 #asesores_list h2{color:#30434D;border-bottom: 3px solid #30434D;}
-.ases_list_item{max-width: 220px;box-shadow:1px 3px 4px rgba(0,0,0,0.3);background-color:#FFE4D7;border-radius: 13px;}
-.ases_fig_obj{width:100%;text-align: center;position: relative;}
-.ases_fig_obj img{width:120px;height:120px;border-radius: 50%;object-fit: cover;margin: 0 auto;}
+
+/* BOTTOM CAROUSEL */
+.section_wrapper .bx-wrapper{background-color: transparent;box-shadow: none;}
+.section_wrapper .bx-viewport{padding-bottom:16px;}
+
+.bottom_car_list_item{max-width: 220px; box-shadow:1px 3px 4px rgba(0,0,0,0.3);background-color:#FFE4D7;border-radius: 13px;}
+.bottom_car_fig_obj{width:100%;text-align: center;position: relative;}
+.bottom_car_fig_obj img{width:120px;height:120px;border-radius: 50%;object-fit: cover;margin: 0 auto;}
+
 .ases_fig_caption h3{font-size: 16px;font-family: 'Source Serif Pro Light', serif; margin-bottom:16px;}
 .ases_fig_caption p{font-family: 'Akzidenz Grotesk LightCond', sans-serif;}
 /* END ARCHIVE INMUEBLE */
 
 /* ARCHIVE DISENO CONSTRUCCIÓN */
 .page-template-page-diseno-construccion .main_wrapper{top:64vh;}
+#page-dc .section_heading{font-family:'Source Serif Pro Light', serif;}
 #page-dc .inner_container{background-color: #fff;}
 #page-dc .section_heading, #page-dc .descriptive_txt, #page-dc .infocard_caption{color:#30434D;}
 #page-dc .section_heading{border-bottom: 2px solid #30434D;}
+#page-dc h2.section_heading{font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 32px;}
 #page-dc .descriptive_txt{text-align: center;margin-bottom: 24px;}
+#success_cases{padding:32px 0;}
+#success_cases .section_heading{color:#FFE4D7;border-bottom: 2px solid #FFE4D7; font-family: 'Akzidenz Grotesk Bold', sans-serif;}
+#success_cases .bottom_car_list_item{max-width: 180px;background-color: transparent;color:#F2F7F5;box-shadow: none;}
+#success_cases .bottom_car_list_item
+.cases_fig_caption, .cases_fig_caption .descriptive_txt{font-family:'Akzidenz Grotesk LightCond', sans-serif;}
+.cases_fig_caption p{ color:#F2F7F5;}
+.cases_fig_caption h3{margin:16px 0;}
 /* END ARCHIVE DISEÑO CONSTRUCCIÓN */
 
 /* FOOTER STYLES */
@@ -252,6 +267,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .footer_style{position:relative;z-index: 2;}
 .big_footer{display: grid;grid-template-columns:minmax(160px, 50%) 1fr;column-gap:8px;background-color:#30434D;color:#F2F7F5;font-family:'Akzidenz Grotesk LightCond', sans-serif;font-size: 14px;line-height: 16px;}
 .mini_footer{background-color:#E26917; padding:8px;}
+
 .sig_about_foot img{object-fit:cover; margin:0 0 8px 16px;}
 .sig_contact_foot h4{font-size: 18px}
 .sig_contact_foot h4, .sig_contact_foot span{color:#E26917;}

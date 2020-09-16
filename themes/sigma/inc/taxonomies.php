@@ -4,7 +4,7 @@
 	function custom_taxonomies_callback(){
 
 		// TIPO DE SERVICIO
-		if( ! taxonomy_exists('autores')){
+		if( ! taxonomy_exists('tipo-servicio')){
 
 			$labels = array(
 				'name'              => 'Tipos de servicios',
@@ -31,6 +31,37 @@
 			);
 
 			register_taxonomy( 'tipo-servicio', 'servicios', $args );
+		}
+
+
+		// TIPO DE CASO
+		if( ! taxonomy_exists('tipo-caso')){
+
+			$labels = array(
+				'name'              => 'Tipos de casos',
+				'singular_name'     => 'Tipo de caso',
+				'search_items'      => 'Buscar',
+				'all_items'         => 'Todos',
+				'edit_item'         => 'Editar Tipo de caso',
+				'update_item'       => 'Actualizar Tipo de caso',
+				'add_new_item'      => 'Nuevo Tipo de caso',
+				'new_item_name'     => 'Nombre Nuevo Tipo de caso',
+				'menu_name'         => 'Tipos de casos'
+			);
+
+			$args = array(
+				'hierarchical'      => true,
+				'labels'            => $labels,
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'show_in_nav_menus' => true,
+				'show_in_rest'			=> true,
+				'public'						=> true,
+				'query_var'         => true,
+				'rewrite'           => array( 'slug' => 'tipo-caso' ),
+			);
+
+			register_taxonomy( 'tipo-caso', array('casos-de-exito', 'recorridos-virtuales'), $args );
 		}
 
 

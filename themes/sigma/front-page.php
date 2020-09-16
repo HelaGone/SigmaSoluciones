@@ -159,7 +159,7 @@
       const bx_conf_partners = {
         mode:'horizontal',
         easing:'ease-in',
-        ticker: true,
+        controls:false,
         auto:true,
         pause:1666,
         maxSlides:3,
