@@ -95,6 +95,7 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* FIXED TOP SECTION */
 .fixed_top_section{position: fixed;top:64px;left:0;right:0;}
+.fixed_top_section img{width:100%;height: auto;}
 .scroll_section{position:relative;padding:32px 0;text-align: center;}
 
 /* HEADER */
@@ -234,8 +235,15 @@ a:hover{color:#30434D;transition:color .6s;}
 .ases_fig_obj img{width:120px;height:120px;border-radius: 50%;object-fit: cover;margin: 0 auto;}
 .ases_fig_caption h3{font-size: 16px;font-family: 'Source Serif Pro Light', serif; margin-bottom:16px;}
 .ases_fig_caption p{font-family: 'Akzidenz Grotesk LightCond', sans-serif;}
-
 /* END ARCHIVE INMUEBLE */
+
+/* ARCHIVE DISENO CONSTRUCCIÓN */
+.page-template-page-diseno-construccion .main_wrapper{top:64vh;}
+#page-dc .inner_container{background-color: #fff;}
+#page-dc .section_heading, #page-dc .descriptive_txt, #page-dc .infocard_caption{color:#30434D;}
+#page-dc .section_heading{border-bottom: 2px solid #30434D;}
+#page-dc .descriptive_txt{text-align: center;margin-bottom: 24px;}
+/* END ARCHIVE DISEÑO CONSTRUCCIÓN */
 
 /* FOOTER STYLES */
 /* Social Icons */
