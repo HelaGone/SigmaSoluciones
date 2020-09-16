@@ -4,17 +4,6 @@
   $pt = $query_vars['post_type'];
   $arch_name = ($pt == 'inmuebles') ? 'inmobiliaria' : $pt;
   if(have_posts()): ?>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('button').on('click', function(){
-          console.log("click");
-          $(this).parent().parent().find('.view_box').show();
-        });
-        $('.close_viewbox').on('click', function(){
-          $(this).parent().hide();
-        });
-      });
-    </script>
     <section class="main_wrapper_section">
       <section class="fixed_top_section">
         <figure class="fig_obj">

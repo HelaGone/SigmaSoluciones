@@ -107,29 +107,7 @@
         endif; ?>
       <!-- END BLOG SECTION -->
 
-      <!-- LOGOS DE EMPRESAS -->
-      <section id="partners" class="section_wrapper">
-        <div class="companies_carousel">
-          <picture class="image_item_frame square">
-            <img src="<?php echo THEMEPATH . 'images/companies/centro.png'; ?>" alt="Logo CENTRO">
-          </picture>
-          <picture class="image_item_frame square">
-            <img src="<?php echo THEMEPATH . 'images/companies/LOGO_NEW_BLACK.png'; ?>" alt="Logo NEW BLACK">
-          </picture>
-          <picture class="image_item_frame square">
-            <img src="<?php echo THEMEPATH . 'images/companies/sigma_logo_hsqua.png'; ?>" alt="Logo SIGMA">
-          </picture>
-          <picture class="image_item_frame square">
-            <img src="<?php echo THEMEPATH . 'images/companies/centro.png'; ?>" alt="Logo CENTRO">
-          </picture>
-          <picture class="image_item_frame square">
-            <img src="<?php echo THEMEPATH . 'images/companies/LOGO_NEW_BLACK.png'; ?>" alt="Logo NEW BLACK">
-          </picture>
-          <picture class="image_item_frame square">
-            <img src="<?php echo THEMEPATH . 'images/companies/sigma_logo_hsqua.png'; ?>" alt="Logo SIGMA">
-          </picture>
-        </div>
-      </section>
+      <?php get_template_part('templates/barra', 'partners'); ?>
 
     </section>
 
@@ -156,22 +134,8 @@
         speed:3500,
         pause:7000
       }
-      const bx_conf_partners = {
-        mode:'horizontal',
-        easing:'ease-in',
-        controls:false,
-        auto:true,
-        pause:1666,
-        maxSlides:3,
-        slideWidth:1440,
-        responsive:true,
-        autoDelay:3000,
-        pager:false,
-        slideMargin:16
-      };
       $('.carousel1').bxSlider(bx_conf_home);
       $('.carousel2').bxSlider(bx_conf_home_2);
-      $('.companies_carousel').bxSlider(bx_conf_partners);
     });
   </script>
 <?php get_footer(); ?>

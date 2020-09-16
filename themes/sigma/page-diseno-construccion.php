@@ -77,6 +77,9 @@
                 <?php
               endif; ?>
 
+              <!-- BARRA PARTNERS  -->
+            <?php get_template_part('templates/barra', 'partners'); ?>
+
           </section>
           <?php
         endwhile; ?>

@@ -98,7 +98,7 @@ a:hover{color:#30434D;transition:color .6s;}
 /* FIXED TOP SECTION */
 .fixed_top_section{position: fixed;top:64px;left:0;right:0;}
 .fixed_top_section img{width:100%;height: auto;}
-.scroll_section{position:relative;padding:32px 0;text-align: center;}
+.scroll_section{position:relative;padding:32px 0 0 0;text-align: center;}
 
 /* HEADER */
 .main_header{position:fixed;top:0;left:0;right:0;z-index:3;display: flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:#F2F7F5;padding:8px 8px;box-shadow: 1px 2px 4px rgba(0,0,0,0.33);}
@@ -137,6 +137,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .g_o_section img{width:100%;height: auto;}
 
 /* COMPANIES CAROUSEL HOME */
+#partners{margin:16px 0;}
 #partners .bx-wrapper{background-color: #708B99;border:none;}
 .companies_carousel{background-color: #708B99;}
 .image_item_frame.square{display: grid;place-items:center;}
@@ -246,7 +247,7 @@ a:hover{color:#30434D;transition:color .6s;}
 /* ARCHIVE DISENO CONSTRUCCIÓN */
 .page-template-page-diseno-construccion .main_wrapper{top:64vh;}
 #page-dc .section_heading{font-family:'Source Serif Pro Light', serif;}
-#page-dc .inner_container{background-color: #fff;}
+#page-dc .inner_container{background-color: #fff;padding-bottom: 1px;}
 #page-dc .section_heading, #page-dc .descriptive_txt, #page-dc .infocard_caption{color:#30434D;}
 #page-dc .section_heading{border-bottom: 2px solid #30434D;}
 #page-dc h2.section_heading{font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 32px;}
