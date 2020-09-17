@@ -155,7 +155,6 @@ a:hover{color:#30434D;transition:color .6s;}
 #tabbed_widget .tabs button{border-bottom:2px solid grey;color:grey;}
 #tabbed_widget .tabs button.selected_tab{border-bottom:2px solid black;color:black;}
 #panorama {min-width:320px; width: 100%;min-height:180px; height:auto;margin:0 auto;}
-/* .inmo_single{top:40vh;background-color: #fff;} */
 
 .tabpanels .panel{display: none;}
 .tabpanels .panel.selected{display: block;}
@@ -179,9 +178,25 @@ a:hover{color:#30434D;transition:color .6s;}
 .ameni_item .fig_object{display:grid;place-items: center;padding:4px 0;position: relative;}
 .ameni_item .fig_object img{margin-bottom:4px;}
 
+/* Content */
+.content_container{text-align: left;font-family:'Source Serif Pro Light', serif; font-weight: 700;}
+.content_container p{line-height: 26px;margin-bottom: 12px;}
+.content_container strong{font-weight: 700;}
+.content_container a{color:#E26917;}
+.content_container a:hover{color:#FFE4D7;}
+.content_container ul{list-style:square inside;padding:0 0 0 16px;}
+.content_container ul li{margin-bottom:8px;}
+.content_container figure{margin:16px 0;width:100%;}
+.content_container .wp-block-image img{width: 100%;height: auto;}
+.content_container .wp-block-gallery ul{padding:0;}
+.content_container .wp-block-image figcaption, .content_container .wp-block-quote cite{font-family: 'Source Serif Pro Italic', serif;}
+
 /* Map container */
-.map_container{width:100%;}
+.map_container{background-color: #F2F7F5;padding-top:32px;padding-bottom:32px;margin-bottom:32px;}
 .map_container iframe{width:100%;height:auto;}
+
+/*Related*/
+#related_pool .section_heading{color:#30434D;border-bottom: none; }
 
 /* ARCHIVE BLOG */
 .blog_carousel img{width: 100%; height: auto;object-fit: cover;}

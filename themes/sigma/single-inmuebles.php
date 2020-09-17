@@ -146,7 +146,7 @@
       <div class="inner_wrapper content_container">
         <?php the_content(); ?>
       </div>
-      <div class="map_container">
+      <div class="map_container inner_wrapper">
         <?php echo $maps_location; ?>
       </div>
     </section>
@@ -161,16 +161,22 @@
           'order'=>'DESC',
           'post__not_in'=>array($pId)
         );
-        $related = get_posts($args);
-        if(is_array($related)&&!empty($related)): ?>
-          <h2>También te pueden interesar</h2>
+        $related = new WP_Query($args);
+        if($related->have_posts()): ?>
+          <h2 class="section_heading">También te pueden interesar</h2>
           <section class="post_pool">
             <?php
               // debug(get_intermediate_image_sizes());
-              foreach ($related as $key => $item):
-                $inmuId = $item->ID;
-                $thumbId = get_post_thumbnail_id($inmuId); ?>
-                <figure>
+              while ($related->have_posts()):
+                $related->the_post();
+                setup_postdata($post);
+                $inmuId = $post->ID;
+                $meta_venta_renta = get_post_meta($inmuId, 'venta__renta', true);
+                $meta_precio = get_post_meta($inmuId, 'precio', true);
+
+                get_template_part('templates/figure', 'inmueble', array('precio'=>$meta_precio, 'tipo'=>$meta_venta_renta)); ?>
+
+                <!-- <figure>
                   <picture>
                     <source media="(min-width:1280px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-xxl-1280')) ? get_the_post_thumbnail_url($inmuId, 'sig-xxl-1280') : ''; ?>">
                     <source media="(min-width:768px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-xl-960')) ? get_the_post_thumbnail_url($inmuId, 'sig-xl-960') : ''; ?>">
@@ -181,9 +187,10 @@
                   <figcaption>
                     <h3><?php echo esc_html($item->post_title); ?></h3>
                   </figcaption>
-                </figure>
+                </figure> -->
             <?php
-              endforeach; ?>
+              wp_reset_postdata();
+              endwhile; ?>
           </section>
       <?php
         endif;?>

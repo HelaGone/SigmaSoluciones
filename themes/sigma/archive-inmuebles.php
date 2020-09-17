@@ -68,48 +68,10 @@
                   'seguridad'=>$meta_vigilancia,
                   'pets'=>$meta_mascotas,
                   'alberca'=>$meta_alberca
-                )); ?>
+                ));
 
-              <figure class="inm_fig_obj">
-                  <?php
-                    if(has_post_thumbnail()):
-                      the_post_thumbnail($p_id, 'sig-m-480');
-                    else:  ?>
-                      <img src="<?php echo THEMEPATH .'images/default.jpg' ?>" alt="<?php echo esc_attr($post->post_title); ?>">
-                  <?php
-                    endif; ?>
-                <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-                  <figcaption class="inm_fig_caption">
-                    <h3><?php the_title(); ?></h3>
-                    <div class=""></div>
-                    <div class="info__bottom_bar">
-                      <span>
-                        <?php echo esc_html(strtoupper($meta_venta_renta)); ?>
-                      </span>
-                    <!--
-                      <ul class="amenities_row_list">
-                        <?php
-                          if(is_array($amenities_arr)&&!empty($amenities_arr)):
-                            foreach($amenities_arr as $key => $amenities):
-                              foreach ($amenities as $key => $amenity): ?>
-                                <li class="amenitie_item">
-                                  <img width="24" height="24" src="<?php echo THEMEPATH .'images/assets/'.$key.'.svg'; ?>" alt="Amenity icon">
-                                </li>
-                        <?php
-                              endforeach;
-                            endforeach;
-                          endif; ?>
-                      </ul>
-                    -->
-                      <span class="price">
-                        <?php echo esc_html('$'.$meta_precio); ?>
-                      </span>
-                    </div>
+              get_template_part('templates/figure', 'inmueble', array('precio'=>$meta_precio, 'tipo'=>$meta_venta_renta));
 
-                  </figcaption>
-                </a>
-              </figure>
-          <?php
               $i++;
             endwhile; ?>
         </section>
