@@ -144,17 +144,18 @@ a:hover{color:#30434D;transition:color .6s;}
 /* .image_item_frame.square img{object-fit: contain;} */
 /* END HOME */
 
-
-
 /* SINGLE INMUEBLE */
 
 /* TABBED WIDGET */
+.single-inmuebles .main_wrapper{top:40vh;}
+.single-inmuebles .inner_container{background-color: #fff;}
+.single-inmuebles .scroll_section{padding-top:0;}
 #tabbed_widget{display: block;}
 #tabbed_widget .tabs{display:flex;flex-direction: row; justify-content: space-between; align-items: center; padding:16px 0;}
 #tabbed_widget .tabs button{border-bottom:2px solid grey;color:grey;}
 #tabbed_widget .tabs button.selected_tab{border-bottom:2px solid black;color:black;}
 #panorama {min-width:320px; width: 100%;min-height:180px; height:auto;margin:0 auto;}
-.main_wrapper.inmo_single{top:40vh;background-color: #fff;}
+/* .inmo_single{top:40vh;background-color: #fff;} */
 
 .tabpanels .panel{display: none;}
 .tabpanels .panel.selected{display: block;}
@@ -175,7 +176,7 @@ a:hover{color:#30434D;transition:color .6s;}
 #amenities_pool{margin-top:32px;}
 .ameni_list{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;align-items: center;width:98%;max-width:352.5px;margin:0 auto;}
 .ameni_item{width:62px; height:62px;padding:8px;background-color: #FFE4D7;border-radius: 5px;margin-bottom:16px;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);}
-.ameni_item .fig_object{display:grid;place-items: center;padding:4px 0;}
+.ameni_item .fig_object{display:grid;place-items: center;padding:4px 0;position: relative;}
 .ameni_item .fig_object img{margin-bottom:4px;}
 
 /* Map container */
@@ -188,12 +189,12 @@ a:hover{color:#30434D;transition:color .6s;}
 /* END ARCHIVE BLOG */
 
 /* ARCHIVE INMUEBLE */
-.fig_obj{position:relative;}
-.fig_obj img{width:100%;}
-.fig_caption{position: absolute;bottom:3px;left:0;right:0;top:0;display: grid;place-items:center;text-align: center;color:#F2F7F5;background-color: rgba(0,0,0,0.3);}
-.fig_caption div.inner_wrapper{position:relative;bottom:25%;}
-.fig_title{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;}
-.fig_descr{font-size: 14px;line-height: 16px;font-family: 'Source Serif Pro Light', serif; }
+.arc_fig_obj{position:relative;}
+.arc_fig_obj img{width:100%;}
+.arc_fig_obj .fig_caption{position: absolute;bottom:3px;left:0;right:0;top:0;display: grid;place-items:center;text-align: center;color:#F2F7F5;background-color: rgba(0,0,0,0.3);}
+.arc_fig_obj .fig_caption div.inner_wrapper{position:relative;bottom:25%;}
+.arc_fig_obj .fig_title{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;}
+.arc_fig_obj .fig_descr{font-size: 14px;line-height: 16px;font-family: 'Source Serif Pro Light', serif; }
 
 #inm_list_section{padding:24px 0;background-color: #fff;}
 #inm_list_section h2{color:#30434D;border-bottom: 2px solid #30434D;}
@@ -263,7 +264,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .cases_fig_caption h3{margin:16px 0;}
 /* END ARCHIVE DISEÑO CONSTRUCCIÓN */
 
-/* ARCHIVE RECORRIDOS VIRTUALES */ 
+/* ARCHIVE RECORRIDOS VIRTUALES */
 #archive-rec-vir h1.section_heading{color:#30434D;border-bottom:none;font-size: 32px;}
 #archive-rec-vir p.descriptive_txt{color:#30434D;font-family: 'Source Serif Pro Italic', serif;text-align: center;}
 #archive-rec-vir .inner_container{background-color: white;}

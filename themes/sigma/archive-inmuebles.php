@@ -6,7 +6,7 @@
   if(have_posts()): ?>
     <section class="main_wrapper_section">
       <section class="fixed_top_section">
-        <figure class="fig_obj">
+        <figure class="arc_fig_obj">
           <img src="<?php echo THEMEPATH.'images/headers/'.$pt.'.jpg' ?>" alt="">
           <figcaption class="fig_caption">
             <div class="inner_wrapper">
@@ -71,7 +71,6 @@
                 )); ?>
 
               <figure class="inm_fig_obj">
-                <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
                   <?php
                     if(has_post_thumbnail()):
                       the_post_thumbnail($p_id, 'sig-m-480');
@@ -79,35 +78,36 @@
                       <img src="<?php echo THEMEPATH .'images/default.jpg' ?>" alt="<?php echo esc_attr($post->post_title); ?>">
                   <?php
                     endif; ?>
-                </a>
-                <figcaption class="inm_fig_caption">
-                  <h3><?php the_title(); ?></h3>
-                  <div class=""></div>
-                  <div class="info__bottom_bar">
-                    <span>
-                      <?php echo esc_html(strtoupper($meta_venta_renta)); ?>
-                    </span>
-                  <!--
-                    <ul class="amenities_row_list">
-                      <?php
-                        if(is_array($amenities_arr)&&!empty($amenities_arr)):
-                          foreach($amenities_arr as $key => $amenities):
-                            foreach ($amenities as $key => $amenity): ?>
-                              <li class="amenitie_item">
-                                <img width="24" height="24" src="<?php echo THEMEPATH .'images/assets/'.$key.'.svg'; ?>" alt="Amenity icon">
-                              </li>
-                      <?php
+                <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+                  <figcaption class="inm_fig_caption">
+                    <h3><?php the_title(); ?></h3>
+                    <div class=""></div>
+                    <div class="info__bottom_bar">
+                      <span>
+                        <?php echo esc_html(strtoupper($meta_venta_renta)); ?>
+                      </span>
+                    <!--
+                      <ul class="amenities_row_list">
+                        <?php
+                          if(is_array($amenities_arr)&&!empty($amenities_arr)):
+                            foreach($amenities_arr as $key => $amenities):
+                              foreach ($amenities as $key => $amenity): ?>
+                                <li class="amenitie_item">
+                                  <img width="24" height="24" src="<?php echo THEMEPATH .'images/assets/'.$key.'.svg'; ?>" alt="Amenity icon">
+                                </li>
+                        <?php
+                              endforeach;
                             endforeach;
-                          endforeach;
-                        endif; ?>
-                    </ul>
-                  -->
-                    <span class="price">
-                      <?php echo esc_html('$'.$meta_precio); ?>
-                    </span>
-                  </div>
+                          endif; ?>
+                      </ul>
+                    -->
+                      <span class="price">
+                        <?php echo esc_html('$'.$meta_precio); ?>
+                      </span>
+                    </div>
 
-                </figcaption>
+                  </figcaption>
+                </a>
               </figure>
           <?php
               $i++;
