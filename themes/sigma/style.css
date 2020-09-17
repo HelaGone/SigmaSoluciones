@@ -97,7 +97,7 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* FIXED TOP SECTION */
 .fixed_top_section{position: fixed;top:64px;left:0;right:0;}
-.scroll_section{position:relative;padding:32px 0 0 0;text-align: center;}
+.scroll_section{position:relative;padding:32px 0 1px 0;text-align: center;}
 
 /* HEADER */
 .main_header{position:fixed;top:0;left:0;right:0;z-index:3;display: flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:#F2F7F5;padding:8px 8px;box-shadow: 1px 2px 4px rgba(0,0,0,0.33);}
@@ -124,6 +124,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .ribbon_fig_title{width:100%;padding:32px 0;text-align: center;background-color: rgba(0,0,0,0.66);color:#F2F7F5;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 22px;text-shadow: 1px 2px 4px rgba(0,0,0,0.66);}
 
 /* BLOG SECTION HOME */
+/* .page-template-page-blog .main_wrapper{top:47vh;} */
 #blog_section{padding-top:24px;}
 #blog_section .section_heading{color:#F2F7F5;border-bottom:2px solid #F2F7F5;margin-bottom: 32px;}
 /* BLOG POST ITEM */
@@ -262,9 +263,11 @@ a:hover{color:#30434D;transition:color .6s;}
 .cases_fig_caption h3{margin:16px 0;}
 /* END ARCHIVE DISEÑO CONSTRUCCIÓN */
 
-/* ARCHIVE RECORRIDOS VIRTUALES */
+/* ARCHIVE RECORRIDOS VIRTUALES */ 
+#archive-rec-vir h1.section_heading{color:#30434D;border-bottom:none;font-size: 32px;}
+#archive-rec-vir p.descriptive_txt{color:#30434D;font-family: 'Source Serif Pro Italic', serif;text-align: center;}
 #archive-rec-vir .inner_container{background-color: white;}
-#archive-rec-vir .services_grid{background-color: #30434D;}
+#archive-rec-vir .services_grid{background-color: #30434D;padding:32px 0;}
 
 /* FOOTER STYLES */
 /* Social Icons */

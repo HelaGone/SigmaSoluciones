@@ -27,7 +27,7 @@
                   array_push($not_repeat, $post->ID);
                   setup_postdata($post); ?>
                   <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-                    <?php has_post_thumbnail() ? the_post_thumbnail() : 'NADA'; ?>
+                    <?php has_post_thumbnail() ? the_post_thumbnail('sig-ver-m-420') : 'NADA'; ?>
                   </a>
               <?php
                   $i++;
@@ -81,7 +81,7 @@
         mode:'horizontal',
         auto:'true',
         pager:false,
-        controls:true
+        controls:false
       });
     });
   </script>

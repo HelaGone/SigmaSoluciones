@@ -151,7 +151,7 @@
 		add_image_size('sig-m-480', 480, 270, array('center', 'top'));
 		add_image_size('sig-s-320', 320, 180, array('center', 'top'));
 		add_image_size('sig-xs-240', 240, 135, array('center', 'top'));
-		add_image_size('sig-ver-m-420', 420, 747, true);
+		add_image_size('sig-ver-m-420', 420, 747, array('center', 'center'));
 	}
 
 	function ct_pre_get_posts($query){
