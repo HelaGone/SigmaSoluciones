@@ -23,7 +23,6 @@
               <?php the_excerpt(); ?>
             </div>
 
-            <h2 class="section_heading">SERVICIOS</h2>
             <!-- SERVICES GRID -->
             <?php get_template_part('templates/services', 'widget', array('serv'=>'construccion')); ?>
 

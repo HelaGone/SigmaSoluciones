@@ -1,6 +1,16 @@
 <section class="services_grid">
-  <h2 class="section_heading">NUESTROS SERVICIOS</h2>
   <?php
+    global $wp_query;
+    if(array_key_exists('post_type', $wp_query->query)):
+      if($wp_query->query['post_type'] != 'inmuebles'): ?>
+        <h2 class="section_heading">NUESTROS SERVICIOS</h2>
+  <?php
+      endif;
+    elseif(array_key_exists('page', $wp_query->query)): ?>
+        <h2 class="section_heading">SERVICIOS</h2>
+  <?php
+    endif;
+
     $service = $args['serv'];
     $_args = array(
       'post_type'=>'servicios',
