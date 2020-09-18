@@ -17,7 +17,7 @@
               <?php
             endif; ?>
           </div>
-          <section class="inner_container scroll_section">
+          <section class="rounded_container scroll_section">
             <h1 class="section_heading"><?php echo the_title(); ?></h1>
             <div class="descriptive_txt">
               <?php the_excerpt(); ?>

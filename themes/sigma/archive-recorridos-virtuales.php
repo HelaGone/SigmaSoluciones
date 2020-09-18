@@ -10,7 +10,7 @@
       </figure>
     </section>
     <!-- SCROLL SECTION -->
-    <section class="inner_container scroll_section">
+    <section class="rounded_container scroll_section">
       <h1 class="section_heading"><?php echo esc_html(ucfirst(str_replace('-', ' ', $arch_name))); ?></h1>
       <p class="descriptive_txt">En SIGMA rompemos barreras geográficas, brindándote una nueva manera de vivir un espacio.</p>
 

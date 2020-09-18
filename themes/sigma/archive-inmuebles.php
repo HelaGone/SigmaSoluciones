@@ -17,7 +17,7 @@
         </figure>
       </section>
       <!-- SCROLL SECTION -->
-      <section class="inner_container scroll_section">
+      <section class="rounded_container scroll_section">
         <h2 class="section_heading">NUESTROS SERVICIOS</h2>
         <div class="descriptive_txt">
           <p>

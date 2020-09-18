@@ -85,6 +85,7 @@ a:hover{color:#30434D;transition:color .6s;}
 /* .home .main_wrapper{position:relative;top:60vh;} */
 .main_wrapper .bx-wrapper{margin-bottom: 0;}
 .main_wrapper_section .bx-wrapper{border:none;}
+.inner_container{padding:16px 8px;}
 .inner_wrapper{padding:16px 8px 8px;}
 .section_heading{color:#FFE4D7;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 24px;line-height: 28px;text-align: center;border-bottom:2px solid #FFE4D7;display: inline-block;padding:2px 4px;margin-bottom:16px;}
 .descriptive_txt{color:#F2F7F5;font-family: 'Source Serif Pro Light', serif;font-size: 16px;line-height: 22px;text-align:left; padding:0 15%;}
@@ -112,7 +113,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .side_carousel img{object-fit: cover;}
 .fixed_header_frame .bx-wrapper{border:none;}
 
-.inner_container{background-color:#30434D;border-radius: 30px 30px 0 0;}
+.rounded_container{background-color:#30434D;border-radius: 30px 30px 0 0;}
 
 /* ABOUT SECTION HOME */
 .about_info{margin-bottom:32px;}
@@ -148,7 +149,7 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* TABBED WIDGET */
 .single-inmuebles .main_wrapper{top:40vh;}
-.single-inmuebles .inner_container{background-color: #fff;}
+.single-inmuebles .rounded_container{background-color: #fff;}
 .single-inmuebles .scroll_section{padding-top:0;}
 #tabbed_widget{display: block;}
 #tabbed_widget .tabs{display:flex;flex-direction: row; justify-content: space-between; align-items: center; padding:16px 0;}
@@ -265,7 +266,7 @@ a:hover{color:#30434D;transition:color .6s;}
 /* .page-template-page-diseno-construccion .main_wrapper{top:64vh;} */
 #page-dc .section_heading{font-family:'Source Serif Pro Light', serif;}
 #page-dc .fixed_top_section img{width:100%;height: auto;}
-#page-dc .inner_container{background-color: #fff;padding-bottom: 1px;}
+#page-dc .rounded_container{background-color: #fff;padding-bottom: 1px;}
 #page-dc .section_heading, #page-dc .descriptive_txt, #page-dc .infocard_caption{color:#30434D;}
 #page-dc .section_heading{border-bottom: 2px solid #30434D;font-weight: 700;}
 #page-dc h2.section_heading{font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 32px;}
@@ -282,8 +283,11 @@ a:hover{color:#30434D;transition:color .6s;}
 /* ARCHIVE RECORRIDOS VIRTUALES */
 #archive-rec-vir h1.section_heading{color:#30434D;border-bottom:none;font-size: 32px;}
 #archive-rec-vir p.descriptive_txt{color:#30434D;font-family: 'Source Serif Pro Italic', serif;text-align: center;}
-#archive-rec-vir .inner_container{background-color: white;}
+#archive-rec-vir .rounded_container{background-color: white;}
 #archive-rec-vir .services_grid{background-color: #30434D;padding:32px 0;}
+
+/* SINGLE SERVICIOS */
+.single-servicios .main_wrapper{top:64px;}
 
 /* FOOTER STYLES */
 /* Social Icons */

@@ -50,7 +50,7 @@
         $blogpost2 = new WP_Query($args2);
         if($blogpost2->have_posts()):
           $i=1; ?>
-          <section class="inner_container scroll_section">
+          <section class="rounded_container scroll_section">
             <div class="about_info">
               <h1 class="section_heading">
                 <?php echo esc_html(strtoupper($queried_object->post_title)); ?>

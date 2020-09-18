@@ -17,7 +17,7 @@
     </section>
 
     <!-- SCROLL SECTION -->
-    <section class="inner_container scroll_section">
+    <section class="rounded_container scroll_section">
       <!-- SERVICES SECTION -->
       <section id="services_section" class="section_wrapper">
         <div class="about_info">

@@ -7,12 +7,14 @@
       the_post(); ?>
 
       <section class="main_wrapper_section">
-        <h1><?php the_title(); ?></h1>
-        <div class="content_container">
-          <?php the_content(); ?>
-        </div>
+        <section class="inner_container">
+          <h1><?php the_title(); ?></h1>
+          <div class="content_container">
+            <?php the_content(); ?>
+          </div>
+        </section>
 
-        <?php get_template_part('templates/services', 'widget', array('serv'=>$serv)); ?>
+        <?php get_template_part('templates/casos', 'widget', array('type'=>$serv)); ?>
 
       </section>
 

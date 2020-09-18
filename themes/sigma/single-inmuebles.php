@@ -82,7 +82,7 @@
   <!-- END TABBED WIDGET -->
 
   <!-- THIS SECTION SCROLLS -->
-  <section class="inmo_single inner_container scroll_section">
+  <section class="inmo_single rounded_container scroll_section">
     <section class="title_widget">
       <ul class="header_list">
         <li class="header_item house_icon round_icon">

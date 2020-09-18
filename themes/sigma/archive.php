@@ -9,7 +9,7 @@
           <h1><?php echo esc_html(strtoupper($query_vars['post_type'])); ?></h1>
         </div>
         <!-- SCROLL SECTION -->
-        <section class="inner_container scroll_section">
+        <section class="rounded_container scroll_section">
           <?php
             $i=1;
             while(have_posts()):
