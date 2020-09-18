@@ -81,7 +81,7 @@ a{text-decoration: none;color:inherit;}
 a:hover{color:#30434D;transition:color .6s;}
 
 /* GENERAL */
-.main_wrapper{max-width:1440px;margin:0 auto;position:relative;top:64vh;}
+.main_wrapper{max-width:1440px;margin:0 auto;padding-top:64vh;}
 /* .home .main_wrapper{position:relative;top:60vh;} */
 .main_wrapper .bx-wrapper{margin-bottom: 0;}
 .main_wrapper_section .bx-wrapper{border:none;}
@@ -148,7 +148,7 @@ a:hover{color:#30434D;transition:color .6s;}
 /* SINGLE INMUEBLE */
 
 /* TABBED WIDGET */
-.single-inmuebles .main_wrapper{top:40vh;}
+.single-inmuebles .main_wrapper{padding-top:40vh;}
 .single-inmuebles .rounded_container{background-color: #fff;}
 .single-inmuebles .scroll_section{padding-top:0;}
 #tabbed_widget{display: block;}
@@ -186,7 +186,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .content_container a{color:#E26917;}
 .content_container a:hover{color:#FFE4D7;}
 .content_container ul{list-style:square inside;padding:0 0 0 16px;}
-.content_container ul li{margin-bottom:8px;}
+.content_container ul li{margin-bottom:8px;line-height: 22px;}
 .content_container figure{margin:16px 0;width:100%;}
 .content_container .wp-block-image img{width: 100%;height: auto;}
 .content_container .wp-block-gallery ul{padding:0;}
@@ -233,7 +233,7 @@ a:hover{color:#30434D;transition:color .6s;}
 
 .view_box{background-color: #fff;position: absolute;top:0;left:0;right:0;bottom:0;overflow: scroll;padding:16px;text-align: left;line-height: 20px;}
 .view_box button{position:absolute;right:16px;top:16px;}
-.view_box p{padding-top:32px;margin-bottom: 16px;}
+.view_box p{padding-top:32px;margin-bottom: 16px;font-size: 24px;line-height: 28px;}
 .close_viewbox{font-weight: 700;}
 .calltoaction{font-weight: 700;font-family: 'Source Serif Pro Light', serif;color:#E26917;}
 
@@ -287,7 +287,10 @@ a:hover{color:#30434D;transition:color .6s;}
 #archive-rec-vir .services_grid{background-color: #30434D;padding:32px 0;}
 
 /* SINGLE SERVICIOS */
-.single-servicios .main_wrapper{top:64px;}
+.single-servicios .main_wrapper{top:0;padding-top:64px;}
+.single-servicios .inner_container h1{font-family:'Akzidenz Grotesk Bold', sans-serif;font-size: 22px;margin:8px 0 16px 0;}
+.single-servicios .content_container p{font-family:'Akzidenz Grotesk Light', sans-serif;line-height: 22px;color:#30434D;}
+.single-servicios .section_wrapper{margin-bottom:32px;}
 
 /* FOOTER STYLES */
 /* Social Icons */

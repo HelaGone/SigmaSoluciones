@@ -27,7 +27,7 @@
             <?php get_template_part('templates/services', 'widget', array('serv'=>'arquitectura', 'tax'=>'rubros')); ?>
 
             <!-- CASOS DE EXITO WIDGET -->
-            <?php get_template_part('templates/casos', 'widget'); ?>
+            <?php get_template_part('templates/casos', 'widget', array('type'=>'remodelacion,interiorismo,mantenimiento,diseno-construccion')); ?>
 
             <!-- BARRA PARTNERS  -->
             <?php get_template_part('templates/barra', 'partners'); ?>
