@@ -6,7 +6,11 @@
   <section id="archive-rec-vir" class="main_wrapper_section">
     <section class="fixed_top_section">
       <figure class="fig_obj">
-        <img src="<?php echo THEMEPATH.'images/headers/'.$arch_name.'.jpg' ?>" alt="Cover Recorridos Virtuales">
+        <picture>
+          <source media="(min-width:1024px)" srcset="<?php echo THEMEPATH . 'images/headers/'.$arch_name.'-1280.jpg' ?>">
+          <source media="(min-width:720px)" srcset="<?php echo THEMEPATH . 'images/headers/'.$arch_name.'-768.jpg' ?>">
+          <img src="<?php echo THEMEPATH.'images/headers/'.$arch_name.'.jpg' ?>" alt="Cover Recorridos Virtuales">
+        </picture>
       </figure>
     </section>
     <!-- SCROLL SECTION -->
@@ -18,11 +22,11 @@
 
       <?php
         if(have_posts()): ?>
-        <section id="recorridos" class="section_wrapper inner_wrapper">
+        <section id="recorridos" class="post_pool inner_wrapper">
           <?php
             while(have_posts()):
               the_post(); ?>
-              <figure class="ribbon_fig_obj">
+              <figure class="ribbon_fig_obj unit_item">
                 <picture>
                   <a href="<?php the_permalink() ?>" title="<?php echo esc_attr($post->post_title); ?>">
                     <?php

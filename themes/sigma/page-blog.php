@@ -59,14 +59,16 @@
                 <?php echo apply_filters('the_content', $queried_object->post_content); ?>
               </div>
             </div>
-            <?php
-              while($blogpost2->have_posts()):
-                $blogpost2->the_post();
-                setup_postdata($post);
-                get_template_part('templates/figure', 'item', array('count'=>$i));
-                $i++;
-              endwhile;
-              wp_reset_postdata(); ?>
+            <section class="post_pool inner_wrapper">
+              <?php
+                while($blogpost2->have_posts()):
+                  $blogpost2->the_post();
+                  setup_postdata($post);
+                  get_template_part('templates/figure', 'item', array('count'=>$i));
+                  $i++;
+                endwhile;
+                wp_reset_postdata(); ?>
+            </section>
           </section>
       <?php
         endif; ?>

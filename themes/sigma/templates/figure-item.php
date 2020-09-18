@@ -1,4 +1,4 @@
-<div class="blogpost_item inner_wrapper">
+<div class="blogpost_item unit_item inner_wrapper">
   <h3 class="grid_object_header">
     <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title);?>">
       <?php the_title(); ?>

@@ -77,7 +77,7 @@
       <?php
         $args = array(
           'post_type'=>'post',
-          'posts_per_page'=>3,
+          'posts_per_page'=>4,
           'post_status'=>'publish',
           'orderby'=>'date',
           'order'=>'date'
@@ -87,7 +87,7 @@
           <!-- BLOG SECTION -->
           <section id="blog_section" class="section_wrapper">
             <h2 class="section_heading">BLOG</h2>
-            <section class="posts_pool">
+            <section class="post_pool">
               <?php
                   $i = 1;
                   while($blog->have_posts()):

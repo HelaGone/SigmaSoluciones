@@ -17,7 +17,6 @@ Tags: Custom, wordpress, theme, templates
  Light orange: #FFE4D7
  Orange: #E26917
  Bluish White: #F2F7F5
- Light Orange: #FFE4D7
  */
 
 @font-face {
@@ -68,20 +67,19 @@ time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: i
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {display: block;}
-body {line-height: 1;font-size: 16px;}
+body {line-height: 1;font-size: 16px;font-family: 'Akzidenz Grotesk',sans-serif;color:#30434D;}
 ol, ul {list-style: none;}
 blockquote, q {quotes: none;}
 blockquote:before, blockquote:after,
 q:before, q:after {content: '';content: none;}
 table {border-collapse: collapse;border-spacing: 0;}
 button{background:none;border:none;}
-
-body{font-family: 'Akzidenz Grotesk',sans-serif;color:#30434D;}
+html,body{min-height: 100%;}
 a{text-decoration: none;color:inherit;}
 a:hover{color:#30434D;transition:color .6s;}
 
 /* GENERAL */
-.main_wrapper{max-width:1440px;margin:0 auto;padding-top:64vh;}
+.main_wrapper{padding-top:64vh;}
 /* .home .main_wrapper{position:relative;top:60vh;} */
 .main_wrapper .bx-wrapper{margin-bottom: 0;}
 .main_wrapper_section .bx-wrapper{border:none;}
@@ -131,7 +129,7 @@ a:hover{color:#30434D;transition:color .6s;}
 /* BLOG POST ITEM */
 .blogpost_item{display: grid;grid-template-columns:1fr 1fr;background-color:#fff;margin-bottom:8px;}
 .grid_object_header{grid-column:1 / 4;font-family: 'Akzidenz Grotesk Bold'; font-size: 20px;line-height:22px;text-align: left;margin-bottom:12px;}
-.left-side{grid-column: 1 / 2;margin-right: 8px;min-width: 94px;}
+.left-side{grid-column: 1 / 2;margin-right: 8px;min-width: 94px;text-align:left;}
 .right-side{grid-column: 2 / 4;}
 .g_o_section .blog_count{font-size:44px;font-family:'Source Serif Pro Light', serif; padding:16px 0;text-align: left;}
 .g_o_section .blogpost_author{font-family:'Source Serif Pro Italic', serif; color:#708B99;text-align: left;}
@@ -139,8 +137,8 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* COMPANIES CAROUSEL HOME */
 #partners{margin:16px 0;}
-#partners .bx-wrapper{background-color: #708B99;border:none;}
-.companies_carousel{background-color: #708B99;}
+#partners .bx-wrapper{background-color: #FFE4D7;border:none;}
+.companies_carousel img{object-fit: contain;}
 .image_item_frame.square{display: grid;place-items:center;}
 /* .image_item_frame.square img{object-fit: contain;} */
 /* END HOME */
@@ -209,7 +207,8 @@ a:hover{color:#30434D;transition:color .6s;}
 .arc_fig_obj img{width:100%;}
 .arc_fig_obj .fig_caption{position: absolute;bottom:3px;left:0;right:0;top:0;display: grid;place-items:center;text-align: center;color:#F2F7F5;background-color: rgba(0,0,0,0.3);}
 .arc_fig_obj .fig_caption div.inner_wrapper{position:relative;bottom:25%;}
-.arc_fig_obj .fig_title{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;}
+/* .arc_fig_obj .fig_title{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;} */
+.main_wrapper_section h1{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;}
 .arc_fig_obj .fig_descr{font-size: 14px;line-height: 16px;font-family: 'Source Serif Pro Light', serif; }
 
 #inm_list_section{padding:24px 0;background-color: #fff;}
@@ -281,16 +280,18 @@ a:hover{color:#30434D;transition:color .6s;}
 /* END ARCHIVE DISEÑO CONSTRUCCIÓN */
 
 /* ARCHIVE RECORRIDOS VIRTUALES */
-#archive-rec-vir h1.section_heading{color:#30434D;border-bottom:none;font-size: 32px;}
+#archive-rec-vir h1.section_heading{color:#30434D;border-bottom:none;}
 #archive-rec-vir p.descriptive_txt{color:#30434D;font-family: 'Source Serif Pro Italic', serif;text-align: center;}
 #archive-rec-vir .rounded_container{background-color: white;}
 #archive-rec-vir .services_grid{background-color: #30434D;padding:32px 0;}
 
 /* SINGLE SERVICIOS */
-.single-servicios .main_wrapper{top:0;padding-top:64px;}
+.single-servicios .main_wrapper{padding-top:64px;position: relative;min-height: calc(100vh - 64px);}
+.single-servicios .main_wrapper_section{padding-bottom: 243px;}
 .single-servicios .inner_container h1{font-family:'Akzidenz Grotesk Bold', sans-serif;font-size: 22px;margin:8px 0 16px 0;}
 .single-servicios .content_container p{font-family:'Akzidenz Grotesk Light', sans-serif;line-height: 22px;color:#30434D;}
 .single-servicios .section_wrapper{margin-bottom:32px;}
+.single-servicios .footer_style{position: absolute;bottom: 0;}
 
 /* FOOTER STYLES */
 /* Social Icons */
@@ -313,4 +314,20 @@ a:hover{color:#30434D;transition:color .6s;}
 
 @media only screen and (min-width:720px){
   .ameni_list{max-width:100%;}
+  #services_section{max-width: 70%;margin:0 auto;}
+  #inm_list_section, #asesores_list{padding:24px;margin-bottom:32px;}
+  .post_pool{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
+  .post_pool .unit_item{width: calc(100% / 2 - 20px);}
+  .inm_fig_obj{border-radius: 5px;overflow: hidden;}
+  .services_list{position:inherit;}
+  .view_box{width:360px;top:80px;left:50%;margin-left:-180px;box-shadow: 1px 3px 6px rgba(0,0,0,0.3);border-radius: 5px;bottom:auto;z-index: 4;}
+  .info__bottom_bar{font-size:24px;}
+  .inm_fig_caption h3{font-size: 32px;line-height: 36px;text-align: left;padding:0 16px;}
+  .main_wrapper_section h1{font-size: 48px;line-height: 50px;}
+  .arc_fig_obj .fig_descr{font-size: 24px;line-height: 28px;}
+  #page-dc .fixed_top_section img{object-fit: cover;object-position:0 -270px;}
+}
+
+@media only screen and (min-width:1280px){
+  #page-dc .fixed_top_section img{object-fit: cover;object-position:0 -270px;}
 }

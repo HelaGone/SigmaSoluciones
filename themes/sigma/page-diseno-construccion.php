@@ -11,7 +11,7 @@
           <div class="fixed_top_section">
               <?php
               if(has_post_thumbnail()):
-                the_post_thumbnail('sig-ver-m-420');
+                wp_is_mobile() ? the_post_thumbnail('sig-ver-m-420') : the_post_thumbnail('sig-xxl-1280');
               else: ?>
               <img src="<?php echo THEMEPATH . 'images/default.jpg' ?>" alt="Cover Inmueble">
               <?php

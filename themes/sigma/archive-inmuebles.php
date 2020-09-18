@@ -46,23 +46,24 @@
               </select>
             </div>
           </section>
-          <?php
-            $i=1;
-            while(have_posts()):
-              the_post();
-              $p_id = $post->ID;
-              $meta_dimensiones = get_post_meta($p_id, 'dimensiones', true);
-              $meta_habitaciones = get_post_meta($p_id, 'habitaciones', true);
-              $meta_banos = get_post_meta($p_id, 'banos', true);
-              $meta_gimnasio = get_post_meta($p_id, 'gimnasio', true);
-              $meta_vigilancia = get_post_meta($p_id, 'vigilancia', true);
-              $meta_mascotas = get_post_meta($p_id, 'mascotas', true);
-              $meta_estacionamiento = get_post_meta($p_id, 'estacionamiento', true);
-              $meta_alberca = get_post_meta($p_id, 'alberca', true);
-              $meta_ubicacion = get_post_meta($p_id, 'ubicacion', true);
-              $meta_venta_renta = get_post_meta($p_id, 'venta__renta', true);
-              $meta_precio = get_post_meta($p_id, 'precio', true);
-              $amenities_arr = array(
+          <section class="post_pool">
+            <?php
+              $i=1;
+              while(have_posts()):
+                the_post();
+                $p_id = $post->ID;
+                $meta_dimensiones = get_post_meta($p_id, 'dimensiones', true);
+                $meta_habitaciones = get_post_meta($p_id, 'habitaciones', true);
+                $meta_banos = get_post_meta($p_id, 'banos', true);
+                $meta_gimnasio = get_post_meta($p_id, 'gimnasio', true);
+                $meta_vigilancia = get_post_meta($p_id, 'vigilancia', true);
+                $meta_mascotas = get_post_meta($p_id, 'mascotas', true);
+                $meta_estacionamiento = get_post_meta($p_id, 'estacionamiento', true);
+                $meta_alberca = get_post_meta($p_id, 'alberca', true);
+                $meta_ubicacion = get_post_meta($p_id, 'ubicacion', true);
+                $meta_venta_renta = get_post_meta($p_id, 'venta__renta', true);
+                $meta_precio = get_post_meta($p_id, 'precio', true);
+                $amenities_arr = array(
                 array(
                   'gym'=>$meta_gimnasio,
                   'seguridad'=>$meta_vigilancia,
@@ -70,10 +71,11 @@
                   'alberca'=>$meta_alberca
                 ));
 
-              get_template_part('templates/figure', 'inmueble', array('precio'=>$meta_precio, 'tipo'=>$meta_venta_renta));
+                get_template_part('templates/figure', 'inmueble', array('precio'=>$meta_precio, 'tipo'=>$meta_venta_renta));
 
-              $i++;
-            endwhile; ?>
+                $i++;
+              endwhile; ?>
+          </section>
         </section>
         <!-- END INMUEBLES LIST -->
 

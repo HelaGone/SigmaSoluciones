@@ -23,14 +23,12 @@ $(document).ready(function(){
 		mode:'horizontal',
 		easing:'ease-in',
 		controls:false,
+		pager:false,
 		auto:true,
 		pause:1666,
-		maxSlides:3,
-		slideWidth:1440,
-		responsive:true,
-		autoDelay:3000,
-		pager:false,
-		slideMargin:16
+		maxSlides:9,
+		minSlides:2,
+		responsive:true
 	};
 	$('.companies_carousel').bxSlider(bx_conf_partners);
 

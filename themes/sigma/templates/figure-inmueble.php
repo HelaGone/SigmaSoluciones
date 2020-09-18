@@ -2,7 +2,7 @@
   $meta_precio = $args['precio'];
   $meta_venta_renta = $args['tipo'];
 ?>
-<figure class="inm_fig_obj">
+<figure class="inm_fig_obj unit_item">
     <?php
       if(has_post_thumbnail()):
         the_post_thumbnail($post->ID, 'sig-m-480');
