@@ -1,7 +1,6 @@
 <?php
-  $param = array('diseno');
   if(array_key_exists('type', $args)):
-    $param = $args['type'];
+    $types = explode(',', $args['type']);
   endif;
 
   $_args = array(
@@ -12,9 +11,9 @@
     'order'=>'DESC',
     'tax_query'=>array(
       array(
-        'taxonomy'=>'tipo-caso',
+        'taxonomy'=>'tipo-servicio',
         'field'=>'slug',
-        'terms'=>$param
+        'terms'=>$types
       )
     )
   );

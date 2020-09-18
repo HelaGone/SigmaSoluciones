@@ -49,7 +49,7 @@
         endif; ?>
 
       <!-- CASOS DE EXITO WIDGET -->
-      <?php get_template_part('templates/casos', 'widget', array('type'=>'arte-cultura')); ?>
+      <?php get_template_part('templates/casos', 'widget', array('type'=>'arte-cultura,negocios,especiales,instituciones-educativas')); ?>
 
       <!-- BARRA PARTNERS  -->
       <?php get_template_part('templates/barra', 'partners'); ?>
