@@ -30,23 +30,44 @@
 				'rewrite'           => array( 'slug' => 'tipo-servicio' ),
 			);
 
-			register_taxonomy( 'tipo-servicio', 'servicios', $args );
+			register_taxonomy( 'tipo-servicio', array('casos-de-exito', 'recorridos-virtuales'), $args );
 		}
 
+		// TERMS
 
-		// TIPO DE CASO
-		if( ! taxonomy_exists('tipo-caso')){
+		$args = array(
+			'post_type'=>'servicios',
+			'posts_per_page'=>-1,
+			'post_status'=>'publish',
+		);
+		$terms = get_posts($args);
+
+		// debug($terms);
+		// die();
+
+		if(is_array($terms)&&!empty($terms)):
+			foreach($terms as $key => $term):
+				$slg = strtolower($term->post_name);
+				$nme = $term->post_title;
+				if ( !term_exists( $slg, 'tipo-servicio' ) ){
+					wp_insert_term( $nme, 'tipo-servicio', array('slug' => $slg) );
+				}
+			endforeach;
+		endif;
+
+		// RUBROS
+		if( ! taxonomy_exists('rubros')){
 
 			$labels = array(
-				'name'              => 'Tipos de casos',
-				'singular_name'     => 'Tipo de caso',
+				'name'              => 'Rubros',
+				'singular_name'     => 'Rubro',
 				'search_items'      => 'Buscar',
 				'all_items'         => 'Todos',
-				'edit_item'         => 'Editar Tipo de caso',
-				'update_item'       => 'Actualizar Tipo de caso',
-				'add_new_item'      => 'Nuevo Tipo de caso',
-				'new_item_name'     => 'Nombre Nuevo Tipo de caso',
-				'menu_name'         => 'Tipos de casos'
+				'edit_item'         => 'Editar Rubro',
+				'update_item'       => 'Actualizar Rubro',
+				'add_new_item'      => 'Nuevo Rubro',
+				'new_item_name'     => 'Nombre Nuevo Rubro',
+				'menu_name'         => 'Rubros'
 			);
 
 			$args = array(
@@ -58,23 +79,23 @@
 				'show_in_rest'			=> true,
 				'public'						=> true,
 				'query_var'         => true,
-				'rewrite'           => array( 'slug' => 'tipo-caso' ),
+				'rewrite'           => array( 'slug' => 'rubros' ),
 			);
 
-			register_taxonomy( 'tipo-caso', array('casos-de-exito', 'recorridos-virtuales'), $args );
+			register_taxonomy( 'rubros', array('servicios'), $args );
+		}
+
+		if ( ! term_exists( 'inmobiliaria', 'rubros' ) ){
+			wp_insert_term( 'Inmobiliaria', 'rubros', array('slug' => 'inmobiliaria') );
+		}
+		if ( ! term_exists( 'medios-digitales', 'rubros' ) ){
+			wp_insert_term( 'Recorridos virtuales', 'rubros', array('slug' => 'medios-digitales') );
+		}
+		if ( ! term_exists( 'arquitectura', 'rubros' ) ){
+			wp_insert_term( 'Diseño & Construcción', 'rubros', array('slug' => 'arquitectura') );
 		}
 
 
-		// TERMS
-		// if ( ! term_exists( 'inmobiliario', 'tipo-servicio' ) ){
-		// 	wp_insert_term( 'Inmobiliario', 'category', array('slug' => 'inmobiliario') );
-		// }
-		// if ( ! term_exists( 'diseno-construccion', 'tipo-servicio' ) ){
-		// 	wp_insert_term( 'Diseño & Construcción', 'category', array('slug' => 'diseno-construccion') );
-		// }
-		// if ( ! term_exists( '', 'tipo-servicio' ) ){
-		// 	wp_insert_term( 'Inmobiliario', 'category', array('slug' => 'inmobiliario') );
-		// }
 
 		/* // SUB TERMS CREATION
 		if(term_exists('parent-term', 'category')){

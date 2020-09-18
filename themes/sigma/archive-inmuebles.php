@@ -28,7 +28,7 @@
         </div>
 
         <!-- SERVICES GRID -->
-        <?php get_template_part('templates/services', 'widget', array('serv'=>'inmobiliarios')); ?>
+        <?php get_template_part('templates/services', 'widget', array('serv'=>'inmobiliaria', 'tax'=>'rubros')); ?>
 
         <!-- INMUEBLES LIST -->
         <section id="inm_list_section" class="section_wrapper">

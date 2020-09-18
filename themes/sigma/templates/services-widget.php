@@ -12,6 +12,7 @@
     endif;
 
     $service = $args['serv'];
+    $tax = $args['tax'];
     $_args = array(
       'post_type'=>'servicios',
       'post_status'=>'publish',
@@ -20,7 +21,7 @@
       'order'=>'ASC',
       'tax_query'=>array(
         array(
-          'taxonomy'=>'tipo-servicio',
+          'taxonomy'=>$tax,
           'field'=>'slug',
           'terms'=>array($service)
         )

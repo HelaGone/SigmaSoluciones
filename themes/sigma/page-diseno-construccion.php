@@ -24,7 +24,7 @@
             </div>
 
             <!-- SERVICES GRID -->
-            <?php get_template_part('templates/services', 'widget', array('serv'=>'construccion')); ?>
+            <?php get_template_part('templates/services', 'widget', array('serv'=>'arquitectura', 'tax'=>'rubros')); ?>
 
             <!-- CASOS DE EXITO WIDGET -->
             <?php get_template_part('templates/casos', 'widget'); ?>

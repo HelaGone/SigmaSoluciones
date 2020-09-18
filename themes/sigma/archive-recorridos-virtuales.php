@@ -14,7 +14,7 @@
       <h1 class="section_heading"><?php echo esc_html(ucfirst(str_replace('-', ' ', $arch_name))); ?></h1>
       <p class="descriptive_txt">En SIGMA rompemos barreras geográficas, brindándote una nueva manera de vivir un espacio.</p>
 
-      <?php get_template_part('templates/services', 'widget', array('serv'=>'recorridos')); ?>
+      <?php get_template_part('templates/services', 'widget', array('serv'=>'medios-digitales', 'tax'=>'rubros')); ?>
 
       <?php
         if(have_posts()): ?>

@@ -60,13 +60,13 @@ add_action('init', function(){
 		'show_in_menu'       => true,
 		'show_in_rest'		   => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'inmueble'),
+		'rewrite'            => array( 'slug' => 'inmuebles'),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'menu_icon'			     => 'dashicons-admin-multisite',
 		'hierarchical'       => false,
-		'menu_position'      => 4,
-		'taxonomies'         => array('category', 'post_tag'),
+		'menu_position'      => 5,
+		'taxonomies'         => array(),
 		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'author' )
 	);
 	register_post_type( 'inmuebles', $args );
@@ -100,8 +100,8 @@ add_action('init', function(){
 		'has_archive'        => true,
 		'menu_icon'			     => 'dashicons-awards',
 		'hierarchical'       => false,
-		'menu_position'      => 4,
-		'taxonomies'         => array('category', 'post_tag'),
+		'menu_position'      => 6,
+		'taxonomies'         => array(),
 		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'author' )
 	);
 	register_post_type( 'casos-de-exito', $args );
@@ -135,8 +135,8 @@ add_action('init', function(){
 		'has_archive'        => true,
 		'menu_icon'			     => 'dashicons-visibility',
 		'hierarchical'       => false,
-		'menu_position'      => 4,
-		'taxonomies'         => array('category', 'post_tag'),
+		'menu_position'      => 7,
+		'taxonomies'         => array(),
 		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'author' )
 	);
 	register_post_type( 'recorridos-virtuales', $args );
@@ -170,8 +170,8 @@ add_action('init', function(){
 		'has_archive'        => true,
 		'menu_icon'			     => 'dashicons-admin-tools',
 		'hierarchical'       => false,
-		'menu_position'      => 4,
-		'taxonomies'         => array('category', 'post_tag', 'taxonomy'),
+		'menu_position'      => 8,
+		'taxonomies'         => array(),
 		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'author' )
 	);
 	register_post_type( 'servicios', $args );
