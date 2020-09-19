@@ -252,6 +252,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .single-asesores .image_frame{width:150px;height: 150px;border-radius: 50%;overflow:hidden;}
 .single-asesores .main_wrapper_section{padding-bottom:0;}
 .single-asesores .main_wrapper_section h1{color:#30434D;font-family: 'Source Serif Pro Light', serif;font-weight: 700;}
+.asesor_container{max-width: 420px;margin:0 auto;}
 .asesor_socials .vertical_list li{margin-bottom:4px;display: flex;align-items: center;}
 .asesor_socials .vertical_list li .share_icon{width:48px;height: 48px;display: grid;place-items:center;margin-right: 16px}
 .asesor_socials .vertical_list li .share_name{font-family:'Akzidenz Grotesk LightCond', sans-serif;font-weight: 700;font-size: 18px;}

@@ -6,14 +6,14 @@
       $whatsapp = get_post_meta($post->ID, 'whatsapp_meta', true);
       ?>
       <section class="main_wrapper_section">
-        <section class="">
-          <figure class="fig_asesor inner_wrapper">
+        <section>
+          <figure class="fig_asesor inner_wrapper asesor_container">
             <picture class="image_frame">
               <?php has_post_thumbnail() ? the_post_thumbnail('thumbnail') : ''; ?>
             </picture>
             <figcaption class="asesor_socials">
               <?php
-                if(is_user_logged_in()&&current_user_can('manage_options')): ?>
+                //if(is_user_logged_in()&&current_user_can('manage_options')): ?>
                   <ul class="vertical_list social_shares">
                     <li class="sare_item">
                       <span class="share_icon fb_item">
@@ -55,16 +55,18 @@
                     </li>
                   </ul>
               <?php
-                endif; ?>
+                //endif; ?>
             </figcaption>
           </figure>
           <section class="light_orange_bg inner_wrapper">
-            <h1 class="txt_hd_k_serif"><?php the_title(); ?></h1>
-            <div class="assesor_quote">
-              <?php the_excerpt(); ?>
-            </div>
-            <div class="assesor_description content_container">
-              <?php the_content(); ?>
+            <div class="asesor_container">
+              <h1 class="txt_hd_k_serif"><?php the_title(); ?></h1>
+              <div class="assesor_quote">
+                <?php the_excerpt(); ?>
+              </div>
+              <div class="assesor_description content_container">
+                <?php the_content(); ?>
+              </div>
             </div>
           </section>
         </section>
