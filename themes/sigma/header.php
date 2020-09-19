@@ -25,20 +25,50 @@
 
 		<link rel="manifest" href="<?php echo THEMEPATH .'manifest.json'; ?>">
 		<link rel="preload" href="<?php echo THEMEPATH .'style.css'; ?>" as="style">
-		<link rel="preload" href="<?php echo THEMEPATH .'js/jquery.bxslider.min.js'; ?>" as="script">
-		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Light.otf'; ?>" as="font" type="font/opentype" crossorigin>
-		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Regular.otf'; ?>" as="font" type="font/opentype" crossorigin>
-		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Bold.otf'; ?>" as="font" type="font/opentype" crossorigin>
-		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Cond.otf'; ?>" as="font" type="font/opentype" crossorigin>
-		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-Bold.ttf'; ?>" as="font" type="font/truetype" crossorigin>
-		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-Light.ttf'; ?>" as="font" type="font/truetype" crossorigin>
-		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-LightItalic.ttf'; ?>" as="font" type="font/truetype" crossorigin>
+		<!-- <link rel="preload" href="<?php echo THEMEPATH .'js/jquery.bxslider.min.js'; ?>" as="script"> -->
+		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Light.otf'; ?>" as="font" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Regular.otf'; ?>" as="font" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Bold.otf'; ?>" as="font" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Cond.otf'; ?>" as="font" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-Bold.ttf'; ?>" as="font" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-Light.ttf'; ?>" as="font" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-LightItalic.ttf'; ?>" as="font" crossorigin>
 
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon.ico">
 		<link rel="icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon.ico" >
+		<script>
+			/*TWITTER JS*/
+			/*
+			window.twttr = (function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0],
+			    t = window.twttr || {};
+			  if (d.getElementById(id)) return t;
+			  js = d.createElement(s);
+			  js.id = id;
+			  js.src = "https://platform.twitter.com/widgets.js";
+			  fjs.parentNode.insertBefore(js, fjs);
+
+			  t._e = [];
+			  t.ready = function(f) {
+			    t._e.push(f);
+			  };
+
+			  return t;
+			}(document, "script", "twitter-wjs"));
+			*/
+
+			/*FACEBOOK JS*/
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+	</script>
 		<!-- START WP_HEAD -->
 		<?php wp_head(); ?>
 		<!-- END WP_HEAD -->
