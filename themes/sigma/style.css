@@ -168,7 +168,7 @@ a:hover{color:#30434D;transition:color .6s;}
 /* END HOME */
 
 /* ARCHIVE BLOG */
-.blog_carousel img{width: 100%; height: auto;object-fit: cover;}
+.blog_carousel picture img{width: 100%; height: auto;object-fit: cover;}
 #archive_blog .scroll_section{top:46vh;}
 /* END ARCHIVE BLOG */
 

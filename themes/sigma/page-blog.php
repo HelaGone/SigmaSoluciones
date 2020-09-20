@@ -25,11 +25,17 @@
                 while($blogposts->have_posts()):
                   $blogposts->the_post();
                   array_push($not_repeat, $post->ID);
-                  setup_postdata($post); ?>
+                  setup_postdata($post);
+                  if(has_post_thumbnail()): ?>
                   <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-                    <?php has_post_thumbnail() ? the_post_thumbnail('sig-ver-m-420') : 'NADA'; ?>
+                    <picture>
+                      <source media="(min-width:1280px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-xxl-1280'); ?>">
+                      <source media="(min-width:768px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-ver-l-768'); ?>">
+                      <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-ver-m-420'); ?>" alt="<?php echo esc_attr($post->post_title); ?>" style="width:100%;" >
+                    </picture>
                   </a>
               <?php
+                  endif;
                   $i++;
                 endwhile;
                 wp_reset_postdata(); ?>
