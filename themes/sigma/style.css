@@ -239,10 +239,17 @@ a:hover{color:#30434D;transition:color .6s;}
 #archive-rec-vir .services_grid{background-color: #30434D;padding:32px 0;}
 /* END ARCHIVE RECORRIDOS VIRTUALES */
 
+.image_frame img{width: 100%;height: auto;}
+
 /* SINGLE GENERALS */
+.social_shares .share_icon{width: 48px;height: 48px;}
+.social_shares .share_icon svg{width:32px;height: 32px;}
+.social_shares .share_icon{width:48px;height:48px;display: grid;place-items:center;}
+
 .single .main_wrapper{padding-top:64px;position: relative;min-height: calc(100vh - 64px);}
-.single .main_wrapper_section{padding-bottom: 243px;}
-.single .inner_container h1{font-family:'Akzidenz Grotesk Bold', sans-serif;font-size: 22px;margin:8px 0 16px 0;}
+.single .main_wrapper_section h1{font-family:'Source Serif Pro Light', serif;font-size: 20px;margin:8px 0 16px 0;font-weight: 700;line-height: 24px;margin-bottom: 0;}
+.single .heading_container time{font-family:'Source Serif Pro Light', serif;font-size: 14px;line-height: 16px;}
+.single .heading_container p{font-family:'Akzidenz Grotesk Cond', sans-serif;margin: 16px 0;color:#708B99;font-size:14px;line-height: 16px;}
 /* Content */
 .single .content_container{text-align: left;font-family:'Source Serif Pro Light', serif;}
 .single .content_container p{
@@ -278,6 +285,7 @@ a:hover{color:#30434D;transition:color .6s;}
    /* .blocks-gallery-item{width:calc(100%);margin: 0;} */
 
 /* SINGLE SERVICIOS */
+.single-servicios .main_wrapper_section{padding-bottom: 243px;}
 .single-servicios .section_wrapper{margin-bottom:32px;}
 .single-servicios .footer_style{position: absolute;bottom: 0;}
 /* END SINGLE SERVICIOS */
@@ -303,8 +311,8 @@ a:hover{color:#30434D;transition:color .6s;}
 /* SINGLE BLOG*/
 .single-post .image_frame{width: 100%;}
 .single-post .image_frame img{width: 100%; height: auto;}
+.horizontal_list{text-align: right;}
 .horizontal_list li{display: inline-block;}
-.horizontal_list .share_item .share_icon{display: inline-block;}
 .tag_cloud{margin:32px 0;}
 .tag_cloud .tag_list{text-align: right;}
 .tag_cloud .tag_list .tag_item{
