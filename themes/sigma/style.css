@@ -78,7 +78,7 @@ blockquote, q {quotes: none;}
 blockquote:before, blockquote:after,
 q:before, q:after {content: '';content: none;}
 table {border-collapse: collapse;border-spacing: 0;}
-button{background:none;border:none;}
+button{background:none;border:none;outline: none;}
 html{scroll-behavior: smooth;}
 html,body{min-height: 100%;}
 a{text-decoration: none;color:inherit;}
@@ -103,7 +103,16 @@ a:hover{color:#30434D;transition:color .6s;}
 .cover_anchor{position: absolute;top:0;left: 0;right: 0;bottom: 0;}
 
 /* MENU */
-#menu_container{position:fixed;top:64px;right:0;bottom:243px;left: 0;z-index: 99999;text-align:right;padding:64px 48px;}
+#menu_container{
+  position:fixed;top:63px;right:0;bottom:0;
+  z-index: 99999;
+  text-align:right;overflow: hidden;
+  width: 0;
+  padding: 0;
+  opacity: 1;
+  transition:width 0.5s, padding 0.5s, opacity 1.3s;
+  /*padding:64px 48px;*/
+}
 #main_menu{border-right: 2px solid #30434D;padding:16px 16px;margin-bottom: 32px;color:#30434D;}
 #main_menu .menu-item{margin-bottom:24px;font-family: 'Akzidenz Grotesk Cond',sans-serif;font-size: 22px;line-height: 1em;font-weight: 900;}
 #main_menu .menu-item:last-child{margin-bottom: 0;}
@@ -336,6 +345,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .single-inmuebles .main_wrapper{padding-top:49vh;}
 .single-inmuebles .rounded_container{background-color: #fff;}
 .single-inmuebles .scroll_section{padding-top:0;}
+.single-inmuebles .main_wrapper_section h1{font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 21px;}
 #tabbed_widget{display: block;}
 #tabbed_widget .tabs{display:flex;flex-direction: row; justify-content: space-between; align-items: center; padding:16px 0;}
 #tabbed_widget .tabs button{border-bottom:2px solid grey;color:grey;}
@@ -379,7 +389,7 @@ a:hover{color:#30434D;transition:color .6s;}
 /* Social Icons */
 .social_icons{display: flex;flex-direction: row;justify-content: flex-end;align-items: center;}
 .social_icons .icon_item{margin: 4px 8px;}
-.footer_style{position:relative;z-index: 2;}
+.footer_style{position:relative;z-index: 999991;}
 .big_footer{display: grid;grid-template-columns:minmax(160px, 50%) 1fr;column-gap:8px;background-color:#30434D;color:#F2F7F5;font-family:'Akzidenz Grotesk LightCond', sans-serif;font-size: 14px;line-height: 16px;}
 .mini_footer{background-color:#E26917; padding:8px;}
 
@@ -395,10 +405,10 @@ a:hover{color:#30434D;transition:color .6s;}
 }
 
 @media only screen and (min-width: 500px) {
-        a._whatsapp {
-            display: none
-        }
-    }
+  a._whatsapp {
+      display: none
+  }
+}
 
 @media only screen and (min-width:720px){
   .ameni_list{max-width:100%;}

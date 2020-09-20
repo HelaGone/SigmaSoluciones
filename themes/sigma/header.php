@@ -84,13 +84,23 @@
 		<script type="text/javascript">
 			let isOpen = false;
 			const hk_handle_toggle_menu = () => {
+				let menu_node = document.getElementById('menu_container');
+				let allview = document.querySelector('.main_wrapper_section')
 				if(!isOpen){
+					allview.style.opacity = 0;
+					menu_node.style.padding = '64px 48px';
+					menu_node.style.width = '100%';
+					//Foter scroll
 					document.getElementById('big_f').scrollIntoView({
-						behavior: 'smooth'
+						behavior: 'auto'
 					});
 					isOpen = !isOpen;
 				}else{
+					//Scroll to top
 					window.scrollTo(0, 0);
+					allview.style.opacity = 1;
+					menu_node.style.padding = '0';
+					menu_node.style.width = '0';
 					isOpen = !isOpen;
 				}
 			}
