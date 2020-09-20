@@ -232,7 +232,6 @@
 
   //SLIDER
   $(document).ready(function(){
-    console.log('loaded');
     $('.slider').bxSlider({
       mode:'fade',
       pager:false,
