@@ -77,10 +77,9 @@
 		//Bx Slider 4.2.12
 		wp_register_script('bx-slider', JSPATH.'jquery.bxslider.js', array('jquery'), '4.2.12');
 		wp_enqueue_script('bx-slider');
-		if(is_single()||is_page()||is_singular()):
-			wp_register_script('fitvids', JSPATH . 'jquery.fitvids.js', array('jquery'), '1.0.0');
-			wp_enqueue_script('fitvids');
-		endif;
+		// Fitvids 1.0.0
+		wp_register_script('fitvids', JSPATH . 'jquery.fitvids.js', array('jquery'), '1.0.0');
+		wp_enqueue_script('fitvids');
 		//Pannellum 2.5.6
 		wp_register_script('sig-pannellum', 'https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js', array('functions'), '2.5.6');
 		wp_enqueue_script('sig-pannellum');

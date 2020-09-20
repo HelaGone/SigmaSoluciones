@@ -106,7 +106,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .scroll_section{position:relative;padding:32px 0 1px 0;text-align: center;}
 
 /* HEADER */
-.main_header{position:fixed;top:0;left:0;right:0;z-index:3;display: flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:#F2F7F5;padding:8px 8px;box-shadow: 1px 2px 4px rgba(0,0,0,0.33);}
+.main_header{position:fixed;top:0;left:0;right:0;z-index:99999;display: flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:#F2F7F5;padding:8px 8px;box-shadow: 1px 2px 4px rgba(0,0,0,0.33);}
 .main_header .logo_item{width:83px;height:47px;}
 .main_header .logo_item img{width: 100%;height: auto;}
 /* END HEADER */
@@ -263,9 +263,19 @@ a:hover{color:#30434D;transition:color .6s;}
 .single .content_container figure{margin:16px 0;width:100%;}
 .single .content_container blockquote{padding: 0 16px;}
 .single .content_container blockquote p{font-family: 'Source Serif Pro Italic', serif;}
-.single .content_container .wp-block-image img{width: 100%;height: auto;}
-.single .content_container .wp-block-gallery ul{padding:0;}
-.single .content_container .wp-block-image figcaption, .content_container .wp-block-quote cite{font-family: 'Source Serif Pro Italic', serif;}
+.single .content_container .bx-wrapper{box-shadow: none;border:0;}
+.single .content_container .blocks-gallery-grid{list-style: none;padding:0;display: flex;flex-wrap: wrap;justify-content: space-around;align-items: center;margin:16px 0;}
+.single .content_container .blocks-gallery-grid .blocks-gallery-item figure{position:relative;margin:0;}
+.single .content_container .blocks-gallery-grid .blocks-gallery-item figcaption{padding:0;text-align: center;}
+.single .content_container .wp-block-gallery.columns-8 .blocks-gallery-item{width:calc(100% / 8);margin: 0;}
+.single .content_container .wp-block-gallery.columns-7 .blocks-gallery-item{width:calc(100% / 7);margin: 0;}
+.single .content_container .wp-block-gallery.columns-6 .blocks-gallery-item{width:calc(100% / 6);margin: 0;}
+.single .content_container .wp-block-gallery.columns-5 .blocks-gallery-item{width:calc(100% / 5);margin: 0;}
+.single .content_container .wp-block-gallery.columns-4 .blocks-gallery-item{width:calc(100% / 4 - 8px);margin: 0;}
+.single .content_container .wp-block-gallery.columns-3 .blocks-gallery-item{width:calc(100% / 3 - 8px);margin: 0;}
+.single .content_container .wp-block-gallery.columns-2 .blocks-gallery-item{width:calc(100% / 2 - 8px);margin: 0;}
+/* .single .content_container .wp-block-gallery.columns-1{} */
+   /* .blocks-gallery-item{width:calc(100%);margin: 0;} */
 
 /* SINGLE SERVICIOS */
 .single-servicios .section_wrapper{margin-bottom:32px;}
