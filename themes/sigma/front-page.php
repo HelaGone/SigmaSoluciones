@@ -32,7 +32,7 @@
             endif; ?>
         </div>
 
-        <section class="posts_pool">
+        <section class="post_pool">
           <?php
             $services = array();
             foreach (get_post_types(array(), 'names') as $key => $value):
@@ -119,10 +119,7 @@
         captions:false,
         pager: false,
         auto:true,
-        controls:false,
-        autoDelay:111,
-        speed:3500,
-        pause:7000
+        controls:false
       }
       const bx_conf_home_2 = {
         mode:'vertical',
@@ -130,9 +127,7 @@
         pager: false,
         auto:true,
         controls:false,
-        autoDirection:'prev',
-        speed:3500,
-        pause:7000
+        autoDirection:'prev'
       }
       $('.carousel1').bxSlider(bx_conf_home);
       $('.carousel2').bxSlider(bx_conf_home_2);

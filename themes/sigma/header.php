@@ -45,7 +45,6 @@
 
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon.ico">
 		<link rel="icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon.ico" >
 		<script>
@@ -81,6 +80,7 @@
 		<!-- START WP_HEAD -->
 		<?php wp_head(); ?>
 		<!-- END WP_HEAD -->
+		<script type="text/javascript" async src="<?php echo JSPATH . 'jquery.bxslider.js?ver=4.2.12' ?>"></script>
 		<script type="text/javascript">
 			let isOpen = false;
 			const hk_handle_toggle_menu = () => {

@@ -94,15 +94,17 @@
                   $i=1; ?>
                   <section id="related_pool" class=" ligh_green_bg">
                     <h2 class="section_heading">RELACIONADAS</h2>
-                    <?php
-                      while($related->have_posts()):
-                        $related->the_post();
-                        setup_postdata($post);
-                        get_template_part('templates/figure', 'item', array("count"=>$i));
-                        $i++;
-                      endwhile;
-                      wp_reset_postdata(); ?>
-                    </section>
+                    <div class="post_pool">
+                      <?php
+                        while($related->have_posts()):
+                          $related->the_post();
+                          setup_postdata($post);
+                          get_template_part('templates/figure', 'item', array("count"=>$i));
+                          $i++;
+                        endwhile;
+                        wp_reset_postdata(); ?>
+                    </div>
+                  </section>
               <?php
                 endif;
           endif; ?>
