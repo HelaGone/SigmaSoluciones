@@ -11,7 +11,7 @@ $(document).ready(function(){
 	 * jQuery
 	*/
 	// FIT VIDS
-	// $('body').fitVids();
+	$('.single').fitVids();
 	// CAROUSELS IN ARCHIVE BOTTOM POSITION
 	$('.bottom_carousel').bxSlider({
 		pager:false,

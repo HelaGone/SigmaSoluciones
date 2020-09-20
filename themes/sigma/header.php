@@ -30,6 +30,7 @@
 		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Regular.otf'; ?>" as="font" crossorigin>
 		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Bold.otf'; ?>" as="font" crossorigin>
 		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Cond.otf'; ?>" as="font" crossorigin>
+		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-LightCond.otf'; ?>" as="font" crossorigin>
 		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-Bold.ttf'; ?>" as="font" crossorigin>
 		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-Light.ttf'; ?>" as="font" crossorigin>
 		<link rel="preload" href="<?php echo FONTSPATH .'SourceSerifPro-LightItalic.ttf'; ?>" as="font" crossorigin>
@@ -86,7 +87,7 @@
 				</a>
 			</div>
 			<div class="main_header_item button_item">
-				<button type="button" name="button" onclick="hk_handle_toggle_menu()">
+				<button type="button" name="button" onclick="hk_handle_toggle_menu()" title="Menu Button">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="#F16922" height="24" viewBox="0 0 24 24" width="24">
 						<path d="M0 0h24v24H0z" fill="none"/>
 						<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>

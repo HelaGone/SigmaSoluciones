@@ -33,13 +33,13 @@
       <!-- RECORRIDO VIRTUAL -->
       <li class="panel" data-media-type="recorrido">
         <div class="item_inner_wrapper">
-          <!-- <iframe src="https://players.cupix.com/p/AYvGTwTL" width="720" height="480" style="margin:0 auto;" allowFullScreen="true"></iframe> -->
+          <iframe src="https://players.cupix.com/p/AYvGTwTL" width="720" height="480" style="margin:0 auto;" allowFullScreen="true"></iframe>
         </div>
       </li>
 
       <!-- FOTO 360 -->
       <li class="panel selected" data-media-type="foto360">
-        <div id="panorama" class="item_inner_wrapper"></div>
+        <div id="panorama" width="426" height="240" class="item_inner_wrapper"></div>
       </li>
 
       <!-- GALERÍA FOTOS -->
@@ -57,7 +57,7 @@
                          if(array_key_exists('ids', $block['attrs'])):
                            for($i=0; $i<count($block['attrs']['ids']); $i++): ?>
                              <li>
-                               <?php echo wp_get_attachment_image($block['attrs']['ids'][$i], 'full', false); ?>
+                               <?php echo (wp_get_attachment_image($block['attrs']['ids'][$i], 'full', false)) ? wp_get_attachment_image($block['attrs']['ids'][$i], 'full', false) : '<img src="'.THEMEPATH.'images/default.jpg" alt="Default Image" width="426" height="240" />'; ?>
                              </li>
                         <?php
                            endfor;
@@ -74,7 +74,7 @@
       <!-- VIDEO -->
       <li class="panel" data-media-type="video">
         <div class="item_inner_wrapper">
-          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/3RrCy6Syyxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="426" height="240" src="https://www.youtube.com/embed/3RrCy6Syyxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
     </ul>

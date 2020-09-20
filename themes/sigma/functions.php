@@ -57,6 +57,10 @@
 		//BxSlider css
 		wp_register_style('sig-bx-css', CSSPATH.'jquery.bxslider.min.css', array(), '4.2.12', 'all');
 		wp_enqueue_style('sig-bx-css');
+
+		wp_dequeue_style( 'wp-block-library');
+		wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-block-style' );
 	}
 	add_action('wp_enqueue_scripts', 'ct_register_styles');
 
@@ -71,7 +75,7 @@
 		//Custom functions
 		wp_enqueue_script('functions', JSPATH.'functions.js', array('jquery'), '1.0.0', false);
 		//Bx Slider 4.2.12
-		wp_register_script('bx-slider', JSPATH.'jquery.bxslider.min.js', array('jquery'), '4.2.12');
+		wp_register_script('bx-slider', JSPATH.'jquery.bxslider.js', array('jquery'), '4.2.12');
 		wp_enqueue_script('bx-slider');
 		if(is_single()||is_page()||is_singular()):
 			wp_register_script('fitvids', JSPATH . 'jquery.fitvids.js', array('jquery'), '1.0.0');
