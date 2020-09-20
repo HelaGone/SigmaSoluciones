@@ -15,6 +15,7 @@ Tags: Custom, wordpress, theme, templates
  Dark blue: #30434D
  Medium Blue: #708B99
  Light orange: #FFE4D7
+ Ligh green: #CAE5E4
  Orange: #E26917
  Bluish White: #F2F7F5
  */
@@ -91,6 +92,7 @@ a:hover{color:#30434D;transition:color .6s;}
 
 .dark_blue_bg{background-color:#30434D;}
 .light_orange_bg{background-color:#FFE4D7;}
+.ligh_green_bg{background-color: #CAE5E4;}
 
 ._see_more{background-color:white;border-radius: 5px;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);max-width:80px;margin:32px auto;padding:16px;font-family: 'Source Serif Pro', serif;}
 .cover_anchor{position: absolute;top:0;left: 0;right: 0;bottom: 0;}
@@ -238,33 +240,64 @@ a:hover{color:#30434D;transition:color .6s;}
 .single .main_wrapper_section{padding-bottom: 243px;}
 .single .inner_container h1{font-family:'Akzidenz Grotesk Bold', sans-serif;font-size: 22px;margin:8px 0 16px 0;}
 .single .content_container p{font-family:'Akzidenz Grotesk Light', sans-serif;line-height: 22px;color:#30434D;}
+.single .content_container .blocks-gallery-grid .blocks-gallery-image figcaption,
+.single .content_container .blocks-gallery-grid .blocks-gallery-item figcaption,
+.single .content_container .wp-block-gallery .blocks-gallery-image figcaption,
+.single .content_container .wp-block-gallery .blocks-gallery-item figcaption{padding:40px 0 9px 0;font-family:'Source Serif Pro Italic', serif;}
+/* Content */
+.single .content_container{text-align: left;font-family:'Source Serif Pro Light', serif; font-weight: 700;}
+.single .content_container p{line-height: 26px;margin-bottom: 12px;}
+.single .content_container strong{font-weight: 700;}
+.single .content_container a{color:#E26917;}
+.single .content_container a:hover{color:#FFE4D7;}
+.single .content_container ul{list-style:square inside;padding:0 0 0 16px;}
+.single .content_container ul li{margin-bottom:8px;line-height: 22px;}
+.single .content_container div.wp-caption{width: 100%!important;}
+.single .content_container img{width: 100%;height: auto;}
+.single .content_container figure{margin:16px 0;width:100%;}
+.single .content_container blockquote{padding: 0 16px;}
+.single .content_container blockquote p{font-family: 'Source Serif Pro Italic', serif;}
+.single .content_container .wp-block-image img{width: 100%;height: auto;}
+.single .content_container .wp-block-gallery ul{padding:0;}
+.single .content_container .wp-block-image figcaption, .content_container .wp-block-quote cite{font-family: 'Source Serif Pro Italic', serif;}
 
 /* SINGLE SERVICIOS */
 .single-servicios .section_wrapper{margin-bottom:32px;}
 .single-servicios .footer_style{position: absolute;bottom: 0;}
-.content_container .blocks-gallery-grid .blocks-gallery-image figcaption,
-.content_container .blocks-gallery-grid .blocks-gallery-item figcaption,
-.content_container .wp-block-gallery .blocks-gallery-image figcaption,
-.content_container .wp-block-gallery .blocks-gallery-item figcaption{padding:40px 0 9px 0;font-family:'Source Serif Pro Italic', serif;}
 /* END SINGLE SERVICIOS */
 
 /* SINGLE ASESORES*/
 .single-asesores .image_frame{width:150px;height: 150px;border-radius: 50%;overflow:hidden;}
 .single-asesores .main_wrapper_section{padding-bottom:0;}
 .single-asesores .main_wrapper_section h1{color:#30434D;font-family: 'Source Serif Pro Light', serif;font-weight: 700;}
-.asesor_container{max-width: 420px;margin:0 auto;}
-.asesor_socials .vertical_list li{margin-bottom:4px;display: flex;align-items: center;}
-.asesor_socials .vertical_list li .share_icon{width:48px;height: 48px;display: grid;place-items:center;margin-right: 16px}
-.asesor_socials .vertical_list li .share_name{font-family:'Akzidenz Grotesk LightCond', sans-serif;font-weight: 700;font-size: 18px;}
-.sare_item svg{width:32px;height: 32px;}
-.fb_item{background-color:#1877F2;}
-.wa_item{background-color:#25D366;}
-.tw_item{background-color:#1DA1F2;}
-.fig_asesor{display: grid;grid-template-columns: minmax(182px, 25%) 1fr; }
-.assesor_quote{padding:0 32px;margin-bottom:16px;}
-.assesor_quote p{font-family:'Source Serif Pro Italic', serif;line-height: 20px;}
-.content_container.assesor_description p{font-family:'Akzidenz Grotesk LightCond', sans-serif;font-size: 18px;line-height: 22px;}
+.single-asesores .asesor_container{max-width: 420px;margin:0 auto;}
+.single-asesores .asesor_socials .vertical_list li{margin-bottom:4px;display: flex;align-items: center;}
+.single-asesores .asesor_socials .vertical_list li .share_icon{width:48px;height: 48px;display: grid;place-items:center;margin-right: 16px}
+.single-asesores .asesor_socials .vertical_list li .share_name{font-family:'Akzidenz Grotesk LightCond', sans-serif;font-weight: 700;font-size: 18px;}
+.single-asesores .share_item svg{width:32px;height: 32px;}
+.single-asesores .fb_item{background-color:#1877F2;}
+.single-asesores .wa_item{background-color:#25D366;}
+.single-asesores .tw_item{background-color:#1DA1F2;}
+.single-asesores .fig_asesor{display: grid;grid-template-columns: minmax(182px, 25%) 1fr; }
+.single-asesores .assesor_quote{padding:0 32px;margin-bottom:16px;}
+.single-asesores .assesor_quote p{font-family:'Source Serif Pro Italic', serif;line-height: 20px;}
+.single-asesores .content_container.assesor_description p{font-family:'Akzidenz Grotesk LightCond', sans-serif;font-size: 18px;line-height: 22px;}
 /* END SINGLE */
+
+/* SINGLE BLOG*/
+.single-post .image_frame{width: 100%;}
+.single-post .image_frame img{width: 100%; height: auto;}
+.horizontal_list li{display: inline-block;}
+.horizontal_list .share_item .share_icon{display: inline-block;}
+.tag_cloud{margin:32px 0;}
+.tag_cloud .tag_list{text-align: right;}
+.tag_cloud .tag_list .tag_item{
+  display: inline-block;
+  padding:8px 4px;
+  font-family: 'Source Serif Pro Light', serif;
+  font-size: 14px;
+}
+/* END SINGLE BLOG */
 
 /* SINGLE INMUEBLE */
 /* TABBED WIDGET */
@@ -298,19 +331,6 @@ a:hover{color:#30434D;transition:color .6s;}
 .ameni_item{width:62px; height:62px;padding:8px;background-color: #FFE4D7;border-radius: 5px;margin-bottom:16px;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);}
 .ameni_item .fig_object{display:grid;place-items: center;padding:4px 0;position: relative;}
 .ameni_item .fig_object img{margin-bottom:4px;}
-
-/* Content */
-.content_container{text-align: left;font-family:'Source Serif Pro Light', serif; font-weight: 700;}
-.content_container p{line-height: 26px;margin-bottom: 12px;}
-.content_container strong{font-weight: 700;}
-.content_container a{color:#E26917;}
-.content_container a:hover{color:#FFE4D7;}
-.content_container ul{list-style:square inside;padding:0 0 0 16px;}
-.content_container ul li{margin-bottom:8px;line-height: 22px;}
-.content_container figure{margin:16px 0;width:100%;}
-.content_container .wp-block-image img{width: 100%;height: auto;}
-.content_container .wp-block-gallery ul{padding:0;}
-.content_container .wp-block-image figcaption, .content_container .wp-block-quote cite{font-family: 'Source Serif Pro Italic', serif;}
 
 /* Map container */
 .map_container{background-color: #F2F7F5;padding-top:32px;padding-bottom:32px;margin-bottom:32px;}
