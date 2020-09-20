@@ -7,7 +7,10 @@
     <section class="main_wrapper_section">
       <section class="fixed_top_section">
         <figure class="arc_fig_obj">
-          <img src="<?php echo THEMEPATH.'images/headers/'.$pt.'.jpg' ?>" alt="">
+          <picture>
+            <source media="(min-width:1280px)" srcset="<?php echo THEMEPATH.'images/headers/'.$pt.'-1280.jpg' ?>" />
+            <img src="<?php echo THEMEPATH.'images/headers/'.$pt.'.jpg' ?>" alt="Header Inmobiliaria">
+          </picture>
           <figcaption class="fig_caption">
             <div class="inner_wrapper">
               <h1 class="fig_title"><?php echo esc_html(strtoupper($arch_name)); ?></h1>

@@ -264,7 +264,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .social_shares .share_icon{width:48px;height:48px;display: grid;place-items:center;}
 
 .single .main_wrapper{padding-top:64px;position: relative;min-height: calc(100vh - 64px);}
-.single .main_wrapper_section h1{font-family:'Source Serif Pro Light', serif;font-size: 22px;line-height: 30px;margin:8px 0 16px 0;font-weight: 700;margin-bottom: 0;}
+.single .main_wrapper_section h1{font-family:'Source Serif Pro Light', serif;font-size: 22px;line-height: 30px;margin:8px 0 16px 0;font-weight: 700;}
 .single .heading_container time{font-family:'Source Serif Pro Light', serif;font-size: 14px;line-height: 16px;}
 .single .heading_container p{font-family:'Akzidenz Grotesk Cond', sans-serif;margin: 16px 0;color:#708B99;font-size:14px;line-height: 16px;}
 /* Content */
@@ -305,7 +305,7 @@ a:hover{color:#30434D;transition:color .6s;}
 /* SINGLE SERVICIOS */
 .single-servicios .main_wrapper_section{padding-bottom: 243px;}
 .single-servicios .section_wrapper{margin-bottom:32px;}
-.single-servicios .footer_style{position: absolute;bottom: 0;}
+.single-servicios .footer_style{position:absolute;bottom:0;left:0;right:0;}
 /* END SINGLE SERVICIOS */
 
 /* SINGLE ASESORES*/
@@ -416,7 +416,7 @@ a:hover{color:#30434D;transition:color .6s;}
   /* #services_section .post_pool{max-width: 60%; margin:0 auto;} */
   #inm_list_section, #asesores_list{padding:24px;margin-bottom:32px;}
   .post_pool{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
-  .post_pool .unit_item{width: calc(100% / 2 - 20px);}
+  .post_pool .unit_item{width: calc(100% / 2 - 20px);margin-bottom: 32px;}
   .ribbon_fig_obj{width: calc(100% / 3 - 4px);}
   .inm_fig_obj{border-radius: 5px;overflow: hidden;}
   .services_list{position:inherit;}
