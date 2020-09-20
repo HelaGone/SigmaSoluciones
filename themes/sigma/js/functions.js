@@ -12,6 +12,7 @@ $(document).ready(function(){
 	*/
 	// FIT VIDS
 	$('.single-inmuebles').fitVids();
+	$('.content_container').fitVids();
 	// CAROUSELS IN ARCHIVE BOTTOM POSITION
 	$('.bottom_carousel').bxSlider({
 		pager:false,

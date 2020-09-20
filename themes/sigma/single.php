@@ -79,7 +79,6 @@
               <?php
                 endwhile; ?>
             </div>
-            <section class="related_pool ligh_green_bg">
               <?php
                 $args = array(
                   'post_type'=>'post',
@@ -87,24 +86,25 @@
                   'posts_per_page'=>3,
                   'orderby'=>'date',
                   'order'=>'DESC',
-                  'tag'=>join(',',$tag_names)
+                  'tag'=>join(',',$tag_names),
+                  'post__not_in'=>array($p_id)
                 );
                 $related = new WP_Query($args);
                 if($related->have_posts()):
                   $i=1; ?>
-                  <h2 class="section_heading">RELACIONADAS</h2>
-                  <?php
-                    while($related->have_posts()):
-                      $related->the_post();
-                      setup_postdata($post);
-                      get_template_part('templates/figure', 'item', array("count"=>$i));
-                      $i++;
-                    endwhile;
-                  wp_reset_postdata();
+                  <section id="related_pool" class=" ligh_green_bg">
+                    <h2 class="section_heading">RELACIONADAS</h2>
+                    <?php
+                      while($related->have_posts()):
+                        $related->the_post();
+                        setup_postdata($post);
+                        get_template_part('templates/figure', 'item', array("count"=>$i));
+                        $i++;
+                      endwhile;
+                      wp_reset_postdata(); ?>
+                    </section>
+              <?php
                 endif;
-              ?>
-            </section>
-        <?php
           endif; ?>
     </section>
   </section>
