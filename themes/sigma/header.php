@@ -82,8 +82,17 @@
 		<?php wp_head(); ?>
 		<!-- END WP_HEAD -->
 		<script type="text/javascript">
+			let isOpen = false;
 			const hk_handle_toggle_menu = () => {
-				console.log('click menu');
+				if(!isOpen){
+					document.getElementById('big_f').scrollIntoView({
+						behavior: 'smooth'
+					});
+					isOpen = !isOpen;
+				}else{
+					window.scrollTo(0, 0);
+					isOpen = !isOpen;
+				}
 			}
 		</script>
 	</head>

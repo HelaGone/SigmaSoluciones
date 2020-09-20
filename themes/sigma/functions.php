@@ -46,6 +46,11 @@
 		require_once('inc/taxonomies.php');
 	}
 
+	function ct_custom_menu() {
+		register_nav_menu('sigma-custom-menu', 'Sigma Menu');
+	}
+	add_action( 'init', 'ct_custom_menu' );
+
 	/**
 	 * This function register stylesheets needed for this theme
 	*/

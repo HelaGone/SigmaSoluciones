@@ -79,6 +79,7 @@ blockquote:before, blockquote:after,
 q:before, q:after {content: '';content: none;}
 table {border-collapse: collapse;border-spacing: 0;}
 button{background:none;border:none;}
+html{scroll-behavior: smooth;}
 html,body{min-height: 100%;}
 a{text-decoration: none;color:inherit;}
 a:hover{color:#30434D;transition:color .6s;}
@@ -100,6 +101,13 @@ a:hover{color:#30434D;transition:color .6s;}
 
 ._see_more{background-color:white;border-radius: 5px;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);max-width:80px;margin:32px auto;padding:16px;font-family: 'Source Serif Pro', serif;}
 .cover_anchor{position: absolute;top:0;left: 0;right: 0;bottom: 0;}
+
+/* MENU */
+#menu_container{position:fixed;top:64px;right:0;bottom:243px;left: 0;z-index: 99999;text-align:right;padding:64px 48px;}
+#main_menu{border-right: 2px solid #30434D;padding:16px 16px;margin-bottom: 32px;color:#30434D;}
+#main_menu .menu-item{margin-bottom:24px;font-family: 'Akzidenz Grotesk Cond',sans-serif;font-size: 22px;line-height: 1em;font-weight: 900;}
+#main_menu .menu-item:last-child{margin-bottom: 0;}
+/* #main_menu{} */
 
 /* FIXED TOP SECTION */
 .fixed_top_section{position: fixed;top:64px;left:0;right:0;}
