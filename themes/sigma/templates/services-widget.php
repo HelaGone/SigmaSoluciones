@@ -39,7 +39,7 @@
              ?>
             <li class="service_item">
               <figure class="infocard_obj">
-                <button type="button" name="button">
+                <button type="button" name="button" class="serv_button">
                   <img width="48" height="48" src="<?php echo THEMEPATH .'images/assets/'.$cover_slug.'.svg' ?>" alt="<?php echo esc_attr($service_name); ?>">
                 </button>
                 <figcaption class="infocard_caption">

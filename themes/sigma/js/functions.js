@@ -36,8 +36,8 @@ $(document).ready(function(){
 	$('.companies_carousel').bxSlider(bx_conf_partners);
 
 	// View Bos Servicios
-	$('button').on('click', function(){
-		console.log("click");
+	$('button.serv_button').on('click', function(){
+		// console.log("click service");
 		$(this).parent().parent().find('.view_box').show();
 	});
 	$('.close_viewbox').on('click', function(){
