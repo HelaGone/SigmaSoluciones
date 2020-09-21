@@ -22,35 +22,35 @@ Tags: Custom, wordpress, theme, templates
 
 @font-face {
   font-family: 'Akzidenz Grotesk Light';
-  src: url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Light.otf') format("opentype");
+  src: url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Light.otf') format("opentype");
 }
 @font-face {
   font-family: 'Akzidenz Grotesk';
-  src: url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Regular.otf') format("opentype");
+  src: url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Regular.otf') format("opentype");
 }
 @font-face{
   font-family: 'Akzidenz Grotesk Bold';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Bold.otf') format("opentype")
+  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Bold.otf') format("opentype")
 }
 @font-face {
   font-family: 'Akzidenz Grotesk Cond';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Cond.otf') format("opentype");
+  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Cond.otf') format("opentype");
 }
 @font-face {
   font-family: 'Akzidenz Grotesk LightCond';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-LightCond.otf') format("opentype");
+  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-LightCond.otf') format("opentype");
 }
 @font-face {
   font-family: 'Source Serif Pro Bold';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Bold.ttf') format("truetype");
+  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-Bold.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Source Serif Pro Light';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Light.ttf') format("truetype");
+  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-Light.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Source Serif Pro Italic';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-LightItalic.ttf') format("truetype");
+  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-LightItalic.ttf') format("truetype");
 }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -256,6 +256,16 @@ a:hover{color:#30434D;transition:color .6s;}
 #archive-rec-vir .services_grid{background-color: #30434D;padding:32px 0;}
 /* END ARCHIVE RECORRIDOS VIRTUALES */
 
+/* ARCHIVE SERVICIOS */
+.post-type-archive-servicios .main_wrapper{padding-top: 64px;}
+#archive_services h1{margin:1em 0;}
+#archive_services .post_pool{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-around;align-items: center;}
+#archive_services .post_pool .fig_object{width:calc(100% / 2 - 16px);position: relative;margin-bottom:24px;border-radius: 5px;overflow: hidden;}
+#archive_services .post_pool .fig_object img{width: 100%;height: auto;object-fit: cover;}
+#archive_services .post_pool .fig_caption{position: absolute;top:0;left:0;bottom:0;right:0;display: grid;place-items:center;}
+#archive_services .post_pool .fig_caption h2{background-color: rgba(255, 255, 255, 0.66);font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 16px;width:100%;padding:16px 0;}
+/* END ARCHIVE SERVICIOS */
+
 .image_frame img{width: 100%;height: auto;}
 
 /* SINGLE GENERALS */
@@ -386,6 +396,11 @@ a:hover{color:#30434D;transition:color .6s;}
 #related_pool .section_heading{color:#30434D;border-bottom: none;}
 /* END SINGLE INMUEBLE */
 
+/* PAGE DEFAULT */
+.page-template-default .main_wrapper{padding-top:64px;}
+.page-template-default .content_container{text-align: left;}
+.page-template-default .content_container p{margin-bottom:12px;}
+
 /* FOOTER STYLES */
 /* Social Icons */
 .social_icons{display: flex;flex-direction: row;justify-content: flex-end;align-items: center;}
@@ -429,6 +444,7 @@ a:hover{color:#30434D;transition:color .6s;}
   .single .heading_container p{max-width: 666px;margin:16px auto;font-size: 16px;line-height: 20px;}
   .single .content_container p{font-size: 20px;}
   .single .main_wrapper_section h1{font-size: 32px;line-height: 36px;}
+  #archive_services .post_pool .fig_object{width:calc(100% / 2 - 16px);}
 }
 
 @media only screen and (min-width:1024px){

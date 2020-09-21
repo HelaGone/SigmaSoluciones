@@ -4,10 +4,10 @@
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-91771961-11"></script>
 		<script>
-		  // window.dataLayer = window.dataLayer || [];
-		  // function gtag(){dataLayer.push(arguments);}
-		  // gtag('js', new Date());
-		  // gtag('config', 'UA-91771961-11');
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-91771961-11');
 		</script>
 		<meta charset="utf-8" name="Custom Theme">
 		<title><?php ct_print_title(); ?></title>

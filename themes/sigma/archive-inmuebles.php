@@ -2,8 +2,7 @@
   global $wp_query;
   $query_vars = $wp_query->query_vars;
   $pt = $query_vars['post_type'];
-  $arch_name = ($pt == 'inmuebles') ? 'inmobiliaria' : $pt;
-  if(have_posts()): ?>
+  $arch_name = ($pt == 'inmuebles') ? 'inmobiliaria' : $pt; ?>
     <section class="main_wrapper_section">
       <section class="fixed_top_section">
         <figure class="arc_fig_obj">
@@ -33,55 +32,60 @@
         <!-- SERVICES GRID -->
         <?php get_template_part('templates/services', 'widget', array('serv'=>'inmobiliaria', 'tax'=>'rubros')); ?>
 
-        <!-- INMUEBLES LIST -->
-        <section id="inm_list_section" class="section_wrapper">
-          <h2 class="section_heading"><?php echo esc_html(strtoupper($pt)); ?></h2>
-          <section id="filter_widget">
-            <?php echo get_search_form(); ?>
-            <div class="selectors_wrapper inner_wrapper">
-              <select class="" name="ventarenta">
-                <option value="venta">Venta</option>
-                <option value="renta">Renta</option>
-              </select>
-              <select class="" name="casadepto">
-                <option value="casa">Casa</option>
-                <option value="departamento">Departamento</option>
-              </select>
-            </div>
-          </section>
-          <section class="post_pool">
-            <?php
-              $i=1;
-              while(have_posts()):
-                the_post();
-                $p_id = $post->ID;
-                $meta_dimensiones = get_post_meta($p_id, 'dimensiones', true);
-                $meta_habitaciones = get_post_meta($p_id, 'habitaciones', true);
-                $meta_banos = get_post_meta($p_id, 'banos', true);
-                $meta_gimnasio = get_post_meta($p_id, 'gimnasio', true);
-                $meta_vigilancia = get_post_meta($p_id, 'vigilancia', true);
-                $meta_mascotas = get_post_meta($p_id, 'mascotas', true);
-                $meta_estacionamiento = get_post_meta($p_id, 'estacionamiento', true);
-                $meta_alberca = get_post_meta($p_id, 'alberca', true);
-                $meta_ubicacion = get_post_meta($p_id, 'ubicacion', true);
-                $meta_venta_renta = get_post_meta($p_id, 'venta__renta', true);
-                $meta_precio = get_post_meta($p_id, 'precio', true);
-                $amenities_arr = array(
-                array(
-                  'gym'=>$meta_gimnasio,
-                  'seguridad'=>$meta_vigilancia,
-                  'pets'=>$meta_mascotas,
-                  'alberca'=>$meta_alberca
-                ));
+        <?php
+          if(have_posts()): ?>
+            <!-- INMUEBLES LIST -->
+            <section id="inm_list_section" class="section_wrapper">
+              <h2 class="section_heading"><?php echo esc_html(strtoupper($pt)); ?></h2>
+              <!--
+              <section id="filter_widget">
+                <?php echo get_search_form(); ?>
+                <div class="selectors_wrapper inner_wrapper">
+                  <select class="" name="ventarenta">
+                    <option value="venta">Venta</option>
+                    <option value="renta">Renta</option>
+                  </select>
+                  <select class="" name="casadepto">
+                    <option value="casa">Casa</option>
+                    <option value="departamento">Departamento</option>
+                  </select>
+                </div>
+              </section>
+            -->
+              <section class="post_pool">
+                <?php
+                  $i=1;
+                  while(have_posts()):
+                    the_post();
+                    $p_id = $post->ID;
+                    $meta_dimensiones = get_post_meta($p_id, 'dimensiones', true);
+                    $meta_habitaciones = get_post_meta($p_id, 'habitaciones', true);
+                    $meta_banos = get_post_meta($p_id, 'banos', true);
+                    $meta_gimnasio = get_post_meta($p_id, 'gimnasio', true);
+                    $meta_vigilancia = get_post_meta($p_id, 'vigilancia', true);
+                    $meta_mascotas = get_post_meta($p_id, 'mascotas', true);
+                    $meta_estacionamiento = get_post_meta($p_id, 'estacionamiento', true);
+                    $meta_alberca = get_post_meta($p_id, 'alberca', true);
+                    $meta_ubicacion = get_post_meta($p_id, 'ubicacion', true);
+                    $meta_venta_renta = get_post_meta($p_id, 'venta__renta', true);
+                    $meta_precio = get_post_meta($p_id, 'precio', true);
+                    $amenities_arr = array(
+                    array(
+                      'gym'=>$meta_gimnasio,
+                      'seguridad'=>$meta_vigilancia,
+                      'pets'=>$meta_mascotas,
+                      'alberca'=>$meta_alberca
+                    ));
 
-                get_template_part('templates/figure', 'inmueble', array('precio'=>$meta_precio, 'tipo'=>$meta_venta_renta));
+                    get_template_part('templates/figure', 'inmueble', array('precio'=>$meta_precio, 'tipo'=>$meta_venta_renta));
 
-                $i++;
-              endwhile; ?>
-          </section>
-        </section>
-        <!-- END INMUEBLES LIST -->
-
+                    $i++;
+                  endwhile; ?>
+              </section>
+            </section>
+            <!-- END INMUEBLES LIST -->
+        <?php
+          endif; ?>
         <!-- ASESORES CAROUSEL -->
         <?php
           $args = array(
@@ -130,6 +134,4 @@
       </section>
       <!-- END SCROLL SECTION -->
     </section>
-<?php
-  endif;
-  get_footer(); ?>
+<?php get_footer(); ?>
