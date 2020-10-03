@@ -20,7 +20,7 @@
           <section class="rounded_container scroll_section">
             <div class="about_info">
               <h1 class="section_heading"><?php echo the_title(); ?></h1>
-              <div class="descriptive_txt">
+              <div class="about_info_description">
                 <?php the_excerpt(); ?>
               </div>
             </div>

@@ -139,7 +139,8 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* ABOUT SECTION HOME */
 .about_info{margin-bottom:32px;}
-.about_info .section_heading{font-size: }
+.about_info .about_info_description{font-family:'Source Serif Pro Light', serif;font-weight: 700;line-height: 24px;padding:0 10%;}
+.post-type-archive-inmuebles .about_info_description{color:#fff;}
 
 /* MAIN SERVICES SECTION HOME*/
 .ribbon_fig_obj{width:100%;position: relative;margin-bottom:8px;}

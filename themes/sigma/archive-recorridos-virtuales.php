@@ -17,7 +17,7 @@
     <section class="rounded_container scroll_section">
       <div class="about_info">
         <h1 class="section_heading"><?php echo esc_html(ucfirst(str_replace('-', ' ', $arch_name))); ?></h1>
-        <div class="post_content_container">
+        <div class="about_info_description">
           <p>En SIGMA rompemos barreras geográficas, brindándote una nueva manera de vivir un espacio.</p>
         </div>
       </div>

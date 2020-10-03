@@ -22,7 +22,7 @@
       <section class="rounded_container scroll_section">
         <div class="about_info">
           <h2 class="section_heading">NUESTROS SERVICIOS</h2>
-          <div class="descriptive_txt post_content_container">
+          <div class="about_info_description">
             <p>
               En SIGMA nos comprometemos con nuestros clientes para brindarles una
               experiencia segura y confiable en cada una de las etapas que conforman
