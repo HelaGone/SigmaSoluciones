@@ -161,7 +161,7 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* COMPANIES CAROUSEL HOME */
 #partners{margin:16px 0;}
-#partners .bx-wrapper{background-color: #FFE4D7;border:none;}
+#partners .bx-wrapper{background-color:#F2F7F5;border:none;}
 .companies_carousel img{object-fit: contain;}
 .image_item_frame.square{display: grid;place-items:center;}
 /* .image_item_frame.square img{object-fit: contain;} */
