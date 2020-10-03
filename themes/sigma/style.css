@@ -461,6 +461,7 @@ a:hover{color:#30434D;transition:color .6s;}
   .ribbon_fig_obj{width:calc(100% / 3 - 8px);margin-bottom:0;}
 
   #page-dc .fixed_top_section img{object-fit: cover;object-position:0 -270px;}
+  .item_inner_wrapper iframe, #panorama{min-height: 374px;}
 }
 
 @media only screen and (min-width:1440px){

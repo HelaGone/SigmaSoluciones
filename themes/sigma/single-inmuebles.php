@@ -11,6 +11,10 @@
   $pool = (get_post_meta($pId, 'alberca', true)) ? get_post_meta($pId, 'alberca', true) : null;
   $maps_location = (get_post_meta($pId, 'ubicacion', true)) ? get_post_meta($pId, 'ubicacion', true) : null;
 
+  $recorrido_url = get_post_meta($pId, 'link_para_recorrido_virtual', true);
+  $imagen360 = get_post_meta($pId, 'imagen_360', true);
+  $video_promo = get_post_meta($pId, 'video_promocional', true);
+
   $amenities_arr = array("dimensiones"=>$dimentions,"habitaciones"=>$rooms,"banos"=>$wc,"gym"=>$gym,"seguridad"=>$security,"pets"=>$pets,"estacionamiento"=>$parking,"alberca"=>$pool);
 ?>
 <section class="main_wrapper_section">
@@ -33,7 +37,7 @@
       <!-- RECORRIDO VIRTUAL -->
       <li class="panel" data-media-type="recorrido">
         <div class="item_inner_wrapper">
-          <iframe src="https://players.cupix.com/p/AYvGTwTL" width="720" height="480" style="margin:0 auto;" allowFullScreen="true"></iframe>
+          <iframe src="<?php echo esc_url($recorrido_url); ?>" width="720" height="480" style="margin:0 auto;" allowFullScreen="true"></iframe>
         </div>
       </li>
 
@@ -74,7 +78,7 @@
       <!-- VIDEO -->
       <li class="panel" data-media-type="video">
         <div class="item_inner_wrapper">
-          <iframe width="426" height="240" src="https://www.youtube.com/embed/3RrCy6Syyxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="426" height="240" src=" <?php echo esc_url('https://www.youtube.com/embed/'.$video_promo); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </li>
     </ul>
@@ -206,7 +210,7 @@
   // PANNELLUM PLUGIN
   pannellum.viewer('panorama',{
     "type":"equirectangular",
-    "panorama":"https://localhost/sigmasoluciones.com.mx/wp-content/uploads/2020/09/foto360example-low-scaled.jpg"
+    "panorama":"<?php echo esc_url($imagen360); ?>"
   });
 
   //TABPANEL
