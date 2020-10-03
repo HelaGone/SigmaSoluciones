@@ -47,6 +47,9 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon.ico">
 		<link rel="icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon.ico" >
+		<!-- BX-SLIDER -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
 		<script>
 			/*TWITTER JS*/
 			/*

@@ -20,13 +20,15 @@
       </section>
       <!-- SCROLL SECTION -->
       <section class="rounded_container scroll_section">
-        <h2 class="section_heading">NUESTROS SERVICIOS</h2>
-        <div class="descriptive_txt">
-          <p>
-            En SIGMA nos comprometemos con nuestros clientes para brindarles una
-            experiencia segura y confiable en cada una de las etapas que conforman
-            el proceso de compra, venta o arrendamiento de su inmueble.
-          </p>
+        <div class="about_info">
+          <h2 class="section_heading">NUESTROS SERVICIOS</h2>
+          <div class="descriptive_txt post_content_container">
+            <p>
+              En SIGMA nos comprometemos con nuestros clientes para brindarles una
+              experiencia segura y confiable en cada una de las etapas que conforman
+              el proceso de compra, venta o arrendamiento de su inmueble.
+            </p>
+          </div>
         </div>
 
         <!-- SERVICES GRID -->

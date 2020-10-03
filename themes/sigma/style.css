@@ -91,7 +91,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .main_wrapper_section .bx-wrapper{border:none;}
 .inner_container{padding:16px 8px;}
 .inner_wrapper{padding:16px 8px 8px;}
-.section_heading{color:#FFE4D7;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 24px;line-height: 28px;text-align: center;border-bottom:2px solid #FFE4D7;display: inline-block;padding:2px 4px;margin-bottom:16px;}
+.section_heading{color:#fff;font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 24px;line-height: 28px;text-align: center;border-bottom:2px solid #fff;display: inline-block;padding:2px 4px;margin-bottom:16px;}
 .descriptive_txt{color:#F2F7F5;font-family: 'Source Serif Pro Light', serif;font-size: 16px;line-height: 22px;text-align:left; padding:0 15%;}
 .section_wrapper{text-align: center;}
 
@@ -139,6 +139,7 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* ABOUT SECTION HOME */
 .about_info{margin-bottom:32px;}
+.about_info .section_heading{font-size: }
 
 /* MAIN SERVICES SECTION HOME*/
 .ribbon_fig_obj{width:100%;position: relative;margin-bottom:8px;}
@@ -232,12 +233,9 @@ a:hover{color:#30434D;transition:color .6s;}
 /* END ARCHIVE INMUEBLE */
 
 /* ARCHIVE DISENO CONSTRUCCIÓN */
-/* .page-template-page-diseno-construccion .main_wrapper{top:64vh;} */
-#page-dc .section_heading{font-family:'Source Serif Pro Light', serif;}
 #page-dc .fixed_top_section img{width:100%;height: auto;}
 #page-dc .rounded_container{background-color: #fff;padding-bottom: 1px;}
 #page-dc .section_heading, #page-dc .descriptive_txt, #page-dc .infocard_caption{color:#30434D;}
-#page-dc .section_heading{border-bottom: 2px solid #30434D;font-weight: 700;}
 #page-dc h2.section_heading{font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 32px;}
 #page-dc .descriptive_txt{text-align: center;margin-bottom: 24px;}
 #success_cases{padding:32px 0;}
@@ -274,7 +272,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .social_shares .share_icon{width:48px;height:48px;display: grid;place-items:center;}
 
 .single .main_wrapper{padding-top:64px;position: relative;min-height: calc(100vh - 64px);}
-.single .main_wrapper_section h1{font-family:'Source Serif Pro Light', serif;font-size: 22px;line-height: 30px;margin:8px 0 16px 0;font-weight: 700;}
+.single .main_wrapper_section h1{font-family:'Source Serif Pro Light', serif;font-weight: 700;} /* font-size: 22px;line-height: 30px;margin:8px 0 16px 0; */
 .single .heading_container time{font-family:'Source Serif Pro Light', serif;font-size: 14px;line-height: 16px;}
 .single .heading_container p{font-family:'Akzidenz Grotesk Cond', sans-serif;margin: 16px 0;color:#708B99;font-size:14px;line-height: 16px;}
 /* Content */
@@ -438,7 +436,7 @@ a:hover{color:#30434D;transition:color .6s;}
   .view_box{width:360px;top:80px;left:50%;margin-left:-180px;box-shadow: 1px 3px 6px rgba(0,0,0,0.3);border-radius: 5px;bottom:auto;z-index: 4;}
   .info__bottom_bar{font-size:24px;}
   .inm_fig_caption h3{font-size: 32px;line-height: 36px;text-align: left;padding:0 16px;}
-  .main_wrapper_section h1{font-size: 48px;line-height: 50px;}
+  .about_info .section_heading{font-size: 48px;line-height: 50px;}
   .arc_fig_obj .fig_descr{font-size: 24px;line-height: 28px;}
   #page-dc .fixed_top_section img{object-fit: cover;object-position:0 -270px;}
   .single .heading_container p{max-width: 666px;margin:16px auto;font-size: 16px;line-height: 20px;}
