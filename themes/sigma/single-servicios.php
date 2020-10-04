@@ -6,7 +6,7 @@
     while(have_posts()):
       the_post(); ?>
 
-      <section class="main_wrapper_section">
+      <section class="main_wrapper_section_single">
         <section class="inner_container">
           <h1><?php the_title(); ?></h1>
           <div class="content_container">

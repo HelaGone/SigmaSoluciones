@@ -5,7 +5,7 @@
       $email = get_post_meta($post->ID, 'correo_electronico_meta', true);
       $whatsapp = get_post_meta($post->ID, 'whatsapp_meta', true);
       ?>
-      <section class="main_wrapper_section">
+      <section class="main_wrapper_section_single">
         <section>
           <figure class="fig_asesor inner_wrapper asesor_container">
             <picture class="image_frame">

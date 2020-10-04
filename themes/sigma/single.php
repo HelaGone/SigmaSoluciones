@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <section class="main_wrapper_section">
+  <section class="main_wrapper_section_single">
     <section>
         <?php
           if(have_posts()): ?>
