@@ -93,7 +93,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .arc_fig_obj .fig_caption div.inner_wrapper{position:relative;bottom:25%;}
 
 .main_wrapper_section{padding-top:64vh;}
-.main_wrapper .bx-wrapper{margin-bottom: 0;}
+.main_wrapper .bx-wrapper{margin-bottom: 0;border:none;}
 .main_wrapper_section .bx-wrapper{border:none;}
 .inner_container{padding:16px 8px;}
 .inner_wrapper{padding:16px 8px 8px;}
@@ -286,11 +286,11 @@ a:hover{color:#30434D;transition:color .6s;}
 .social_shares .share_icon{width:48px;height:48px;display: grid;place-items:center;}
 
 .single .main_wrapper_section{padding-top:64px;position: relative;min-height: calc(100vh - 64px);}
-.single .main_wrapper_section h1{font-family:'Source Serif Pro Light', serif;font-weight: 700;} /* font-size: 22px;line-height: 30px;margin:8px 0 16px 0; */
+.single .main_wrapper_section h1{font-family:'Source Serif Pro Light', serif;font-weight: 700;font-size: 24px;line-height: 30px;margin-bottom: 4px;}
 .single .heading_container time{font-family:'Source Serif Pro Light', serif;font-size: 14px;line-height: 16px;}
 .single .heading_container p{font-family:'Akzidenz Grotesk Cond', sans-serif;margin: 16px 0;color:#708B99;font-size:14px;line-height: 16px;}
 /* Content */
-.single .content_container{text-align: left;font-family:'Source Serif Pro Light', serif;}
+.single .content_container{text-align: left;}
 .single .content_container p{
   font-family:'Akzidenz Grotesk Light', sans-serif;
   color:#30434D;line-height: 26px;max-width: 666px;margin:0 auto 12px auto;}

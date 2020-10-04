@@ -1,7 +1,9 @@
 			<footer class="inner_section footer_style">
 				<section id="big_f" class="big_footer inner_wrapper">
 					<div class="sig_about_foot">
-						<img width="64" height="64" src="<?php echo THEMEPATH .'images/logo_sigma_w.svg' ?>" alt="">
+						<a href="<?php echo home_url(); ?>" title="Home Sigma Soluciones">
+							<img width="64" height="64" src="<?php echo THEMEPATH .'images/logo_sigma_w.svg' ?>" alt="">
+						</a>
 						<p>
 							SIGMA es un equipo multidisciplinario encargado
 							de brindarte soluciones integrales, usando

@@ -7,12 +7,18 @@
     <!-- fixed header -->
     <section class="fixed_top_section home_carousel">
       <div class="side_carousel carousel1">
-        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/img1.jpg' ?>" alt="Img 1">
-        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/img2.jpg' ?>" alt="Img 2">
+        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-1-PARTE-1.jpg' ?>" alt="Img 1">
+        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-2-PARTE-1.jpg' ?>" alt="Img 2">
+        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-3-PARTE-1.jpg' ?>" alt="Img 2">
+        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-4-PARTE-1.jpg' ?>" alt="Img 2">
+        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-5-PARTE-2.jpg' ?>" alt="Img 2">
       </div>
       <div class="side_carousel carousel2">
-        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/img3.jpg' ?>" alt="Img 3">
-        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/img4.jpg' ?>" alt="Img 4">
+        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-1-PARTE-2.jpg' ?>" alt="Img 3">
+        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-5-PATE-1.jpg' ?>" alt="Img 4">
+        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-4-PARTE-2.jpg' ?>" alt="Img 4">
+        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-3-PARTE-2.jpg' ?>" alt="Img 3">
+        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-2-PARTE-2.jpg' ?>" alt="Img 4">
       </div>
     </section>
 
