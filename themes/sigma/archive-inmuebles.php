@@ -10,12 +10,6 @@
         <source media="(min-width:1024px)" srcset="<?php echo THEMEPATH.'images/headers/'.$pt.'-1280.jpg' ?>" />
         <img src="<?php echo THEMEPATH.'images/headers/'.$pt.'.jpg' ?>" alt="Header Inmobiliaria">
       </picture>
-      <figcaption class="fig_caption">
-        <div class="inner_wrapper">
-          <h1 class="fig_title"><?php echo esc_html(strtoupper($arch_name)); ?></h1>
-          <p class="fig_descr">Lorem Ipsum Dolor Sit met consectetur adipiscing elit mecenas nullam proim esectas integer</p>
-        </div>
-      </figcaption>
     </figure>
   </section>
   <!-- END FIXED SECTION -->
@@ -24,7 +18,7 @@
       <!-- SCROLL SECTION -->
       <section class="rounded_container scroll_section">
         <div class="about_info">
-          <h2 class="section_heading">NUESTROS SERVICIOS</h2>
+          <h1 class="section_heading"><?php echo esc_html(strtoupper($arch_name)); ?></h1>
           <div class="about_info_description">
             <p>
               En SIGMA nos comprometemos con nuestros clientes para brindarles una

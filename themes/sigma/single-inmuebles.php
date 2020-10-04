@@ -120,12 +120,12 @@
               if(strtolower($value)!='no' || intval($value)!=0):
 
                 switch ($key) {
-                  case 'habitaciones': $abrev = 'Hab.'; break;
-                  case 'banos': $abrev = 'WC'; break;
+                  case 'habitaciones': $abrev = ''; break;
+                  case 'banos': $abrev = ''; break;
                   case 'gym': $abrev = 'Gimnasio'; break;
                   case 'seguridad': $abrev = 'Vigilancia'; break;
                   case 'pets': $abrev = 'Mascotas'; break;
-                  case 'estacionamiento': $abrev = 'E'; break;
+                  case 'estacionamiento': $abrev = ''; break;
                   case 'alberca': $abrev = 'Alberca'; break;
                   default: $abrev = '';break;
                 } ?>

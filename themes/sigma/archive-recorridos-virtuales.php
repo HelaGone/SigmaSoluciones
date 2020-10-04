@@ -17,7 +17,7 @@
     <!-- SCROLL SECTION -->
     <section class="rounded_container scroll_section">
       <div class="about_info">
-        <h1 class="section_heading"><?php echo esc_html(ucfirst(str_replace('-', ' ', $arch_name))); ?></h1>
+        <h1 class="section_heading"><?php echo esc_html(strtoupper(str_replace('-', ' ', $arch_name))); ?></h1>
         <div class="about_info_description">
           <p>En SIGMA rompemos barreras geográficas, brindándote una nueva manera de vivir un espacio.</p>
         </div>
@@ -28,6 +28,7 @@
 
       <?php
         if(have_posts()): ?>
+        <h2 class="section_heading">PORTAFOLIO</h2>
         <section id="recorridos" class="post_pool inner_wrapper">
           <?php
             while(have_posts()):

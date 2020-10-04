@@ -187,7 +187,7 @@
     	global $post;
     	$anchor_text = 'Read more';
     	$more = ' &hellip; <a href="'. esc_url( get_permalink() ) . '">' . $anchor_text . '</a>';
-    	return $more;
+    	return '';
 	}
 	add_filter('excerpt_more', 'isa_cpt_excerpt_more');
 

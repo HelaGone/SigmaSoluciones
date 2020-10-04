@@ -189,7 +189,7 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* ARCHIVE INMUEBLE */
 /* .arc_fig_obj .fig_title{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;} */
-.main_wrapper_section h1{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;}
+/* .main_wrapper_section h1{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;} */
 .arc_fig_obj .fig_descr{font-size: 14px;line-height: 16px;font-family: 'Source Serif Pro Light', serif; }
 
 #inm_list_section{padding:24px 0;background-color: #fff;}
@@ -248,7 +248,7 @@ a:hover{color:#30434D;transition:color .6s;}
 #page-dc h2.section_heading{font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 32px;}
 #page-dc .descriptive_txt{text-align: center;margin-bottom: 24px;}
 #success_cases{padding:32px 0;}
-#success_cases .section_heading{color:#FFE4D7;border-bottom: 2px solid #FFE4D7; font-family: 'Akzidenz Grotesk Bold', sans-serif;}
+#success_cases .section_heading{color:#fff;border-bottom: 2px solid #fff; font-family: 'Akzidenz Grotesk Bold', sans-serif;}
 #success_cases .bottom_car_list_item{max-width: 180px;background-color: transparent;color:#F2F7F5;box-shadow: none;}
 #success_cases .bottom_car_list_item
 .cases_fig_caption, .cases_fig_caption .descriptive_txt{font-family:'Akzidenz Grotesk LightCond', sans-serif;}
@@ -260,7 +260,8 @@ a:hover{color:#30434D;transition:color .6s;}
 #archive-rec-vir h1.section_heading{color:#30434D;border-bottom:none;}
 #archive-rec-vir p.descriptive_txt{color:#30434D;font-family: 'Source Serif Pro Italic', serif;text-align: center;}
 #archive-rec-vir .rounded_container{background-color: white;}
-#archive-rec-vir .services_grid{background-color: #30434D;padding:32px 0;}
+#archive-rec-vir .services_grid{padding:32px 0;}
+#archive-rec-vir .services_list .infocard_title{color:#30434d;}
 /* END ARCHIVE RECORRIDOS VIRTUALES */
 
 /* ARCHIVE SERVICIOS */
@@ -384,8 +385,8 @@ a:hover{color:#30434D;transition:color .6s;}
 .house_icon{background-color:#ffffff;margin-right: 16px;}
 .house_icon svg{fill:#E26917;}
 .house_name{color:#F2F7F5;font-weight: 700;font-family: sans-serif;line-height: 22px;}
-.house_location{background-color: #E26917;margin-left:16px;}
-.house_location svg{fill:#30434D;}
+.house_location{background-color: #fff;margin-left:16px;}
+.house_location svg{fill:#E26917;}
 
 /* AMENITIES WIDGET */
 #amenities_pool{margin-top:32px;}
