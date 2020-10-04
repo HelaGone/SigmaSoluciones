@@ -22,35 +22,35 @@ Tags: Custom, wordpress, theme, templates
 
 @font-face {
   font-family: 'Akzidenz Grotesk Light';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Light.otf') format("opentype");
+  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Light.otf') format("opentype");
 }
 @font-face {
   font-family: 'Akzidenz Grotesk';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Regular.otf') format("opentype");
+  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Regular.otf') format("opentype");
 }
 @font-face{
   font-family: 'Akzidenz Grotesk Bold';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Bold.otf') format("opentype")
+  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Bold.otf') format("opentype")
 }
 @font-face {
   font-family: 'Akzidenz Grotesk Cond';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Cond.otf') format("opentype");
+  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-Cond.otf') format("opentype");
 }
 @font-face {
   font-family: 'Akzidenz Grotesk LightCond';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/AkzidenzGrotesk-LightCond.otf') format("opentype");
+  src:url('/wp-content/themes/sigma/fonts/AkzidenzGrotesk-LightCond.otf') format("opentype");
 }
 @font-face {
   font-family: 'Source Serif Pro Bold';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Bold.ttf') format("truetype");
+  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-Bold.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Source Serif Pro Light';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-Light.ttf') format("truetype");
+  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-Light.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Source Serif Pro Italic';
-  src:url('/sigmasoluciones.com.mx/wp-content/themes/sigma/fonts/SourceSerifPro-LightItalic.ttf') format("truetype");
+  src:url('/wp-content/themes/sigma/fonts/SourceSerifPro-LightItalic.ttf') format("truetype");
 }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -96,9 +96,9 @@ a:hover{color:#e26917;transition:color .6s;}
 .main_wrapper_section .bx-wrapper{border:none;}
 .main_wrapper_section_single{padding-top:64px;}
 
-.panel .bx-wrapper .bx-next{background:no-repeat center url('/sigmasoluciones.com.mx/wp-content/themes/sigma/images/assets/keyboard_arrow_right-24px.svg');}
+.panel .bx-wrapper .bx-next{background:no-repeat center url('/wp-content/themes/sigma/images/assets/keyboard_arrow_right-24px.svg');}
 .panel .bx-wrapper .bx-next:hover{background-position:center;}
-.panel .bx-wrapper .bx-prev{background:no-repeat center url('/sigmasoluciones.com.mx/wp-content/themes/sigma/images/assets/keyboard_arrow_left-24px.svg');}
+.panel .bx-wrapper .bx-prev{background:no-repeat center url('/wp-content/themes/sigma/images/assets/keyboard_arrow_left-24px.svg');}
 
 .main_wrapper .bx-wrapper{margin-bottom: 0;border:none;box-shadow: none;}
 .main_wrapper_section .home_carousel .bx-wrapper{border:none;width:calc(100% / 2);box-shadow: none;}
@@ -204,7 +204,7 @@ a:hover{color:#e26917;transition:color .6s;}
 .arc_fig_obj .fig_descr{font-size: 14px;line-height: 16px;font-family: 'Source Serif Pro Light', serif; }
 
 #inm_list_section{padding:24px 0;background-color:transparent;margin:0 auto;}
-#inm_list_section h2{color:#30434D;border-bottom: 2px solid #30434D;}
+#inm_list_section h2{color:#fff;border-bottom: 2px solid #fff;}
 .inm_fig_obj{position:relative; margin:0 0 16px 0;}
 .inm_fig_obj img{width:100%;height: auto;}
 .amenitie_item img{width:24px;height:24px;}
@@ -300,9 +300,11 @@ a:hover{color:#e26917;transition:color .6s;}
 .single .content_container p{
   font-family:'Akzidenz Grotesk Light', sans-serif;
   color:#30434D;line-height: 26px;max-width: 666px;margin:0 auto 12px auto;}
+.single .content_container h2{font-size: 24px;line-height: 30px;margin-bottom: 8px;}
 .single .content_container  p.wp-caption-text{font-family:'Source Serif Pro Italic', serif;}
 .single .content_container .blocks-gallery-grid .blocks-gallery-image figcaption,
 .single .content_container .blocks-gallery-grid .blocks-gallery-item figcaption,
+.single .content_container .wp-block-gallery{display: none;}
 .single .content_container .wp-block-gallery .blocks-gallery-image figcaption,
 .single .content_container .wp-block-gallery .blocks-gallery-item figcaption{padding:40px 0 9px 0;font-family:'Source Serif Pro Italic', serif;}
 .single .content_container strong{font-weight: 700;}
@@ -483,7 +485,7 @@ a:hover{color:#e26917;transition:color .6s;}
   .content_container{max-width:1024px;margin:0 auto;}
   .ribbon_fig_obj{width:calc(100% / 3 - 8px);margin-bottom:0;}
   .single-inmuebles .fixed_top_section{bottom: 0;}
-  .single-inmuebles .main_wrapper_section{padding-top:86vh;}
+  .single-inmuebles .main_wrapper_section{padding-top:80vh;}
   .home .main_wrapper_section{padding-top: 87vh;}
 }
 

@@ -15,31 +15,44 @@
     'order'=>'DESC'
   );
   $blogposts = new WP_Query($args);
+  debug(count($blogposts->posts));
   if($blogposts->have_posts()): ?>
     <section class="fixed_top_section">
-      <div class="blog_carousel">
+      <?php
+      if(count($blogposts->posts) > 2): ?>
+        <div class="blog_carousel">
+          <?php
+            $i=1;
+            while($blogposts->have_posts()):
+              $blogposts->the_post();
+              array_push($not_repeat, $post->ID);
+              setup_postdata($post);
+              if(has_post_thumbnail()): ?>
+              <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+                <figure class="arc_fig_obj">
+                  <picture>
+                    <source media="(min-width:1280px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-xxl-1280'); ?>">
+                    <source media="(min-width:768px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-ver-l-768'); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-ver-m-420'); ?>" alt="<?php echo esc_attr($post->post_title); ?>" style="width:100%;" >
+                  </picture>
+                </figure>
+              </a>
+          <?php
+              endif;
+              $i++;
+            endwhile;
+            wp_reset_postdata(); ?>
+        </div><?php
+      else: ?>
+        <figure class="arc_fig_obj">
+          <picture>
+            <!-- <source media="(min-width:1280px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-xxl-1280'); ?>">
+            <source media="(min-width:768px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-ver-l-768'); ?>"> -->
+            <img src="<?php echo THEMEPATH . 'images/default.jpg' ?>" alt="<?php echo esc_attr($post->post_title); ?>" style="width:100%;" >
+          </picture>
+        </figure>
         <?php
-          $i=1;
-          while($blogposts->have_posts()):
-            $blogposts->the_post();
-            array_push($not_repeat, $post->ID);
-            setup_postdata($post);
-            if(has_post_thumbnail()): ?>
-            <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-              <figure class="arc_fig_obj">
-                <picture>
-                  <source media="(min-width:1280px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-xxl-1280'); ?>">
-                  <source media="(min-width:768px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-ver-l-768'); ?>">
-                  <img src="<?php echo get_the_post_thumbnail_url($post->ID, 'sig-ver-m-420'); ?>" alt="<?php echo esc_attr($post->post_title); ?>" style="width:100%;" >
-                </picture>
-              </figure>
-            </a>
-        <?php
-            endif;
-            $i++;
-          endwhile;
-          wp_reset_postdata(); ?>
-      </div>
+      endif;  ?>
     </section>
 <?php
   endif; ?>
