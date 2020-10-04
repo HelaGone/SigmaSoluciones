@@ -93,8 +93,14 @@ a:hover{color:#30434D;transition:color .6s;}
 .arc_fig_obj .fig_caption div.inner_wrapper{position:relative;bottom:25%;}
 
 .main_wrapper_section{padding-top:64vh;}
-.main_wrapper .bx-wrapper{margin-bottom: 0;border:none;}
 .main_wrapper_section .bx-wrapper{border:none;}
+
+.panel .bx-wrapper .bx-next{background:no-repeat center url('/sigmasoluciones.com.mx/wp-content/themes/sigma/images/assets/keyboard_arrow_right-24px.svg');}
+.panel .bx-wrapper .bx-next:hover{background-position:center;}
+.panel .bx-wrapper .bx-prev{background:no-repeat center url('/sigmasoluciones.com.mx/wp-content/themes/sigma/images/assets/keyboard_arrow_left-24px.svg');}
+
+.main_wrapper .bx-wrapper{margin-bottom: 0;border:none;}
+.main_wrapper_section .home_carousel .bx-wrapper{border:none;width:calc(100% / 2);box-shadow: none;}
 .inner_container{padding:16px 8px;}
 .inner_wrapper{padding:16px 8px 8px;}
 .section_heading{
@@ -196,7 +202,7 @@ a:hover{color:#30434D;transition:color .6s;}
 /* .main_wrapper_section h1{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;} */
 .arc_fig_obj .fig_descr{font-size: 14px;line-height: 16px;font-family: 'Source Serif Pro Light', serif; }
 
-#inm_list_section{padding:24px 0;background-color: #fff;}
+#inm_list_section{padding:24px 0;background-color:transparent;margin:0 auto;}
 #inm_list_section h2{color:#30434D;border-bottom: 2px solid #30434D;}
 .inm_fig_obj{position:relative; margin:0 0 16px 0;}
 .inm_fig_obj img{width:100%;height: auto;}
@@ -285,7 +291,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .social_shares .share_icon svg{width:32px;height: 32px;}
 .social_shares .share_icon{width:48px;height:48px;display: grid;place-items:center;}
 
-.single .main_wrapper_section{padding-top:64px;position: relative;min-height: calc(100vh - 64px);}
+/* .single .main_wrapper_section{padding-top:64px;position: relative;min-height: calc(100vh - 64px);} */
 .single .main_wrapper_section h1{font-family:'Source Serif Pro Light', serif;font-weight: 700;font-size: 24px;line-height: 30px;margin-bottom: 4px;}
 .single .heading_container time{font-family:'Source Serif Pro Light', serif;font-size: 14px;line-height: 16px;}
 .single .heading_container p{font-family:'Akzidenz Grotesk Cond', sans-serif;margin: 16px 0;color:#708B99;font-size:14px;line-height: 16px;}
@@ -298,8 +304,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .single .content_container .blocks-gallery-grid .blocks-gallery-image figcaption,
 .single .content_container .blocks-gallery-grid .blocks-gallery-item figcaption,
 .single .content_container .wp-block-gallery .blocks-gallery-image figcaption,
-.single .content_container .wp-block-gallery .blocks-gallery-item figcaption{
-  padding:40px 0 9px 0;font-family:'Source Serif Pro Italic', serif;}
+.single .content_container .wp-block-gallery .blocks-gallery-item figcaption{padding:40px 0 9px 0;font-family:'Source Serif Pro Italic', serif;}
 .single .content_container strong{font-weight: 700;}
 .single .content_container a{color:#E26917;}
 .single .content_container a:hover{color:#FFE4D7;}
@@ -321,8 +326,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .single .content_container .wp-block-gallery.columns-4 .blocks-gallery-item{width:calc(100% / 4 - 8px);margin: 0;}
 .single .content_container .wp-block-gallery.columns-3 .blocks-gallery-item{width:calc(100% / 3 - 8px);margin: 0;}
 .single .content_container .wp-block-gallery.columns-2 .blocks-gallery-item{width:calc(100% / 2 - 8px);margin: 0;}
-/* .single .content_container .wp-block-gallery.columns-1{} */
-   /* .blocks-gallery-item{width:calc(100%);margin: 0;} */
+.single-inmuebles .columns-1 .blocks-gallery-grid{display: none;}
 
 /* SINGLE SERVICIOS */
 .single-servicios .main_wrapper_section{padding-bottom: 243px;}
@@ -348,6 +352,9 @@ a:hover{color:#30434D;transition:color .6s;}
 .single-asesores .content_container.assesor_description p{font-family:'Akzidenz Grotesk LightCond', sans-serif;font-size: 18px;line-height: 22px;}
 /* END SINGLE */
 
+/* SINGLE REORRIDOS VIRTUALES */
+.single-recorridos-virtuales .main_wrapper_section{padding-top: 64px;}
+
 /* SINGLE BLOG*/
 .single-post .image_frame{width: 100%;}
 .single-post .image_frame img{width: 100%; height: auto;}
@@ -365,23 +372,25 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* SINGLE INMUEBLE */
 /* TABBED WIDGET */
-.single-inmuebles .main_wrapper_section{padding-top:49vh;}
+.single-inmuebles .main_wrapper_section{margin-top:115px;padding-top:32.4vh;}
+.single-inmuebles .fixed_top_section{bottom:47vh;}
 .single-inmuebles .rounded_container{background-color: #fff;}
 .single-inmuebles .scroll_section{padding-top:0;}
 .single-inmuebles .main_wrapper_section h1{font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 21px;}
-#tabbed_widget{display: block;}
-#tabbed_widget .tabs{display:flex;flex-direction: row; justify-content: space-between; align-items: center; padding:16px 0;}
+#tabbed_widget{display: block;background-color: #30424d;}
+#tabbed_widget .tabs{display:flex;flex-direction: row; justify-content: space-between; align-items: center; padding:16px 0;background-color: #f2f7f5;}
 #tabbed_widget .tabs button{border-bottom:2px solid grey;color:grey;}
 #tabbed_widget .tabs button.selected_tab{border-bottom:2px solid black;color:black;}
-#panorama {min-width:320px;min-height:210px;}
+/* #panorama {min-height:235px;} */
 
-.tabpanels .panel{display: none;}
+.tabpanels{width: 100%;height: calc(100% - 25px);}
+.tabpanels .panel{display: none;height: 85%;}
 .tabpanels .panel.selected{display: block;}
-.tabpanels .panel.selected .bx-viewport{min-height: 212px!important;height: 100%!important;}
-.item_inner_wrapper{width:100%;}
-.item_inner_wrapper iframe{width:100%;height:100%;min-height: 212px;}
-.item_inner_wrapper .slider li{width: 100%!important;}
-.item_inner_wrapper .slider img{width:100%;height: auto;object-fit: contain;}
+.item_inner_wrapper{width:100%;height: 100%;}
+.item_inner_wrapper iframe{width:100%;height:100%;}
+.inmueble_slider{display: flex;position: relative;flex-direction: row;flex-wrap: nowrap;overflow-y: scroll;justify-content: flex-start;height: 100%;}
+.inmueble_slider li{flex-shrink: 0;}
+.inmueble_slider img{width:100%;height:100%;object-fit:cover;}
 
 .title_widget{background-color:#30434D;border-radius:0 0 15px 15px;padding:16px;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);}
 .header_list{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
@@ -430,6 +439,11 @@ a:hover{color:#30434D;transition:color .6s;}
 
 @media only screen and (min-width:360px){
   .ameni_list{width:94%;}
+  .single-inmuebles .fixed_top_section{bottom:48vh;}
+}
+
+@media only screen and (min-width:414px){
+    .single-inmuebles .fixed_top_section{bottom:50vh;}
 }
 
 @media only screen and (min-width: 500px) {
@@ -440,8 +454,6 @@ a:hover{color:#30434D;transition:color .6s;}
 
 @media only screen and (min-width:720px){
   .ameni_list{max-width:100%;}
-  /* #services_section .post_pool{max-width: 60%; margin:0 auto;} */
-  /* #inm_list_section, #asesores_list{padding:24px;margin-bottom:32px;} */
   .post_pool{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
   .post_pool .unit_item{width: calc(100% / 2 - 20px);margin-bottom: 32px;}
   .ribbon_fig_obj{width: calc(100% / 3 - 4px);}
@@ -455,19 +467,27 @@ a:hover{color:#30434D;transition:color .6s;}
   .single .heading_container p{max-width: 666px;margin:16px auto;font-size: 16px;line-height: 20px;}
   .single .content_container p{font-size: 20px;}
   .single .main_wrapper_section h1{font-size: 32px;line-height: 36px;}
+  .single-inmuebles .main_wrapper_section{padding-top:43vh;}
+  .single-inmuebles .fixed_top_section{bottom:45.8vh;;}
+  .tabpanels .panel{height: 95.1%;}
   #archive_services .post_pool .fig_object{width:calc(100% / 2 - 16px);}
 }
 
 @media only screen and (min-width:1024px){
   #success_cases{max-width: 100%;width:100%;}
   .heading_container{max-width: 768px;margin: 0 auto;}
+  .single-inmuebles .fixed_top_section{bottom:48.5vh;}
+  .home .main_wrapper_section{padding-top: 55vh;}
+  #tabbed_widget .tabs{padding:16px;}
 }
 
 @media only screen and (min-width:1280px){
   .section_wrapper{max-width: 90%;}
   .content_container{max-width:1024px;margin:0 auto;}
   .ribbon_fig_obj{width:calc(100% / 3 - 8px);margin-bottom:0;}
-  .item_inner_wrapper iframe, #panorama{min-height: 374px;}
+  .single-inmuebles .fixed_top_section{bottom: 0;}
+  .single-inmuebles .main_wrapper_section{padding-top:86vh;}
+  .home .main_wrapper_section{padding-top: 87vh;}
 }
 
 @media only screen and (min-width:1440px){

@@ -17,74 +17,73 @@
 
   $amenities_arr = array("dimensiones"=>$dimentions,"habitaciones"=>$rooms,"banos"=>$wc,"gym"=>$gym,"seguridad"=>$security,"pets"=>$pets,"estacionamiento"=>$parking,"alberca"=>$pool);
 ?>
-<section class="main_wrapper_section">
-  <section id="tabbed_widget" class="fixed_top_section">
-    <ul class="tabs custom-list inner_wrapper">
-      <li class="tab_item">
-        <button type="button" name="button" onclick="hk_hanlde_panel(this, 'recorrido')">RECORRIDO</button>
-      </li>
-      <li class="tab_item">
-        <button type="button" name="button" onclick="hk_hanlde_panel(this, 'foto360')">VISTA 360</button>
-      </li>
-      <li class="tab_item">
-        <button type="button" name="button" onclick="hk_hanlde_panel(this, 'galeria')">GALERÍA</button>
-      </li>
-      <li class="tab_item">
-        <button type="button" name="button" onclick="hk_hanlde_panel(this, 'video')">VIDEO</button>
-      </li>
-    </ul>
-    <ul class="tabpanels">
-      <!-- RECORRIDO VIRTUAL -->
-      <li class="panel" data-media-type="recorrido">
-        <div class="item_inner_wrapper">
-          <iframe src="<?php echo esc_url($recorrido_url); ?>" width="720" height="480" style="margin:0 auto;" allowFullScreen="true"></iframe>
-        </div>
-      </li>
+<section id="tabbed_widget" class="fixed_top_section">
+  <ul class="tabs custom-list inner_wrapper">
+    <li class="tab_item">
+      <button type="button" name="button" onclick="hk_hanlde_panel(this, 'recorrido')">RECORRIDO</button>
+    </li>
+    <li class="tab_item">
+      <button type="button" name="button" onclick="hk_hanlde_panel(this, 'foto360')">VISTA 360</button>
+    </li>
+    <li class="tab_item">
+      <button type="button" name="button" onclick="hk_hanlde_panel(this, 'galeria')">GALERÍA</button>
+    </li>
+    <li class="tab_item">
+      <button type="button" name="button" onclick="hk_hanlde_panel(this, 'video')">VIDEO</button>
+    </li>
+  </ul>
+  <ul class="tabpanels">
+    <!-- RECORRIDO VIRTUAL -->
+    <li class="panel" data-media-type="recorrido">
+      <div class="item_inner_wrapper">
+        <iframe src="<?php echo esc_url($recorrido_url); ?>" width="100%" height="100%" style="margin:0 auto;" allowFullScreen="true"></iframe>
+      </div>
+    </li>
 
-      <!-- FOTO 360 -->
-      <li class="panel selected" data-media-type="foto360">
-        <div id="panorama" width="426" height="240" class="item_inner_wrapper"></div>
-      </li>
+    <!-- FOTO 360 -->
+    <li class="panel" data-media-type="foto360">
+      <div id="panorama" width="320" height="180" class="item_inner_wrapper"></div>
+    </li>
 
-      <!-- GALERÍA FOTOS -->
-      <li class="panel" data-media-type="galeria">
-        <div class="item_inner_wrapper">
-          <?php
-            $img_ids = array();
-            if(has_block('gallery', $post->post_content)):
-               $post_blocks = parse_blocks($post->post_content); ?>
-               <ul class="slider">
-                <?php
-                   foreach ($post_blocks as $key => $block):
-                     if($block['blockName'] == 'core/gallery'):
-                       if(array_key_exists('attrs', $block)):
-                         if(array_key_exists('ids', $block['attrs'])):
-                           for($i=0; $i<count($block['attrs']['ids']); $i++): ?>
-                             <li>
-                               <?php echo (wp_get_attachment_image($block['attrs']['ids'][$i], 'full', false)) ? wp_get_attachment_image($block['attrs']['ids'][$i], 'full', false) : '<img src="'.THEMEPATH.'images/default.jpg" alt="Default Image" width="426" height="240" />'; ?>
-                             </li>
-                        <?php
-                           endfor;
-                         endif;
+    <!-- GALERÍA FOTOS -->
+    <li class="panel selected" data-media-type="galeria">
+      <div class="item_inner_wrapper">
+        <?php
+          $img_ids = array();
+          if(has_block('gallery', $post->post_content)):
+             $post_blocks = parse_blocks($post->post_content); ?>
+             <ul class="inmueble_slider">
+              <?php
+                 foreach ($post_blocks as $key => $block):
+                   if($block['blockName'] == 'core/gallery'):
+                     if(array_key_exists('attrs', $block)):
+                       if(array_key_exists('ids', $block['attrs'])):
+                         for($i=0; $i<count($block['attrs']['ids']); $i++): ?>
+                           <li>
+                             <?php echo (wp_get_attachment_image($block['attrs']['ids'][$i], 'full', false)) ? wp_get_attachment_image($block['attrs']['ids'][$i], 'full', false) : '<img src="'.THEMEPATH.'images/default.jpg" alt="Default Image" width="426" height="240" />'; ?>
+                           </li>
+                      <?php
+                         endfor;
                        endif;
                      endif;
-                   endforeach; ?>
-               </ul>
-          <?php
-            endif; ?>
-        </div>
-      </li>
+                   endif;
+                 endforeach; ?>
+             </ul>
+        <?php
+          endif; ?>
+      </div>
+    </li>
 
-      <!-- VIDEO -->
-      <li class="panel" data-media-type="video">
-        <div class="item_inner_wrapper">
-          <iframe width="426" height="240" src=" <?php echo esc_url('https://www.youtube.com/embed/'.$video_promo); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </li>
-    </ul>
-  </section>
-  <!-- END TABBED WIDGET -->
-
+    <!-- VIDEO -->
+    <li class="panel" data-media-type="video">
+      <div class="item_inner_wrapper">
+        <iframe width="426" height="240" src=" <?php echo esc_url('https://www.youtube.com/embed/'.$video_promo); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </li>
+  </ul>
+</section>
+<!-- END TABBED WIDGET -->
+<section class="main_wrapper_section">
   <!-- THIS SECTION SCROLLS -->
   <section class="inmo_single rounded_container scroll_section">
     <section class="title_widget">
@@ -236,13 +235,11 @@
 
   //SLIDER
   $(document).ready(function(){
-    $('.slider').bxSlider({
+    $('.inmueble_slider').bxSlider({
       mode:'fade',
       pager:false,
-      minSlides:2
-    });
-    $('.columns-1 .blocks-gallery-grid').bxSlider({
-      pager:false
+      auto:true,
+      slideWidth:0
     });
   });
 </script>
