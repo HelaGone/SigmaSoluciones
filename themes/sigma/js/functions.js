@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(document).ready(function(){
 	'use strict';
 	console.log('functions js');
 
@@ -11,10 +11,11 @@ $(document).ready(function(){
 	 * jQuery
 	*/
 	// FIT VIDS
-	$('.single-inmuebles').fitVids();
-	$('.content_container').fitVids();
+	jQuery('.single-inmuebles').fitVids();
+	jQuery('.content_container').fitVids();
+
 	// CAROUSELS IN ARCHIVE BOTTOM POSITION
-	$('.bottom_carousel').bxSlider({
+	jQuery('.bottom_carousel').bxSlider({
 		pager:false,
 		controls:false,
 		auto:true,
@@ -23,25 +24,20 @@ $(document).ready(function(){
 
 	// CAROUSELS IN PAGES WITH PARTNERS
 	const bx_conf_partners = {
-		mode:'horizontal',
-		easing:'ease-in',
 		controls:false,
 		pager:false,
 		auto:true,
-		pause:1666,
-		maxSlides:9,
-		minSlides:2,
-		responsive:true
+		slideWidth:0
 	};
-	$('.companies_carousel').bxSlider(bx_conf_partners);
+	jQuery('.companies_carousel').bxSlider(bx_conf_partners);
 
 	// View Bos Servicios
-	$('button.serv_button').on('click', function(){
+	jQuery('button.serv_button').on('click', function(){
 		// console.log("click service");
-		$(this).parent().parent().find('.view_box').show();
+		jQuery(this).parent().parent().find('.view_box').show();
 	});
-	$('.close_viewbox').on('click', function(){
-		$(this).parent().hide();
+	jQuery('.close_viewbox').on('click', function(){
+		jQuery(this).parent().hide();
 	});
 
 });

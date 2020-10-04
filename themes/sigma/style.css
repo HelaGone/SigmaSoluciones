@@ -176,10 +176,10 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* COMPANIES CAROUSEL HOME */
 #partners{margin:16px 0;}
-#partners .bx-wrapper{background-color:#F2F7F5;border:none;}
+#partners .bx-wrapper{background-color:#F2F7F5;border:none;padding-bottom:16px;}
+.companies_carousel{position: relative;background-color:#F2F7F5;padding-top: 24px;display: flex;flex-wrap: nowrap;overflow-y: scroll;}
+.companies_carousel picture{width:120px!important;height:120px;display: inline-block;margin:0 16px;}
 .companies_carousel img{object-fit: contain;}
-.image_item_frame.square{display: grid;place-items:center;}
-/* .image_item_frame.square img{object-fit: contain;} */
 /* END HOME */
 
 /* ARCHIVE BLOG */

@@ -80,8 +80,8 @@
 		//Custom functions
 		wp_enqueue_script('functions', JSPATH.'functions.js', array('jquery'), '1.0.0', false);
 		//Bx Slider 4.2.12
-		/*wp_register_script('bx-slider', JSPATH.'jquery.bxslider.js', array('jquery'), '4.2.12', true);
-		wp_enqueue_script('bx-slider');*/
+		wp_register_script('bx-slider', JSPATH.'jquery.bxslider.js', array('jquery'), '4.2.12', true);
+		wp_enqueue_script('bx-slider');
 		// Fitvids 1.0.0
 		wp_register_script('fitvids', JSPATH . 'jquery.fitvids.js', array('jquery'), '1.0.0', true);
 		wp_enqueue_script('fitvids');
