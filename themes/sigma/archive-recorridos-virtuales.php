@@ -3,16 +3,17 @@
   $query_vars = $wp_query->query_vars;
   $arch_name = $query_vars['post_type'];
 ?>
+  <section class="fixed_top_section">
+    <figure class="arc_fig_obj">
+      <picture>
+        <source media="(min-width:1024px)" srcset="<?php echo THEMEPATH . 'images/headers/'.$arch_name.'-1280.jpg' ?>">
+        <img src="<?php echo THEMEPATH.'images/headers/'.$arch_name.'.jpg' ?>" alt="Cover Recorridos Virtuales">
+      </picture>
+    </figure>
+  </section>
+  <!-- END FIXED SECTION -->
+
   <section id="archive-rec-vir" class="main_wrapper_section">
-    <section class="fixed_top_section">
-      <figure class="fig_obj">
-        <picture>
-          <source media="(min-width:1024px)" srcset="<?php echo THEMEPATH . 'images/headers/'.$arch_name.'-1280.jpg' ?>">
-          <source media="(min-width:720px)" srcset="<?php echo THEMEPATH . 'images/headers/'.$arch_name.'-768.jpg' ?>">
-          <img src="<?php echo THEMEPATH.'images/headers/'.$arch_name.'.jpg' ?>" alt="Cover Recorridos Virtuales">
-        </picture>
-      </figure>
-    </section>
     <!-- SCROLL SECTION -->
     <section class="rounded_container scroll_section">
       <div class="about_info">

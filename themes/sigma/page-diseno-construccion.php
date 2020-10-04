@@ -3,20 +3,19 @@
     Template name: d&c
   */
   get_header();
-  if(have_posts()): ?>
+  if(have_posts()):?>
     <section id="page-dc" class="main_wrapper_section">
       <?php
         while(have_posts()):
           the_post(); ?>
-          <div class="fixed_top_section">
-              <?php
-              if(has_post_thumbnail()):
-                wp_is_mobile() ? the_post_thumbnail('sig-ver-m-420') : the_post_thumbnail('sig-xxl-1280');
-              else: ?>
-              <img src="<?php echo THEMEPATH . 'images/default.jpg' ?>" alt="Cover Inmueble">
-              <?php
-            endif; ?>
-          </div>
+          <section class="fixed_top_section">
+            <figure class="arc_fig_obj">
+              <picture>
+                <source media="(min-width:1024px)" srcset="<?php echo THEMEPATH . 'images/headers/diseno-construccion-1280.jpg' ?>">
+                <img src="<?php echo THEMEPATH.'images/headers/diseno-construccion.jpg' ?>" alt="Cover Recorridos Virtuales">
+              </picture>
+            </figure>
+          </section>
           <section class="rounded_container scroll_section">
             <div class="about_info">
               <h1 class="section_heading"><?php echo the_title(); ?></h1>
