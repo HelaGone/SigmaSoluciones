@@ -11,8 +11,8 @@
           <section class="fixed_top_section">
             <figure class="arc_fig_obj">
               <picture>
-                <source media="(min-width:1024px)" srcset="<?php echo THEMEPATH . 'images/headers/diseno-construccion-1280.jpg' ?>">
-                <img src="<?php echo THEMEPATH.'images/headers/diseno-construccion.jpg' ?>" alt="Cover Recorridos Virtuales">
+                <source media="(min-width:1024px)" srcset="<?php echo THEMEPATH . 'images/headers/diseno-y-construccion-1280.jpg' ?>">
+                <img src="<?php echo THEMEPATH.'images/headers/diseno-y-construccion.jpg' ?>" alt="Cover Diseño & Construcción">
               </picture>
             </figure>
           </section>

@@ -55,7 +55,7 @@
               <figure class="ribbon_fig_obj">
                 <picture>
                   <a href="<?php echo esc_url($service['link']); ?>" title="<?php echo esc_attr($s_name); ?>">
-                    <img src="<?php echo THEMEPATH . 'images/default.jpg' ?>" alt="Cover Inmueble">
+                    <img src="<?php echo THEMEPATH . 'images/headers/'.$service['name'].'.jpg'; ?>" alt="Cover Inmueble">
                   </a>
                 </picture>
                 <figcaption class="ribbon_fig_capion">
