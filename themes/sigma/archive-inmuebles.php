@@ -97,34 +97,32 @@
           $asesores = get_posts($args);
           if(is_array($asesores)&&!empty($asesores)): ?>
             <section id="asesores_list" class="section_wrapper">
-              <div class="inner_wrapper">
-                <h2 class="section_heading">Conoce a nuestros asesores</h2>
-                <ul class="bottom_carousel">
-                  <?php
-                    foreach($asesores as $key => $asesor):
-                      $a_id = $asesor->ID;
-                       ?>
-                      <li class="bottom_car_list_item inner_wrapper">
-                        <figure class="bottom_car_fig_obj">
-                          <?php
-                            if(has_post_thumbnail()):
-                              echo get_the_post_thumbnail($a_id, 'sig-m-480');
-                            else: ?>
-                              <img width="420" height="420" src="<?php echo THEMEPATH .'images/default_squa.jpg' ?>" alt="<?php echo esc_attr($asesor->post_title); ?>">
-                          <?php
-                            endif; ?>
-                          <figcaption class="ases_fig_caption inner_wrapper">
-                            <h3><?php echo esc_html($asesor->post_title); ?></h3>
-                            <p><?php echo esc_html($asesor->post_excerpt); ?></p>
-                          </figcaption>
-                          <a class="cover_anchor" href="<?php echo get_the_permalink($a_id); ?>" title="<?php echo esc_attr($asesor->post_title); ?>"></a>
-                        </figure>
-                      </li>
-                  <?php
-                    endforeach;
-                  ?>
-                </ul>
-              </div>
+              <h2 class="section_heading">Conoce a nuestros asesores</h2>
+              <ul class="bottom_carousel">
+                <?php
+                  foreach($asesores as $key => $asesor):
+                    $a_id = $asesor->ID;
+                     ?>
+                    <li class="bottom_car_list_item inner_wrapper">
+                      <figure class="bottom_car_fig_obj">
+                        <?php
+                          if(has_post_thumbnail()):
+                            echo get_the_post_thumbnail($a_id, 'sig-m-480');
+                          else: ?>
+                            <img width="420" height="420" src="<?php echo THEMEPATH .'images/default_squa.jpg' ?>" alt="<?php echo esc_attr($asesor->post_title); ?>">
+                        <?php
+                          endif; ?>
+                        <figcaption class="ases_fig_caption">
+                          <h3><?php echo esc_html($asesor->post_title); ?></h3>
+                          <p><?php echo esc_html($asesor->post_excerpt); ?></p>
+                        </figcaption>
+                        <a class="cover_anchor" href="<?php echo get_the_permalink($a_id); ?>" title="<?php echo esc_attr($asesor->post_title); ?>"></a>
+                      </figure>
+                    </li>
+                <?php
+                  endforeach;
+                ?>
+              </ul>
             </section>
         <?php
           endif;

@@ -116,6 +116,10 @@ a:hover{color:#30434D;transition:color .6s;}
 ._see_more{background-color:white;border-radius: 5px;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);max-width:80px;margin:32px auto;padding:16px;font-family: 'Source Serif Pro', serif;}
 .cover_anchor{position: absolute;top:0;left: 0;right: 0;bottom: 0;}
 
+/* CARRUSEL ASESORES */
+.bottom_carousel{position: relative;display: flex;flex-wrap: nowrap;overflow-y: scroll;justify-content: flex-start;padding-bottom:8px;}
+.bottom_carousel .bottom_car_list_item{display: inline-block;margin:0;flex-shrink: 0;margin-right: 16px;}
+
 /* MENU */
 #menu_container{
   position:fixed;top:63px;right:0;bottom:0;
@@ -227,7 +231,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .selectors_wrapper select{width: calc(100% / 2 - 24px);padding: 8px 12px;border:none; border-radius: 25px;background-color: #CAE5E4;position: relative;font-weight: 700;outline: none;box-shadow: 1px 2px 4px rgba(0,0,0,0.3);}
 
 /* ASESORES WIDGET */
-/* #asesores_list{background-color: #F2F7F5;} */
+#asesores_list{background-color:#fff;padding-bottom:16px;}
 #asesores_list h2{color:#30434D;border-bottom: 3px solid #30434D;}
 
 /* BOTTOM CAROUSEL */
