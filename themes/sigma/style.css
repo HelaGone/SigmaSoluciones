@@ -200,7 +200,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .inm_fig_caption{position: absolute;top:0;left:0;right: 0;bottom: 3px;display: grid;grid-template-rows: 1fr 1fr 1fr;background-color: rgba(0,0,0,0.3);}
 .inm_fig_caption h3{margin-top:16px;font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;color:#F2F7F5;text-shadow: 1px 2px 3px rgba(0,0,0,0.8);}
 .info__bottom_bar{padding:16px 8px;background-color: rgba(242,247,245,0.8);}
-.info__bottom_bar span.price{font-family: 'Source Serif Pro Light', serif;font-size: 24px;}
+.info__bottom_bar span{font-family: 'Source Serif Pro Light', serif;font-size: 24px;}
 .info__bottom_bar, .amenities_row_list{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
 .amenitie_item{width:24px;height: 16px;padding:4px;}
 

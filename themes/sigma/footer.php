@@ -17,11 +17,11 @@
 							</li>
 							<li>
 								<span>Teléfono: </span>
-								<a href="#" title="">55345-67890</a>
+								<a href="#" title="">55 8015 6099</a>
 							</li>
 							<li>
 								<span>Dirección: </span>
-								<a href="#" title="">Av. Cerro de las campanas, 3 San Andrés Atenco, Edo. Mex.</a>
+								<a href="#" title="">Av. Cerro De Las Campanas. Exterior 3 Interior 108. Tlalnepantla. Edo. Méx.</a>
 							</li>
 						</ul>
 					</div>

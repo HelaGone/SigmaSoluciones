@@ -52,6 +52,7 @@
             ct_move_element($services, 2, 1);
             foreach ($services as $key => $service):
               $s_name = str_replace('-', ' ', $service['name']);
+              $s_name = ($s_name == 'inmuebles') ? 'INMOBILIARIA' :  $s_name;
               $file_name = ($service['name'] == 'diseno-y-construccion') ? $service['name'].'-h.jpg' : $service['name'].'.jpg';
               ?>
               <figure class="ribbon_fig_obj">
