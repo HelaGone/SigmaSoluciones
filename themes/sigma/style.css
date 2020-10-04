@@ -82,7 +82,7 @@ button{background:none;border:none;outline: none;}
 html{scroll-behavior: smooth;}
 html,body{min-height: 100%;}
 a{text-decoration: none;color:inherit;}
-a:hover{color:#30434D;transition:color .6s;}
+a:hover{color:#e26917;transition:color .6s;}
 
 /* GENERAL */
 /* FIXED TOP SECTION */
@@ -100,7 +100,7 @@ a:hover{color:#30434D;transition:color .6s;}
 .panel .bx-wrapper .bx-next:hover{background-position:center;}
 .panel .bx-wrapper .bx-prev{background:no-repeat center url('/sigmasoluciones.com.mx/wp-content/themes/sigma/images/assets/keyboard_arrow_left-24px.svg');}
 
-.main_wrapper .bx-wrapper{margin-bottom: 0;border:none;}
+.main_wrapper .bx-wrapper{margin-bottom: 0;border:none;box-shadow: none;}
 .main_wrapper_section .home_carousel .bx-wrapper{border:none;width:calc(100% / 2);box-shadow: none;}
 .inner_container{padding:16px 8px;}
 .inner_wrapper{padding:16px 8px 8px;}
@@ -406,7 +406,7 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* Map container */
 .map_container{background-color: #F2F7F5;padding-top:32px;padding-bottom:32px;}
-.map_container iframe{width:100%;height:auto;}
+.map_container iframe{width:100%;height:450px;}
 
 /*Related*/
 #related_pool{padding:24px 0; text-align: center;}
@@ -415,8 +415,9 @@ a:hover{color:#30434D;transition:color .6s;}
 
 /* PAGE DEFAULT */
 .page-template-default .main_wrapper_section{padding-top:64px;}
-.page-template-default .content_container{text-align: left;}
-.page-template-default .content_container p{margin-bottom:12px;}
+.page-template-default .section_wrapper{padding:56px 5%;}
+.page-template-default .content_container{text-align: left;max-width: 666px;}
+.page-template-default .content_container p{margin-bottom:12px;font-size: 18px;line-height: 22px;}
 
 /* FOOTER STYLES */
 /* Social Icons */

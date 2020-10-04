@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section class="main_wrapper_section">
-  <section class="section_wrapper inner_wrapper">
-    <h1><?php the_title(); ?></h1>
+  <section class="section_wrapper">
+    <h1 class="section_heading"><?php the_title(); ?></h1>
     <div class="content_container">
       <?php the_content(); ?>
     </div>

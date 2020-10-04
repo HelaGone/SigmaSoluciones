@@ -32,8 +32,6 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon-16x16.png">
 
 		<link rel="manifest" href="<?php echo THEMEPATH .'manifest.json'; ?>">
-		<link rel="preload" href="<?php echo THEMEPATH .'style.css'; ?>" as="style">
-		<!-- <link rel="preload" href="<?php echo THEMEPATH .'js/jquery.bxslider.min.js'; ?>" as="script"> -->
 		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Light.otf'; ?>" as="font" crossorigin>
 		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Regular.otf'; ?>" as="font" crossorigin>
 		<link rel="preload" href="<?php echo FONTSPATH .'AkzidenzGrotesk-Bold.otf'; ?>" as="font" crossorigin>
@@ -47,9 +45,6 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon.ico">
 		<link rel="icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon.ico" >
-		<!-- BX-SLIDER -->
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" /> -->
 		<script>
 			/*TWITTER JS*/
 			/*
