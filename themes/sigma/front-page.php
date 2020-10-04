@@ -51,11 +51,13 @@
 
             ct_move_element($services, 2, 1);
             foreach ($services as $key => $service):
-              $s_name = str_replace('-', ' ', $service['name']); ?>
+              $s_name = str_replace('-', ' ', $service['name']);
+              $file_name = ($service['name'] == 'diseno-y-construccion') ? $service['name'].'-h.jpg' : $service['name'].'.jpg';
+              ?>
               <figure class="ribbon_fig_obj">
                 <picture>
                   <a href="<?php echo esc_url($service['link']); ?>" title="<?php echo esc_attr($s_name); ?>">
-                    <img src="<?php echo THEMEPATH . 'images/headers/'.$service['name'].'.jpg'; ?>" alt="Cover Inmueble">
+                    <img src="<?php echo THEMEPATH . 'images/headers/'.$file_name; ?>" alt="Cover Inmueble">
                   </a>
                 </picture>
                 <figcaption class="ribbon_fig_capion">
