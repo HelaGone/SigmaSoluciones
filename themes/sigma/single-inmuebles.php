@@ -18,7 +18,7 @@
   $amenities_arr = array("dimensiones"=>$dimentions,"habitaciones"=>$rooms,"banos"=>$wc,"gym"=>$gym,"seguridad"=>$security,"pets"=>$pets,"estacionamiento"=>$parking,"alberca"=>$pool);
 ?>
 <section id="tabbed_widget" class="fixed_top_section">
-  <ul class="tabs custom-list inner_wrapper">
+  <!-- <ul class="tabs custom-list inner_wrapper">
     <li class="tab_item">
       <button type="button" name="button" onclick="hk_hanlde_panel(this, 'recorrido')">RECORRIDO</button>
     </li>
@@ -31,19 +31,19 @@
     <li class="tab_item">
       <button type="button" name="button" onclick="hk_hanlde_panel(this, 'video')">VIDEO</button>
     </li>
-  </ul>
+  </ul> -->
   <ul class="tabpanels">
     <!-- RECORRIDO VIRTUAL -->
-    <li class="panel" data-media-type="recorrido">
+    <!-- <li class="panel" data-media-type="recorrido">
       <div class="item_inner_wrapper">
         <iframe src="<?php echo esc_url($recorrido_url); ?>" width="100%" height="100%" style="margin:0 auto;" allowFullScreen="true"></iframe>
       </div>
-    </li>
+    </li> -->
 
     <!-- FOTO 360 -->
-    <li class="panel" data-media-type="foto360">
+    <!-- <li class="panel" data-media-type="foto360">
       <div id="panorama" width="320" height="180" class="item_inner_wrapper"></div>
-    </li>
+    </li> -->
 
     <!-- GALERÍA FOTOS -->
     <li class="panel selected" data-media-type="galeria">
@@ -75,11 +75,11 @@
     </li>
 
     <!-- VIDEO -->
-    <li class="panel" data-media-type="video">
+    <!-- <li class="panel" data-media-type="video">
       <div class="item_inner_wrapper">
         <iframe width="426" height="240" src=" <?php echo esc_url('https://www.youtube.com/embed/'.$video_promo); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-    </li>
+    </li> -->
   </ul>
 </section>
 <!-- END TABBED WIDGET -->
@@ -207,10 +207,10 @@
 
 <script type="text/javascript">
   // PANNELLUM PLUGIN
-  pannellum.viewer('panorama',{
-    "type":"equirectangular",
-    "panorama":"<?php echo esc_url($imagen360); ?>"
-  });
+  // pannellum.viewer('panorama',{
+  //   "type":"equirectangular",
+  //   "panorama":"<?php echo esc_url($imagen360); ?>"
+  // });
 
   //TABPANEL
   const hk_hanlde_panel = (elemt, type) =>{
