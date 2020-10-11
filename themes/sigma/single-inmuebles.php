@@ -204,44 +204,4 @@
   </section>
 </section>
 
-
-<script type="text/javascript">
-  // PANNELLUM PLUGIN
-  // pannellum.viewer('panorama',{
-  //   "type":"equirectangular",
-  //   "panorama":"<?php echo esc_url($imagen360); ?>"
-  // });
-
-  //TABPANEL
-  const hk_hanlde_panel = (elemt, type) =>{
-    let tabButtons = document.getElementsByClassName('tab_item')
-    Object.keys(tabButtons).forEach((index) => {
-      let tab = tabButtons[index];
-      let button = $(tab).find('button');
-      button.removeClass('selected_tab');
-    });
-    elemt.classList.add('selected_tab');
-
-    //PANELS
-    let panelElements = document.getElementsByClassName('panel');
-    Object.keys(panelElements).forEach((index) => {
-      let item = panelElements[index];
-      item.classList.remove('selected');
-      if(item.dataset.mediaType == type){
-        item.classList.add('selected');
-      }
-    });
-  } //END HANDLE PANEL FUNCTION
-
-  //SLIDER
-  $(document).ready(function(){
-    $('.inmueble_slider').bxSlider({
-      mode:'fade',
-      pager:false,
-      auto:true,
-      slideWidth:0
-    });
-  });
-</script>
-
 <?php get_footer(); ?>

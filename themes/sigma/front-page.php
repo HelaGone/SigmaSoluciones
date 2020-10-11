@@ -120,25 +120,4 @@
     </section>
 
   </section>
-  <script type="text/javascript">
-    $(function(){
-      const bx_conf_home = {
-        mode:'vertical',
-        captions:false,
-        pager: false,
-        auto:true,
-        controls:false
-      }
-      const bx_conf_home_2 = {
-        mode:'vertical',
-        captions:false,
-        pager: false,
-        auto:true,
-        controls:false,
-        autoDirection:'prev'
-      }
-      $('.carousel1').bxSlider(bx_conf_home);
-      $('.carousel2').bxSlider(bx_conf_home_2);
-    });
-  </script>
 <?php get_footer(); ?>

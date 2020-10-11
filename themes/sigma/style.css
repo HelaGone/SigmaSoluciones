@@ -370,7 +370,7 @@ a:hover{color:#e26917;transition:color .6s;}
 
 /* SINGLE INMUEBLE */
 /* TABBED WIDGET */
-.single-inmuebles .main_wrapper_section{margin-top:115px;padding-top:23vh;}
+.single-inmuebles .main_wrapper_section{margin-top:64px;padding-top:31vh;}
 .single-inmuebles .fixed_top_section{bottom:51.5vh;}
 .single-inmuebles .rounded_container{background-color: #fff;}
 .single-inmuebles .scroll_section{padding-top:0;}
@@ -381,11 +381,9 @@ a:hover{color:#e26917;transition:color .6s;}
 #tabbed_widget .tabs button.selected_tab{border-bottom:2px solid black;color:black;}
 /* #panorama {min-height:235px;} */
 
-.tabpanels{width: 100%;height: auto;}
-.tabpanels .panel{display: none;height: 85%;}
-.tabpanels .panel.selected{display: block;}
-.item_inner_wrapper{width:100%;height: 100%;}
-.item_inner_wrapper iframe{width:100%;height:100%;}
+.tabpanels{width: 100%;}
+.item_inner_wrapper{width:100%;}
+.item_inner_wrapper iframe{width:100%;}
 .inmueble_slider{display: flex;position: relative;flex-direction: row;flex-wrap: nowrap;overflow-y: scroll;justify-content: flex-start;height: 100%;}
 .inmueble_slider li{flex-shrink: 0;}
 .inmueble_slider img{width:100%;height:100%;object-fit:cover;}
