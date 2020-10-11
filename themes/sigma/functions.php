@@ -75,10 +75,10 @@
 	function ct_register_scripts(){
 		//Jquery 3.5.1
 		wp_deregister_script('jquery');
-		wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-3.5.1.min.js", array(), '3.5.1', false);
+		wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-3.5.1.min.js", array(), '3.5.1', true);
 		wp_enqueue_script('jquery');
 		//Custom functions
-		wp_enqueue_script('functions', JSPATH.'functions.js', array('jquery'), '1.0.0', false);
+		wp_enqueue_script('functions', JSPATH.'functions.js', array('jquery'), '1.0.0', true);
 		//Bx Slider 4.2.12
 		wp_register_script('bx-slider', JSPATH.'jquery.bxslider.js', array('jquery'), '4.2.12', true);
 		wp_enqueue_script('bx-slider');

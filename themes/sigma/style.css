@@ -297,13 +297,14 @@ a:hover{color:#e26917;transition:color .6s;}
 .single .heading_container p{font-family:'Akzidenz Grotesk Cond', sans-serif;margin: 16px 0;color:#708B99;font-size:14px;line-height: 16px;}
 /* Content */
 .single .content_container{text-align: left;}
-.single .content_container p{
+.single .content_container p, .single .content_container ul{
   font-family:'Akzidenz Grotesk Light', sans-serif;
   color:#30434D;line-height: 26px;max-width: 666px;margin:0 auto 12px auto;}
 .single .content_container h2{font-size: 24px;line-height: 30px;margin-bottom: 8px;}
 .single .content_container  p.wp-caption-text{font-family:'Source Serif Pro Italic', serif;}
 .single .content_container .blocks-gallery-grid .blocks-gallery-image figcaption,
 .single .content_container .blocks-gallery-grid .blocks-gallery-item figcaption,
+.single .content_container .wp-block-embed div{margin:10px auto;}
 .single .content_container .wp-block-gallery{display: none;}
 .single .content_container .wp-block-gallery .blocks-gallery-image figcaption,
 .single .content_container .wp-block-gallery .blocks-gallery-item figcaption{padding:40px 0 9px 0;font-family:'Source Serif Pro Italic', serif;}
@@ -371,7 +372,7 @@ a:hover{color:#e26917;transition:color .6s;}
 /* SINGLE INMUEBLE */
 /* TABBED WIDGET */
 .single-inmuebles .main_wrapper_section{margin-top:64px;padding-top:31vh;}
-.single-inmuebles .fixed_top_section{bottom:51.5vh;}
+/* .single-inmuebles .fixed_top_section{bottom:51.5vh;} */
 .single-inmuebles .rounded_container{background-color: #fff;}
 .single-inmuebles .scroll_section{padding-top:0;}
 .single-inmuebles .main_wrapper_section h1{font-family: 'Akzidenz Grotesk Bold', sans-serif;font-size: 21px;}
