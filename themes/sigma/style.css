@@ -3,7 +3,7 @@ Theme Name: Custom Theme
 Theme URI: https://hela.dev/
 Author: Holkan Luna
 Author URI: https://hela.dev/
-Description: Custom theme
+Description: Custom theme for Sigma Soluciones
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -93,6 +93,8 @@ a:hover{color:#e26917;transition:color .6s;}
 .arc_fig_obj .fig_caption div.inner_wrapper{position:relative;bottom:25%;}
 
 .main_wrapper_section{padding-top:64vh;}
+.archive .main_wrapper_section,
+.page-template-page-diseno-construccion .main_wrapper_section{padding-top: 55vh;}
 .main_wrapper_section .bx-wrapper{border:none;}
 .main_wrapper_section_single{padding-top:64px;}
 
@@ -199,8 +201,6 @@ a:hover{color:#e26917;transition:color .6s;}
 /* END ARCHIVE BLOG */
 
 /* ARCHIVE INMUEBLE */
-/* .arc_fig_obj .fig_title{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;} */
-/* .main_wrapper_section h1{font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;margin-bottom: 16px;} */
 .arc_fig_obj .fig_descr{font-size: 14px;line-height: 16px;font-family: 'Source Serif Pro Light', serif; }
 
 #inm_list_section{padding:24px 0;background-color:transparent;margin:0 auto;}
@@ -208,7 +208,7 @@ a:hover{color:#e26917;transition:color .6s;}
 .inm_fig_obj{position:relative; margin:0 0 16px 0;}
 .inm_fig_obj img{width:100%;height: auto;}
 .amenitie_item img{width:24px;height:24px;}
-.inm_fig_caption{position: absolute;top:0;left:0;right: 0;bottom: 3px;display: grid;grid-template-rows: 1fr 1fr 1fr;background-color: rgba(0,0,0,0.3);}
+.inm_fig_caption{position: absolute;top:0;left:0;right: 0;bottom: 3px;display: grid;grid-template-rows: 1fr 1fr 1fr;background-color: rgba(0,0,0,0.1);}
 .inm_fig_caption h3{margin-top:16px;font-size: 22px;line-height: 24px;font-family:'Akzidenz Grotesk Bold', sans-serif;color:#F2F7F5;text-shadow: 1px 2px 3px rgba(0,0,0,0.8);}
 .info__bottom_bar{padding:16px 8px;background-color: rgba(242,247,245,0.8);}
 .info__bottom_bar span{font-family: 'Source Serif Pro Light', serif;font-size: 24px;}
