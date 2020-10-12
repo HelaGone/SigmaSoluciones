@@ -141,7 +141,7 @@
 
 	// CAMBIAR EL CONTENIDO DEL FOOTER EN EL DASHBOARD ///////////////////////////////////
 	add_filter( 'admin_footer_text', function() {
-		echo 'Creado por <a href="https://cubeinthebox.com">cubeinthebox</a>. ';
+		echo 'Creado por <a href="https://hela.dev/">hela development</a>. ';
 		echo 'Powered by <a href="http://www.wordpress.org">WordPress</a>';
 	});
 
