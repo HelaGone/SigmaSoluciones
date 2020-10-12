@@ -18,35 +18,9 @@
   $amenities_arr = array("dimensiones"=>$dimentions,"habitaciones"=>$rooms,"banos"=>$wc,"gym"=>$gym,"seguridad"=>$security,"pets"=>$pets,"estacionamiento"=>$parking,"alberca"=>$pool);
 ?>
 <section id="tabbed_widget" class="fixed_top_section">
-  <ul class="tabs custom-list inner_wrapper">
-    <li class="tab_item">
-      <button type="button" name="button" onclick="hk_hanlde_panel(this, 'recorrido')">RECORRIDO</button>
-    </li>
-    <li class="tab_item">
-      <button type="button" name="button" onclick="hk_hanlde_panel(this, 'foto360')">VISTA 360</button>
-    </li>
-    <li class="tab_item">
-      <button type="button" name="button" onclick="hk_hanlde_panel(this, 'galeria')">GALERÍA</button>
-    </li>
-    <li class="tab_item">
-      <button type="button" name="button" onclick="hk_hanlde_panel(this, 'video')">VIDEO</button>
-    </li>
-  </ul>
-  <ul class="tabpanels">
-    <!-- RECORRIDO VIRTUAL -->
-    <li class="panel" data-media-type="recorrido">
-      <div class="item_inner_wrapper">
-        <iframe src="<?php echo esc_url($recorrido_url); ?>" width="100%" height="100%" style="margin:0 auto;" allowFullScreen="true"></iframe>
-      </div>
-    </li>
-
-    <!-- FOTO 360 -->
-    <li class="panel" data-media-type="foto360">
-      <div id="panorama" width="320" height="180" class="item_inner_wrapper"></div>
-    </li>
-
+  <div class="tabpanels">
     <!-- GALERÍA FOTOS -->
-    <li class="panel selected" data-media-type="galeria">
+    <div class="panel" data-media-type="galeria">
       <div class="item_inner_wrapper">
         <?php
           $img_ids = array();
@@ -72,15 +46,8 @@
         <?php
           endif; ?>
       </div>
-    </li>
-
-    <!-- VIDEO -->
-    <li class="panel" data-media-type="video">
-      <div class="item_inner_wrapper">
-        <iframe width="426" height="240" src=" <?php echo esc_url('https://www.youtube.com/embed/'.$video_promo); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </li>
-  </ul>
+    </div>
+  </div>
 </section>
 <!-- END TABBED WIDGET -->
 <section class="main_wrapper_section">
@@ -144,8 +111,43 @@
             endforeach;
           endif; ?>
       </ul>
+
+      <div id="media_buttons" class="inner_wrapper">
+        <ul class="media_buttons_list">
+          <?php
+            if($recorrido_url): ?>
+              <li class="media_button_item">
+                <button type="button" name="button" onclick="handle_media('recorrido')">Recorrido Virtual</button>
+              </li>
+          <?php
+            endif;
+            if($imagen360): ?>
+              <li class="media_button_item">
+                <button type="button" name="button" onclick="handle_media('three_sixty')" data-media="<?php echo $imagen360; ?>">Imagen 360</button>
+              </li>
+          <?php
+            endif; ?>
+        </ul>
+      </div>
     </section>
     <!-- END AMENITIES SECTION -->
+
+    <!-- FULL SCREEN MEDIA -->
+    <section id="full_screen" class="full_screen_container">
+      <div id="recorrido_virtual" class="full_screen_media">
+        <button type="button" class="close_media" name="button" onclick="handle_close_media('recorrido')">
+          <img src="<?php echo THEMEPATH . 'images/assets/close-24px.svg'; ?>" alt="Close button">
+        </button>
+        <iframe src="<?php echo $recorrido_url?>" width="100%" height="100%" allowfullscreen ></iframe>
+      </div>
+
+      <div id="three_sixty" class="full_screen_media">
+        <button type="button" class="close_media" name="button" onclick="handle_close_media('three_sixty')">
+          <img src="<?php echo THEMEPATH . 'images/assets/close-24px.svg'; ?>" alt="Close button">
+        </button>
+        <div id="panorama"></div>
+      </div>
+    </section>
 
     <section id="description_section">
       <div class="inner_wrapper content_container">
@@ -171,28 +173,13 @@
           <h2 class="section_heading">También te pueden interesar</h2>
           <section class="post_pool">
             <?php
-              // debug(get_intermediate_image_sizes());
               while ($related->have_posts()):
                 $related->the_post();
                 setup_postdata($post);
                 $inmuId = $post->ID;
                 $meta_venta_renta = get_post_meta($inmuId, 'venta__renta', true);
                 $meta_precio = get_post_meta($inmuId, 'precio', true);
-
                 get_template_part('templates/figure', 'inmueble', array('precio'=>$meta_precio, 'tipo'=>$meta_venta_renta)); ?>
-
-                <!-- <figure>
-                  <picture>
-                    <source media="(min-width:1280px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-xxl-1280')) ? get_the_post_thumbnail_url($inmuId, 'sig-xxl-1280') : ''; ?>">
-                    <source media="(min-width:768px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-xl-960')) ? get_the_post_thumbnail_url($inmuId, 'sig-xl-960') : ''; ?>">
-                    <source media="(min-width:650px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-l-640')) ? get_the_post_thumbnail_url($inmuId, 'sig-l-640') : ''; ?>">
-                    <source media="(min-width:465px)" srcset="<?php echo (get_the_post_thumbnail_url($inmuId, 'sig-m-480')) ? get_the_post_thumbnail_url($inmuId, 'sig-m-480') : ''; ?>">
-                    <img src="<?php echo get_the_post_thumbnail_url($inmuId, 'sig-m-480'); ?>" alt="Cover Inmueble">
-                  </picture>
-                  <figcaption>
-                    <h3><?php echo esc_html($item->post_title); ?></h3>
-                  </figcaption>
-                </figure> -->
             <?php
               wp_reset_postdata();
               endwhile; ?>
@@ -204,44 +191,34 @@
   </section>
 </section>
 
-
 <script type="text/javascript">
+
   // PANNELLUM PLUGIN
   pannellum.viewer('panorama',{
     "type":"equirectangular",
     "panorama":"<?php echo esc_url($imagen360); ?>"
   });
 
-  //TABPANEL
-  const hk_hanlde_panel = (elemt, type) =>{
-    let tabButtons = document.getElementsByClassName('tab_item')
-    Object.keys(tabButtons).forEach((index) => {
-      let tab = tabButtons[index];
-      let button = $(tab).find('button');
-      button.removeClass('selected_tab');
-    });
-    elemt.classList.add('selected_tab');
+  const handle_media = (evt) => {
+    document.getElementById('full_screen').style.height = '80vh';
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    const body = document.body;
+    body.style.top = `-${scrollY}`;
+    if(evt == 'recorrido'){
+      document.getElementById('recorrido_virtual').style.display = 'block';
+    }else if('three_sixty'){
+      document.getElementById('three_sixty').style.display = 'block';
+    }
+  }
 
-    //PANELS
-    let panelElements = document.getElementsByClassName('panel');
-    Object.keys(panelElements).forEach((index) => {
-      let item = panelElements[index];
-      item.classList.remove('selected');
-      if(item.dataset.mediaType == type){
-        item.classList.add('selected');
-      }
-    });
-  } //END HANDLE PANEL FUNCTION
-
-  //SLIDER
-  $(document).ready(function(){
-    $('.inmueble_slider').bxSlider({
-      mode:'fade',
-      pager:false,
-      auto:true,
-      slideWidth:0
-    });
-  });
+  const handle_close_media = (evt) => {
+    document.getElementById('full_screen').style.height = '0';
+    if(evt == 'recorrido'){
+      document.getElementById('recorrido_virtual').style.display = 'none';
+    }else if('three_sixty'){
+      document.getElementById('three_sixty').style.display = 'none';
+    }
+  }
 </script>
 
 <?php get_footer(); ?>

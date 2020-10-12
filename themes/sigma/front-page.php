@@ -8,17 +8,17 @@
     <section class="fixed_top_section home_carousel">
       <div class="side_carousel carousel1">
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-1-PARTE-1.jpg' ?>" alt="Img 1">
-        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-2-PARTE-1.jpg' ?>" alt="Img 2">
+        <!-- <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-2-PARTE-2.jpg' ?>" alt="Img 4"> -->
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-3-PARTE-1.jpg' ?>" alt="Img 2">
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-4-PARTE-1.jpg' ?>" alt="Img 2">
-        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-5-PARTE-2.jpg' ?>" alt="Img 2">
+        <!-- <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-5-PATE-1.jpg' ?>" alt="Img 4"> -->
       </div>
       <div class="side_carousel carousel2">
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-1-PARTE-2.jpg' ?>" alt="Img 3">
-        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-5-PATE-1.jpg' ?>" alt="Img 4">
+        <!-- <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-5-PARTE-2.jpg' ?>" alt="Img 2"> -->
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-4-PARTE-2.jpg' ?>" alt="Img 4">
         <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-3-PARTE-2.jpg' ?>" alt="Img 3">
-        <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL2-IMAGEN-2-PARTE-2.jpg' ?>" alt="Img 4">
+        <!-- <img width="720" height="720" src="<?php echo THEMEPATH .'images/carousel/CARRUSEL1-IMAGEN-2-PARTE-1.jpg' ?>" alt="Img 2"> -->
       </div>
     </section>
 
@@ -59,8 +59,7 @@
             foreach ($services as $key => $service):
               $s_name = str_replace('-', ' ', $service['name']);
               $s_name = ($s_name == 'inmuebles') ? 'INMOBILIARIA' :  $s_name;
-              $file_name = ($service['name'] == 'diseno-y-construccion') ? $service['name'].'-h.jpg' : $service['name'].'.jpg';
-              ?>
+              $file_name = $service['name'].'-h.jpg'; ?>
               <figure class="ribbon_fig_obj">
                 <picture>
                   <a href="<?php echo esc_url($service['link']); ?>" title="<?php echo esc_attr($s_name); ?>">
@@ -121,25 +120,4 @@
     </section>
 
   </section>
-  <script type="text/javascript">
-    $(function(){
-      const bx_conf_home = {
-        mode:'vertical',
-        captions:false,
-        pager: false,
-        auto:true,
-        controls:false
-      }
-      const bx_conf_home_2 = {
-        mode:'vertical',
-        captions:false,
-        pager: false,
-        auto:true,
-        controls:false,
-        autoDirection:'prev'
-      }
-      $('.carousel1').bxSlider(bx_conf_home);
-      $('.carousel2').bxSlider(bx_conf_home_2);
-    });
-  </script>
 <?php get_footer(); ?>
