@@ -48,12 +48,6 @@ $(document).ready(function(){
 	$('.companies_carousel').bxSlider(bx_conf_partners);
 	$('.blocks-gallery-grid').bxSlider(bx_conf_partners);
 
-	// PANNELLUM PLUGIN
-	// pannellum.viewer('panorama',{
-	//   "type":"equirectangular",
-	//   "panorama":"<?php echo esc_url($imagen360); ?>"
-	// });
-
 	//TABPANEL
 	const hk_hanlde_panel = (elemt, type) =>{
 		let tabButtons = document.getElementsByClassName('tab_item')

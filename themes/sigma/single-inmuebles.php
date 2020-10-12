@@ -111,8 +111,43 @@
             endforeach;
           endif; ?>
       </ul>
+
+      <div id="media_buttons" class="inner_wrapper">
+        <ul class="media_buttons_list">
+          <?php
+            if($recorrido_url): ?>
+              <li class="media_button_item">
+                <button type="button" name="button" onclick="handle_media('recorrido')">Recorrido Virtual</button>
+              </li>
+          <?php
+            endif;
+            if($imagen360): ?>
+              <li class="media_button_item">
+                <button type="button" name="button" onclick="handle_media('three_sixty')" data-media="<?php echo $imagen360; ?>">Imagen 360</button>
+              </li>
+          <?php
+            endif; ?>
+        </ul>
+      </div>
     </section>
     <!-- END AMENITIES SECTION -->
+
+    <!-- FULL SCREEN MEDIA -->
+    <section id="full_screen" class="full_screen_container">
+      <div id="recorrido_virtual" class="full_screen_media">
+        <button type="button" class="close_media" name="button" onclick="handle_close_media('recorrido')">
+          <img src="<?php echo THEMEPATH . 'images/assets/close-24px.svg'; ?>" alt="Close button">
+        </button>
+        <iframe src="<?php echo $recorrido_url?>" width="100%" height="100%" allowfullscreen ></iframe>
+      </div>
+
+      <div id="three_sixty" class="full_screen_media">
+        <button type="button" class="close_media" name="button" onclick="handle_close_media('three_sixty')">
+          <img src="<?php echo THEMEPATH . 'images/assets/close-24px.svg'; ?>" alt="Close button">
+        </button>
+        <div id="panorama"></div>
+      </div>
+    </section>
 
     <section id="description_section">
       <div class="inner_wrapper content_container">
@@ -155,5 +190,35 @@
     </section>
   </section>
 </section>
+
+<script type="text/javascript">
+
+  // PANNELLUM PLUGIN
+  pannellum.viewer('panorama',{
+    "type":"equirectangular",
+    "panorama":"<?php echo esc_url($imagen360); ?>"
+  });
+
+  const handle_media = (evt) => {
+    document.getElementById('full_screen').style.height = '80vh';
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    const body = document.body;
+    body.style.top = `-${scrollY}`;
+    if(evt == 'recorrido'){
+      document.getElementById('recorrido_virtual').style.display = 'block';
+    }else if('three_sixty'){
+      document.getElementById('three_sixty').style.display = 'block';
+    }
+  }
+
+  const handle_close_media = (evt) => {
+    document.getElementById('full_screen').style.height = '0';
+    if(evt == 'recorrido'){
+      document.getElementById('recorrido_virtual').style.display = 'none';
+    }else if('three_sixty'){
+      document.getElementById('three_sixty').style.display = 'none';
+    }
+  }
+</script>
 
 <?php get_footer(); ?>
